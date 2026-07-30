@@ -1,0 +1,248 @@
+# ===========================================================================
+# VOCABULARY PUBLISHING PIPELINE
+# ===========================================================================
+# This workflow runs automatically when a vocabulary YAML file is pushed
+# to the repository. It performs the following steps:
+#
+#   1. LinkML lint validation of the YAML file
+#   2. SKOS generation (Python script)
+#   3. Skosify validation and repair
+#   4. Markdown documentation generation (gen-doc)
+#   5. Fix <br/> tags in documentation
+#   6. GitHub Pages deployment (mkdocs gh-deploy)
+#   7. Commit generated TTL files back to repository
+#
+# Triggers:
+#   - Push to main branch that changes any file in vocabulary/
+#   - Manual trigger via GitHub Actions UI (workflow_dispatch)
+#
+# Requirements:
+#   - GitHub Pages must be enabled in repository settings
+#   - Source: gh-pages branch, / (root) folder
+# ===========================================================================
+
+name: Publish Vocabulary
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'vocabulary/**'        # trigger on any vocabulary YAML change
+      - 'scripts/**'           # or script changes
+      - 'mkdocs.yml'           # or MkDocs config changes
+  workflow_dispatch:           # allow manual trigger from GitHub Actions UI
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write          # needed to commit generated files back to repo
+
+    steps:
+
+      # ── Step 1: Checkout repository ───────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0       # full history needed for mkdocs gh-deploy
+
+      # ── Step 2: Set up Python ─────────────────────────────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      # ── Step 3: Install dependencies ──────────────────────────────────────
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install \
+            linkml \
+            rdflib \
+            skosify \
+            mkdocs \
+            mkdocs-material
+
+      # ── Step 4: Find changed vocabulary files ─────────────────────────────
+      - name: Find vocabulary files
+        id: find_vocabs
+        run: |
+          # Find all YAML files in vocabulary/ directory
+          VOCAB_FILES=$(find vocabulary/ -name "*.yaml" -o -name "*.yml" 2>/dev/null | tr '\n' ' ')
+          echo "Found vocabulary files: $VOCAB_FILES"
+          echo "vocab_files=$VOCAB_FILES" >> $GITHUB_OUTPUT
+
+          # Check if any vocabulary files exist
+          if [ -z "$VOCAB_FILES" ]; then
+            echo "No vocabulary files found in vocabulary/"
+            exit 1
+          fi
+
+      # ── Step 5: LinkML lint validation ────────────────────────────────────
+      - name: Validate vocabulary YAML (LinkML lint)
+        run: |
+          echo "Running LinkML validation..."
+          FAILED=0
+
+          for vocab_file in vocabulary/*.yaml vocabulary/*.yml; do
+            [ -f "$vocab_file" ] || continue
+            echo "  Validating: $vocab_file"
+
+            # Run linkml-lint and capture output
+            OUTPUT=$(PYTHONUTF8=1 linkml-lint --ignore-warnings "$vocab_file" 2>&1)
+            EXIT_CODE=$?
+
+            if [ $EXIT_CODE -ne 0 ]; then
+              echo "  ❌ FAILED: $vocab_file"
+              echo "$OUTPUT"
+              FAILED=1
+            else
+              echo "  ✅ PASSED: $vocab_file"
+            fi
+          done
+
+          if [ $FAILED -ne 0 ]; then
+            echo ""
+            echo "❌ LinkML validation failed. Fix errors before publishing."
+            exit 1
+          fi
+
+          echo ""
+          echo "✅ All vocabulary files passed LinkML validation"
+
+      # ── Step 6: Generate SKOS Turtle ──────────────────────────────────────
+      - name: Generate SKOS Turtle
+        run: |
+          echo "Generating SKOS..."
+          mkdir -p output
+
+          for vocab_file in vocabulary/*.yaml vocabulary/*.yml; do
+            [ -f "$vocab_file" ] || continue
+            stem=$(basename "$vocab_file" .yaml)
+            stem=$(basename "$stem" .yml)
+            echo "  Processing: $vocab_file -> output/${stem}-raw.ttl"
+
+            PYTHONUTF8=1 python3 scripts/generate_skos.py \
+              --input "$vocab_file" \
+              --output "output/${stem}-raw.ttl" \
+              --verbose
+          done
+
+          echo "✅ SKOS generation complete"
+
+      # ── Step 7: Skosify validation and repair ─────────────────────────────
+      - name: Skosify — validate and repair SKOS
+        run: |
+          echo "Running Skosify..."
+
+          for raw_file in output/*-raw.ttl; do
+            [ -f "$raw_file" ] || continue
+            stem=$(basename "$raw_file" -raw.ttl)
+            echo "  Skosifying: $raw_file -> output/${stem}.ttl"
+
+            python3 scripts/skosify_vocab.py \
+              --input "$raw_file" \
+              --output "output/${stem}.ttl" \
+              --verbose
+          done
+
+          echo "✅ Skosify complete"
+
+      # ── Step 8: List generated files ──────────────────────────────────────
+      - name: List generated SKOS files
+        run: |
+          echo "Generated files in output/:"
+          ls -la output/
+          echo ""
+          echo "Triple counts:"
+          for ttl_file in output/*.ttl; do
+            [ -f "$ttl_file" ] || continue
+            # Count triples (lines with .) as approximation
+            count=$(grep -c '\.$' "$ttl_file" 2>/dev/null || echo "unknown")
+            echo "  $ttl_file: ~$count triples"
+          done
+
+      # ── Step 9: Generate Markdown documentation ───────────────────────────
+      - name: Generate documentation (gen-doc)
+        run: |
+          echo "Generating documentation..."
+          rm -rf docs/
+          mkdir -p docs
+
+          for vocab_file in vocabulary/*.yaml vocabulary/*.yml; do
+            [ -f "$vocab_file" ] || continue
+            echo "  Generating docs for: $vocab_file"
+            PYTHONUTF8=1 gen-doc "$vocab_file" -d ./docs -f markdown
+          done
+
+          echo "✅ Documentation generated"
+
+      # ── Step 10: Fix <br/> tags in documentation ──────────────────────────
+      - name: Fix table rendering in documentation
+        run: |
+          echo "Fixing <br/> tags in Markdown tables..."
+          python3 scripts/fix_tables.py --dir docs --verbose
+          echo "✅ Table fix complete"
+
+      # ── Step 11: Generate ER diagram ──────────────────────────────────────
+      - name: Generate ER diagram
+        run: |
+          echo "Generating ER diagram..."
+          for vocab_file in vocabulary/*.yaml vocabulary/*.yml; do
+            [ -f "$vocab_file" ] || continue
+            PYTHONUTF8=1 gen-erdiagram \
+              --follow-references \
+              --no-exclude-abstract-classes \
+              "$vocab_file" > docs/schema_diagram.md
+            echo "  Generated: docs/schema_diagram.md"
+          done
+          echo "✅ ER diagram generated"
+
+      # ── Step 12: Add diagram link to index.md ─────────────────────────────
+      - name: Add diagram link to index.md
+        run: |
+          if [ -f docs/index.md ]; then
+            # Add Schema Overview section if not already present
+            if ! grep -q "Schema Overview" docs/index.md; then
+              python3 -c "
+          with open('docs/index.md', 'r') as f:
+              content = f.read()
+          overview = '\n## Schema Overview\n\n- [ER diagram — concept relationships](schema_diagram.md)\n\n'
+          # Insert before ## Enumerations or ## Classes
+          import re
+          content = re.sub(r'\n(## (?:Enumerations|Classes))', overview + r'\n\1', content, count=1)
+          with open('docs/index.md', 'w') as f:
+              f.write(content)
+          print('Added schema overview link to index.md')
+              "
+            fi
+          fi
+
+      # ── Step 13: Deploy to GitHub Pages ───────────────────────────────────
+      - name: Deploy to GitHub Pages
+        run: |
+          echo "Deploying to GitHub Pages..."
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          mkdocs gh-deploy --force
+          echo "✅ GitHub Pages deployed"
+
+      # ── Step 14: Commit generated TTL files back to repository ─────────────
+      - name: Commit generated SKOS files
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+          # Add generated TTL files
+          git add output/*.ttl 2>/dev/null || true
+
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-generate SKOS from vocabulary YAML [skip ci]"
+            git push
+            echo "✅ Generated files committed to repository"
+          fi

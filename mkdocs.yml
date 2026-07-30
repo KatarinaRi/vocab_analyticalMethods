@@ -1,0 +1,24 @@
+site_name: My Controlled Vocabulary
+site_url: https://your-username.github.io/your-repo-name/
+site_description: Human-readable documentation for the controlled vocabulary
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - navigation.top
+
+docs_dir: docs
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - nl2br
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
