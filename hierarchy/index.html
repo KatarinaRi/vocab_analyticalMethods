@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://your-username.github.io/your-repo-name/schema_diagram/">
+        <link rel="canonical" href="https://your-username.github.io/your-repo-name/hierarchy/">
       
       
         <link rel="prev" href="../analytical-methods-vocabulary/">
@@ -25,7 +25,7 @@
     
     
       
-        <title>Schema diagram - My Controlled Vocabulary</title>
+        <title>Analytical Methods Vocabulary — Concept Hierarchy - My Controlled Vocabulary</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#analytical-methods-vocabulary-concept-hierarchy" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -97,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Schema diagram
+              Analytical Methods Vocabulary — Concept Hierarchy
             
           </span>
         </div>
@@ -793,6 +798,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -801,7 +808,7 @@
   <span class="md-ellipsis">
     
   
-    Schema diagram
+    Analytical Methods Vocabulary — Concept Hierarchy
   
 
     
@@ -832,6 +839,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -848,12 +857,271 @@
 
 
 
-  <h1>Schema diagram</h1>
+<h1 id="analytical-methods-vocabulary-concept-hierarchy">Analytical Methods Vocabulary — Concept Hierarchy</h1>
+<p>This diagram shows the hierarchical relationships between concepts using arrows from broader (parent) to narrower (child) concepts.</p>
+<pre class="mermaid"><code>classDiagram
+    %% Analytical Methods Vocabulary
 
-<pre class="mermaid"><code>erDiagram
-
-
-
+    %% --- AnalyticalMethod ---
+    class AnalyticalMethod["AnalyticalMethod"]
+    class Spectroscopy["Spectroscopic methods"]
+    AnalyticalMethod &lt;|-- Spectroscopy
+    class MassSpectrometry["MS methods"]
+    AnalyticalMethod &lt;|-- MassSpectrometry
+    class Chromatography["Chromatographic methods"]
+    AnalyticalMethod &lt;|-- Chromatography
+    class MixedMethods["Hyphenated methods"]
+    AnalyticalMethod &lt;|-- MixedMethods
+    class Other["Other"]
+    AnalyticalMethod &lt;|-- Other
+    class AAS["Atomic Absorption Spectroscopy"]
+    Spectroscopy &lt;|-- AAS
+    class DirectAAS["Direct AAS"]
+    AAS &lt;|-- DirectAAS
+    class FlameAAS["Flame AAS"]
+    AAS &lt;|-- FlameAAS
+    class GFAAS["Graphite Furnace AAS"]
+    AAS &lt;|-- GFAAS
+    class CVAAS["Cold Vapour AAS"]
+    AAS &lt;|-- CVAAS
+    class TDAAS["Thermal Decomposition AAS"]
+    AAS &lt;|-- TDAAS
+    class AdvancedMercuryAnalyzer["AMA"]
+    AAS &lt;|-- AdvancedMercuryAnalyzer
+    class DirectMercuryAnalyzer["DMA"]
+    AAS &lt;|-- DirectMercuryAnalyzer
+    class AES["Atomic Emission Spectroscopy"]
+    Spectroscopy &lt;|-- AES
+    class DirectAES["Direct AES"]
+    AES &lt;|-- DirectAES
+    class FlameAES["Flame AES"]
+    AES &lt;|-- FlameAES
+    class PlasmaAES["Plasma AES"]
+    AES &lt;|-- PlasmaAES
+    class GDAES["Glow Discharge AES"]
+    AES &lt;|-- GDAES
+    class AFS["Atomic Fluorescence Spectroscopy"]
+    Spectroscopy &lt;|-- AFS
+    class DirectAFS["Direct AFS"]
+    AFS &lt;|-- DirectAFS
+    class HGAFS["Hydride Generation AFS"]
+    AFS &lt;|-- HGAFS
+    class FIAFS["Flow Injection AFS"]
+    AFS &lt;|-- FIAFS
+    class CVAFS["Cold Vapour AFS"]
+    AFS &lt;|-- CVAFS
+    class ICP["Inductively Coupled Plasma Spectroscopy"]
+    Spectroscopy &lt;|-- ICP
+    class ICPAES["ICP-AES"]
+    ICP &lt;|-- ICPAES
+    class ICPOES["ICP-OES"]
+    ICP &lt;|-- ICPOES
+    class XRF["X-ray Fluorescence Spectroscopy"]
+    Spectroscopy &lt;|-- XRF
+    class EDXRF["Energy-Dispersive XRF"]
+    XRF &lt;|-- EDXRF
+    class WDXRF["Wavelength-Dispersive XRF"]
+    XRF &lt;|-- WDXRF
+    class TXRF["Total Reflection XRF"]
+    XRF &lt;|-- TXRF
+    class NMR["Nuclear Magnetic Resonance Spectroscopy"]
+    Spectroscopy &lt;|-- NMR
+    class H1NMR["Proton NMR"]
+    NMR &lt;|-- H1NMR
+    class C13NMR["Carbon-13 NMR"]
+    NMR &lt;|-- C13NMR
+    class UVVis["UV-Visible Spectroscopy"]
+    Spectroscopy &lt;|-- UVVis
+    class SingleWavelengthUVVis["Single Wavelength UV-Vis"]
+    UVVis &lt;|-- SingleWavelengthUVVis
+    class DADUVVis["DAD UV-Vis"]
+    UVVis &lt;|-- DADUVVis
+    class ICPMS["ICP-MS"]
+    MassSpectrometry &lt;|-- ICPMS
+    class ICPMSMS["ICP-MS/MS"]
+    ICPMS &lt;|-- ICPMSMS
+    class ICPDRCMS["ICP-DRC-MS"]
+    ICPMS &lt;|-- ICPDRCMS
+    class ICPKEDMS["ICP-KED-MS"]
+    ICPMS &lt;|-- ICPKEDMS
+    class GCMS["GC-MS"]
+    MassSpectrometry &lt;|-- GCMS
+    class GCMSMS["GC-MS/MS"]
+    GCMS &lt;|-- GCMSMS
+    class GCHRMS["GC-HRMS"]
+    GCMS &lt;|-- GCHRMS
+    class GCHRMSMS["GC-HRMS/MS"]
+    GCMS &lt;|-- GCHRMSMS
+    class GCEIMS["GC-EI-MS"]
+    GCMS &lt;|-- GCEIMS
+    class GCEIMSMS["GC-EI-MS/MS"]
+    GCMS &lt;|-- GCEIMSMS
+    class GCEIHMS["GC-EI-HRMS"]
+    GCMS &lt;|-- GCEIHMS
+    class GCEIHRMSMSt["GC-EI-HRMS/MS"]
+    GCMS &lt;|-- GCEIHRMSMSt
+    class GCNCIMS["GC-NCI-MS"]
+    GCMS &lt;|-- GCNCIMS
+    class GCNCIMSMSt["GC-NCI-MS/MS"]
+    GCMS &lt;|-- GCNCIMSMSt
+    class GCNCIHRMS["GC-NCI-HRMS"]
+    GCMS &lt;|-- GCNCIHRMS
+    class GCNCIHRMSMSt["GC-NCI-HRMS/MS"]
+    GCMS &lt;|-- GCNCIHRMSMSt
+    class GCCIMS["GC-CI-MS"]
+    GCMS &lt;|-- GCCIMS
+    class GCCIMSMSt["GC-CI-MS/MS"]
+    GCMS &lt;|-- GCCIMSMSt
+    class GCCIHRMS["GC-CI-HRMS"]
+    GCMS &lt;|-- GCCIHRMS
+    class GCCIHRMSMSt["GC-CI-HRMS/MS"]
+    GCMS &lt;|-- GCCIHRMSMSt
+    class GCAPPIMS["GC-APPI-MS"]
+    GCMS &lt;|-- GCAPPIMS
+    class GCAPPIMSMSt["GC-APPI-MS/MS"]
+    GCMS &lt;|-- GCAPPIMSMSt
+    class GCAPPIHRMS["GC-APPI-HRMS"]
+    GCMS &lt;|-- GCAPPIHRMS
+    class GCAPPIHRMSMSt["GC-APPI-HRMS/MS"]
+    GCMS &lt;|-- GCAPPIHRMSMSt
+    class GCAPCIMS["GC-APCI-MS"]
+    GCMS &lt;|-- GCAPCIMS
+    class GCAPCIMSMSt["GC-APCI-MS/MS"]
+    GCMS &lt;|-- GCAPCIMSMSt
+    class GCAPCIHRMS["GC-APCI-HRMS"]
+    GCMS &lt;|-- GCAPCIHRMS
+    class GCAPCIHRMSMSt["GC-APCI-HRMS/MS"]
+    GCMS &lt;|-- GCAPCIHRMSMSt
+    class GCxGCMS["GCxGC-MS"]
+    GCMS &lt;|-- GCxGCMS
+    class GCxGCMSMSt["GCxGC-MS/MS"]
+    GCMS &lt;|-- GCxGCMSMSt
+    class GCxGCHRMS["GCxGC-HRMS"]
+    GCMS &lt;|-- GCxGCHRMS
+    class LCMS["LC-MS"]
+    MassSpectrometry &lt;|-- LCMS
+    class LCMSMSt["LC-MS/MS"]
+    LCMS &lt;|-- LCMSMSt
+    class LCHRMS["LC-HRMS"]
+    LCMS &lt;|-- LCHRMS
+    class LCHRMSMSt["LC-HRMS/MS"]
+    LCMS &lt;|-- LCHRMSMSt
+    class HPLCMS["HPLC-MS"]
+    LCMS &lt;|-- HPLCMS
+    class HPLCMSMSt["HPLC-MS/MS"]
+    LCMS &lt;|-- HPLCMSMSt
+    class HPLCHRMS["HPLC-HRMS"]
+    LCMS &lt;|-- HPLCHRMS
+    class HPLCHRMSMSt["HPLC-HRMS/MS"]
+    LCMS &lt;|-- HPLCHRMSMSt
+    class HPLCECD["HPLC-ECD"]
+    LCMS &lt;|-- HPLCECD
+    class UPLCMS["UPLC-MS"]
+    LCMS &lt;|-- UPLCMS
+    class UPLCMSMSt["UPLC-MS/MS"]
+    LCMS &lt;|-- UPLCMSMSt
+    class UPLCHRMS["UPLC-HRMS"]
+    LCMS &lt;|-- UPLCHRMS
+    class UPLCHRMSMSt["UPLC-HRMS/MS"]
+    LCMS &lt;|-- UPLCHRMSMSt
+    class ICMS["IC-MS"]
+    MassSpectrometry &lt;|-- ICMS
+    class ICMSMSt["IC-MS/MS"]
+    ICMS &lt;|-- ICMSMSt
+    class ICHRMS["IC-HRMS"]
+    ICMS &lt;|-- ICHRMS
+    class ICHRMSMSt["IC-HRMS/MS"]
+    ICMS &lt;|-- ICHRMSMSt
+    class ICESIMS["IC-ESI-MS"]
+    ICMS &lt;|-- ICESIMS
+    class ICESIMSMSt["IC-ESI-MS/MS"]
+    ICMS &lt;|-- ICESIMSMSt
+    class ICESIHRMS["IC-ESI-HRMS"]
+    ICMS &lt;|-- ICESIHRMS
+    class ICESIHRMSMSt["IC-ESI-HRMS/MS"]
+    ICMS &lt;|-- ICESIHRMSMSt
+    class SFCMS["SFC-MS"]
+    MassSpectrometry &lt;|-- SFCMS
+    class SFCMSMSt["SFC-MS/MS"]
+    SFCMS &lt;|-- SFCMSMSt
+    class SFCHRMS["SFC-HRMS"]
+    SFCMS &lt;|-- SFCHRMS
+    class SFCHRMSMSt["SFC-HRMS/MS"]
+    SFCMS &lt;|-- SFCHRMSMSt
+    class LC["Liquid Chromatography"]
+    Chromatography &lt;|-- LC
+    class LCDAD["LC-DAD"]
+    LC &lt;|-- LCDAD
+    class LCFLD["LC-FLD"]
+    LC &lt;|-- LCFLD
+    class LCUV["LC-UV"]
+    LC &lt;|-- LCUV
+    class LCVIS["LC-VIS"]
+    LC &lt;|-- LCVIS
+    class HPLC["High Performance Liquid Chromatography"]
+    LC &lt;|-- HPLC
+    class HPLCDAD["HPLC-DAD"]
+    HPLC &lt;|-- HPLCDAD
+    class HPLCFLD["HPLC-FLD"]
+    HPLC &lt;|-- HPLCFLD
+    class HPLCUV["HPLC-UV"]
+    HPLC &lt;|-- HPLCUV
+    class HPLCVIS["HPLC-VIS"]
+    HPLC &lt;|-- HPLCVIS
+    class UPLC["Ultra Performance Liquid Chromatography"]
+    LC &lt;|-- UPLC
+    class UPLCDAD["UPLC-DAD"]
+    UPLC &lt;|-- UPLCDAD
+    class UPLCFLD["UPLC-FLD"]
+    UPLC &lt;|-- UPLCFLD
+    class UPLCUV["UPLC-UV"]
+    UPLC &lt;|-- UPLCUV
+    class UPLCVIS["UPLC-VIS"]
+    UPLC &lt;|-- UPLCVIS
+    class GC["Gas Chromatography"]
+    Chromatography &lt;|-- GC
+    class GCECD["GC-ECD"]
+    GC &lt;|-- GCECD
+    class GCFID["GC-FID"]
+    GC &lt;|-- GCFID
+    class GCPID["GC-PID"]
+    GC &lt;|-- GCPID
+    class GCFPD["GC-FPD"]
+    GC &lt;|-- GCFPD
+    class GCNPD["GC-NPD"]
+    GC &lt;|-- GCNPD
+    class IC["Ion Chromatography"]
+    Chromatography &lt;|-- IC
+    class ICUV["IC-UV"]
+    IC &lt;|-- ICUV
+    class ICDAD["IC-DAD"]
+    IC &lt;|-- ICDAD
+    class ICFLD["IC-FLD"]
+    IC &lt;|-- ICFLD
+    class MixICP["Mix-ICP"]
+    MixedMethods &lt;|-- MixICP
+    class LCICPMS["LC-ICP-MS"]
+    MixICP &lt;|-- LCICPMS
+    class LCICPMSMSt["LC-ICP-MS/MS"]
+    MixICP &lt;|-- LCICPMSMSt
+    class GCICPMS["GC-ICP-MS"]
+    MixICP &lt;|-- GCICPMS
+    class ICICPMS["IC-ICP-MS"]
+    MixICP &lt;|-- ICICPMS
+    class MixOthers["Mix-Others"]
+    MixedMethods &lt;|-- MixOthers
+    class LCIR["LC-IR"]
+    MixOthers &lt;|-- LCIR
+    class LCNMR["LC-NMR"]
+    MixOthers &lt;|-- LCNMR
+    class Spectrophotometry["Spectrophotometric methods"]
+    Other &lt;|-- Spectrophotometry
+    class Colorimetry["Colorimetric methods"]
+    Spectrophotometry &lt;|-- Colorimetry
+    class Electrophoresis["Electrophoretic methods"]
+    Other &lt;|-- Electrophoresis
+    class CZE["Capillary Zone Electrophoresis"]
+    Electrophoresis &lt;|-- CZE
 </code></pre>
 
 
