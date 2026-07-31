@@ -228,11 +228,14 @@ jobs:
           mkdocs gh-deploy --force
           echo "✅ GitHub Pages deployed"
 
-      # ── Step 14: Commit generated TTL files back to repository ─────────────
+# ── Step 14: Commit generated TTL files back to repository ─────────────
       - name: Commit generated SKOS files
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+
+          # Pull latest changes first to avoid non-fast-forward conflicts
+          git pull --rebase origin main
 
           # Add generated TTL files
           git add output/*.ttl 2>/dev/null || true
@@ -242,6 +245,5 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Auto-generate SKOS from vocabulary YAML [skip ci]"
-            git push
-            echo "✅ Generated files committed to repository"
-          fi
+            git push origin main
+            echo "✅ Generated files committed to
