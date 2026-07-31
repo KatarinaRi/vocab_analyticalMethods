@@ -199,27 +199,16 @@ jobs:
           done
           echo "✅ ER diagram generated"
 
-      # ── Step 12: Add diagram link to index.md ─────────────────────────────
+# ── Step 12: Add diagram link to index.md ─────────────────────────────
       - name: Add diagram link to index.md
         run: |
           if [ -f docs/index.md ]; then
-            # Add Schema Overview section if not already present
             if ! grep -q "Schema Overview" docs/index.md; then
-              python3 -c "
-          with open('docs/index.md', 'r') as f:
-              content = f.read()
-          overview = '\n## Schema Overview\n\n- [ER diagram — concept relationships](schema_diagram.md)\n\n'
-          # Insert before ## Enumerations or ## Classes
-          import re
-          content = re.sub(r'\n(## (?:Enumerations|Classes))', overview + r'\n\1', content, count=1)
-          with open('docs/index.md', 'w') as f:
-              f.write(content)
-          print('Added schema overview link to index.md')
-              "
+              python3 scripts/add_diagram_link.py
             fi
           fi
 
-      # ── Step 13: Deploy to GitHub Pages ───────────────────────────────────
+# ── Step 13: Deploy to GitHub Pages ───────────────────────────────────
       - name: Deploy to GitHub Pages
         run: |
           echo "Deploying to GitHub Pages..."
