@@ -1,4 +1,4 @@
-@prefix cenvo: <https://w3id.org/chemical-exposome/term/> .
+@prefix cenvo: <https://w3id.org/chemical-exposome/terms/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -873,7 +873,7 @@ cenvo:WDXRF a skos:Concept ;
 <https://w3id.org/chemical-exposome/vocabulary/analytical-methods> a owl:Ontology ;
     dcterms:created "2026-07-30T00:00:00+00:00"^^xsd:dateTime ;
     dcterms:creator <https://orcid.org/0000-0003-0222-801x> ;
-    dcterms:description "Controlled vocabulary of analytical methods used for chemical analysis in environmental monitoring samples. Covers spectroscopy, mass spectrometry, chromatography, mixed methods and other analytical techniques. Developed within the PARC (Partnership for the Assessment of Risks from Chemicals) project, Environmental cluster (T7.2), aligned with PARC deliverable D9.4-1."@en ;
+    dcterms:description "Controlled vocabulary of analytical methods used for chemical analysis in environmental monitoring samples. Covers spectroscopy, mass spectrometry, chromatography, mixed methods and other analytical techniques. Developed within the PARC (Partnership for the Assessment of Risks from Chemicals) project, aligned with PARC deliverable D9.4-1."@en ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:modified "2026-07-30T00:00:00+00:00"^^xsd:dateTime ;
     dcterms:title "Analytical Methods Vocabulary"@en ;
