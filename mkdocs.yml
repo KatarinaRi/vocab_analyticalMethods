@@ -1,6 +1,6 @@
-site_name: My Controlled Vocabulary
-site_url: https://your-username.github.io/your-repo-name/
-site_description: Human-readable documentation for the controlled vocabulary
+site_name: Analytical Methods Vocabulary
+site_url: https://katarinari.github.io/vocab_analyticalMethods/
+site_description: Controlled vocabulary of analytical methods for chemical analysis in environmental monitoring samples
 
 theme:
   name: material
@@ -15,6 +15,7 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - nl2br
+  - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
