@@ -79,14 +79,14 @@ def get_pref_label(pv_name, pv):
 
 
 def render_tree_text(node, children, pvs, depth=0):
-    """Render concept hierarchy as indented Markdown link tree."""
+    """Render concept hierarchy as indented clickable Markdown link tree."""
     lines = []
-    indent = "    " * depth
-    prefix = "└── " if depth > 0 else ""
+    indent = "&nbsp;&nbsp;&nbsp;&nbsp;" * depth
+    prefix = "└── " if depth > 0 else "📌 "
     pv = pvs.get(node)
     label = get_pref_label(node, pv) if pv else node
     fn = safe_filename(node)
-    lines.append(f"{indent}{prefix}[{label}]({fn}.md) `{node}`")
+    lines.append(f"{indent}{prefix}[**{label}**]({fn}.md) `{node}`  ")
     for child in sorted(children.get(node, [])):
         lines.extend(render_tree_text(child, children, pvs, depth + 1))
     return lines
@@ -266,18 +266,18 @@ def generate_hierarchy(sv, output_dir, verbose=False):
             lines.append(f"**{len(descendants)} narrower concepts**")
             lines.append("")
 
-            # Mermaid diagram for this branch only
+            # Mermaid graph LR diagram for this branch — left to right tree layout
             lines.append("```mermaid")
-            lines.append("classDiagram")
+            lines.append("graph LR")
             lines.append(f'    %% Branch: {root_label}')
 
             added = set()
-            relationships = []
 
             # Add root node
             safe_root = safe_filename(root)
-            lines.append(f'    class {safe_root}["{root_label}"]')
-            lines.append(f'    click {safe_root} href "../{safe_root}/"')
+            root_label_escaped = root_label.replace('"', "'")
+            lines.append(f'    {safe_root}["{root_label_escaped}"]')
+            lines.append(f'    click {safe_root} "../{safe_root}/" _self')
             added.add(safe_root)
 
             # Add all descendants
@@ -290,25 +290,22 @@ def generate_hierarchy(sv, output_dir, verbose=False):
                 safe_node = safe_filename(node)
 
                 if safe_node not in added:
-                    lines.append(f'    class {safe_node}["{label}"]')
-                    lines.append(f'    click {safe_node} href "../{safe_node}/"')
+                    lines.append(f'    {safe_node}["{label}"]')
+                    lines.append(f'    click {safe_node} "../{safe_node}/" _self')
                     added.add(safe_node)
 
                 if pv.is_a and pv.is_a in all_nodes:
                     safe_parent = safe_filename(pv.is_a)
-                    relationships.append(f"    {safe_parent} <|-- {safe_node}")
+                    lines.append(f"    {safe_parent} --> {safe_node}")
 
-            lines.extend(relationships)
             lines.append("```")
             lines.append("")
 
-            # Also show as text tree for readability
+            # Clickable text tree in collapsible section
             lines.append("<details>")
-            lines.append(f"<summary>Show as text tree</summary>")
+            lines.append("<summary>Show as clickable text tree</summary>")
             lines.append("")
-            lines.append("```")
             lines.extend(render_tree_text(root, children, pvs))
-            lines.append("```")
             lines.append("")
             lines.append("</details>")
             lines.append("")
