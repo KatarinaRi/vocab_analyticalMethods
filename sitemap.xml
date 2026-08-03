@@ -5,87 +5,523 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
+         <loc>https://your-username.github.io/your-repo-name/AAS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/AES/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/AFS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/AdvancedMercuryAnalyzer/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
          <loc>https://your-username.github.io/your-repo-name/AnalyticalMethod/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Boolean/</loc>
+         <loc>https://your-username.github.io/your-repo-name/C13NMR/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Curie/</loc>
+         <loc>https://your-username.github.io/your-repo-name/CVAAS/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Date/</loc>
+         <loc>https://your-username.github.io/your-repo-name/CVAFS/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/DateOrDatetime/</loc>
+         <loc>https://your-username.github.io/your-repo-name/CZE/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Datetime/</loc>
+         <loc>https://your-username.github.io/your-repo-name/Chromatography/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Decimal/</loc>
+         <loc>https://your-username.github.io/your-repo-name/Colorimetry/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Double/</loc>
+         <loc>https://your-username.github.io/your-repo-name/DADUVVis/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Float/</loc>
+         <loc>https://your-username.github.io/your-repo-name/DirectAAS/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Integer/</loc>
+         <loc>https://your-username.github.io/your-repo-name/DirectAES/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Jsonpath/</loc>
+         <loc>https://your-username.github.io/your-repo-name/DirectAFS/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Jsonpointer/</loc>
+         <loc>https://your-username.github.io/your-repo-name/DirectMercuryAnalyzer/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Ncname/</loc>
+         <loc>https://your-username.github.io/your-repo-name/EDXRF/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Nodeidentifier/</loc>
+         <loc>https://your-username.github.io/your-repo-name/Electrophoresis/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Objectidentifier/</loc>
+         <loc>https://your-username.github.io/your-repo-name/FIAFS/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Sparqlpath/</loc>
+         <loc>https://your-username.github.io/your-repo-name/FlameAAS/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/String/</loc>
+         <loc>https://your-username.github.io/your-repo-name/FlameAES/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Time/</loc>
+         <loc>https://your-username.github.io/your-repo-name/GC/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Uri/</loc>
+         <loc>https://your-username.github.io/your-repo-name/GCAPCIHRMS/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/Uriorcurie/</loc>
+         <loc>https://your-username.github.io/your-repo-name/GCAPCIHRMSMSt/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://your-username.github.io/your-repo-name/analytical-methods-vocabulary/</loc>
+         <loc>https://your-username.github.io/your-repo-name/GCAPCIMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCAPCIMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCAPPIHRMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCAPPIHRMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCAPPIMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCAPPIMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCCIHRMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCCIHRMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCCIMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCCIMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCECD/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCEIHMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCEIHRMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCEIMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCEIMSMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCFID/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCFPD/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCHRMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCHRMSMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCICPMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCMSMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCNCIHRMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCNCIHRMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCNCIMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCNCIMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCNPD/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCPID/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCxGCHRMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCxGCMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GCxGCMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GDAES/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/GFAAS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/H1NMR/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/HGAFS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/HPLC/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/HPLCDAD/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/HPLCECD/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/HPLCFLD/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/HPLCHRMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/HPLCHRMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/HPLCMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/HPLCMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/HPLCUV/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/HPLCVIS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/IC/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICDAD/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICESIHRMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICESIHRMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICESIMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICESIMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICFLD/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICHRMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICHRMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICICPMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICP/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICPAES/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICPDRCMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICPKEDMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICPMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICPMSMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICPOES/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/ICUV/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/LC/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/LCDAD/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/LCFLD/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/LCHRMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/LCHRMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/LCICPMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/LCICPMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/LCIR/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/LCMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/LCMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/LCNMR/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/LCUV/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/LCVIS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/MassSpectrometry/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/MixICP/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/MixOthers/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/MixedMethods/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/NMR/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/Other/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/PlasmaAES/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/SFCHRMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/SFCHRMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/SFCMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/SFCMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/SingleWavelengthUVVis/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/Spectrophotometry/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/Spectroscopy/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/TDAAS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/TXRF/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/UPLC/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/UPLCDAD/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/UPLCFLD/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/UPLCHRMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/UPLCHRMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/UPLCMS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/UPLCMSMSt/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/UPLCUV/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/UPLCVIS/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/UVVis/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/WDXRF/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-username.github.io/your-repo-name/XRF/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
