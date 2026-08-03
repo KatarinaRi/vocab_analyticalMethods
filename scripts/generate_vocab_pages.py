@@ -6,7 +6,7 @@ Generates complete SKOS-oriented documentation for a LinkML vocabulary.
 
 Generated pages:
   - docs/index.md              — vocabulary homepage with metadata
-  - docs/browse.md             — tabbed view: Alphabetical | Hierarchy
+  - docs/hierarchy.md          — collapsible HTML concept tree
   - docs/{ConceptName}.md      — one page per concept with full SKOS properties
 
 Usage:
@@ -76,122 +76,49 @@ def get_all_descendants(node, children):
     return result
 
 
-# ── HTML tree renderer ────────────────────────────────────────────────────────
+# ── Collapsible HTML tree renderer ────────────────────────────────────────────
 
-def render_html_tree(node, children, pvs, depth=0):
-    """Render concept hierarchy as nested HTML list with clickable links."""
+def render_collapsible_tree(node, children, pvs, depth=0):
+    """
+    Render concept hierarchy as nested collapsible HTML using details/summary.
+    Top-level concepts are expanded by default.
+    Children are collapsed and expand on click.
+    Links use MkDocs-compatible paths (no .md extension).
+    """
     pv = pvs.get(node)
     label = get_pref_label(node, pv)
     fn = safe_filename(node)
     definition = clean_description(pv.description) if pv else ""
-    short_def = (definition[:80] + "...") if len(definition) > 80 else definition
-
-    lines = []
-    lines.append('<li>')
-    lines.append(f'  <a href="{fn}.md"><strong>{label}</strong></a>')
-    lines.append(f'  <small><code>{node}</code></small>')
-    if short_def:
-        lines.append(f'  <br/><small style="color:#666">{short_def}</small>')
+    short_def = (definition[:100] + "...") if len(definition) > 100 else definition
 
     node_children = sorted(children.get(node, []))
-    if node_children:
+    has_children = bool(node_children)
+
+    lines = []
+
+    if has_children:
+        # Use details/summary for collapsible behaviour
+        open_attr = " open" if depth == 0 else ""
+        lines.append(f'<details{open_attr}>')
+        lines.append(f'<summary>')
+        lines.append(f'  <a href="../{fn}/"><strong>{label}</strong></a>')
+        lines.append(f'  <small><code>{node}</code></small>')
+        if short_def:
+            lines.append(f'  <br/><small style="color:#666;font-weight:normal">{short_def}</small>')
+        lines.append(f'</summary>')
         lines.append('<ul>')
         for child in node_children:
-            lines.extend(render_html_tree(child, children, pvs, depth + 1))
+            lines.append('<li>')
+            lines.extend(render_collapsible_tree(child, children, pvs, depth + 1))
+            lines.append('</li>')
         lines.append('</ul>')
-    lines.append('</li>')
-    return lines
-
-
-# ── Generate alphabetical content (reusable) ──────────────────────────────────
-
-def generate_alphabetical_content(enums, indent=""):
-    """Generate alphabetical listing as Markdown lines."""
-    lines = []
-    all_concepts = []
-    for enum_name, enum in enums.items():
-        for pv_name, pv in enum.permissible_values.items():
-            all_concepts.append((pv_name, pv, enum_name, enum))
-
-    all_concepts.sort(key=lambda x: get_pref_label(x[0], x[1]).lower())
-
-    letters = sorted(set(get_pref_label(c[0], c[1])[0].upper()
-                         for c in all_concepts if get_pref_label(c[0], c[1])))
-    lines.append(indent + "**Jump to:** " +
-                 " · ".join(f"[{l}](#{l.lower()})" for l in letters))
-    lines.append("")
-    lines.append(indent + f"**Total: {len(all_concepts)} concepts**")
-    lines.append("")
-
-    current_letter = None
-    for pv_name, pv, enum_name, enum in all_concepts:
-        pref_label = get_pref_label(pv_name, pv)
-        first_letter = pref_label[0].upper()
-
-        if first_letter != current_letter:
-            current_letter = first_letter
-            lines.append(indent + f"### {current_letter}")
-            lines.append("")
-
-        fn = safe_filename(pv_name)
-        definition = clean_description(pv.description)
-        if len(definition) > 120:
-            definition = definition[:117] + "..."
-
-        alt_labels = [str(a) for a in (pv.aliases or [])[1:3]]
-        alt_str = f" *(also: {', '.join(alt_labels)})*" if alt_labels else ""
-
-        broader_str = ""
-        if pv.is_a:
-            broader_pv = enum.permissible_values.get(pv.is_a)
-            broader_label = get_pref_label(pv.is_a, broader_pv) if broader_pv else pv.is_a
-            broader_fn = safe_filename(pv.is_a)
-            broader_str = f"*Broader: [{broader_label}]({broader_fn}.md)*  \n"
-
-        lines.append(indent + f"**[{pref_label}]({fn}.md)**{alt_str} `{pv_name}`")
-        lines.append("")
-        if broader_str:
-            lines.append(indent + broader_str.strip())
-            lines.append("")
-        if definition:
-            lines.append(indent + definition)
-            lines.append("")
-
-    return lines
-
-
-# ── Generate hierarchy content (reusable) ─────────────────────────────────────
-
-def generate_hierarchy_content(enums, indent=""):
-    """Generate hierarchy HTML trees as Markdown lines."""
-    lines = []
-    for enum_name, enum in enums.items():
-        if len(enums) > 1:
-            lines.append(indent + f"### {enum_name}")
-            lines.append("")
-
-        roots, children = build_tree(enum)
-        pvs = enum.permissible_values
-
-        for root in roots:
-            root_pv = pvs.get(root)
-            root_label = get_pref_label(root, root_pv) if root_pv else root
-            root_desc = clean_description(root_pv.description) if root_pv else ""
-            descendants = get_all_descendants(root, children)
-
-            lines.append(indent + f"#### {root_label}")
-            lines.append("")
-            if root_desc:
-                short = root_desc[:120] + "..." if len(root_desc) > 120 else root_desc
-                lines.append(indent + f"*{short}*")
-                lines.append("")
-            lines.append(indent + f"**{len(descendants)} narrower concepts**")
-            lines.append("")
-
-            lines.append('<ul class="vocab-tree">')
-            lines.extend(render_html_tree(root, children, pvs, depth=0))
-            lines.append('</ul>')
-            lines.append("")
+        lines.append('</details>')
+    else:
+        # Leaf concept — no collapsible needed
+        lines.append(f'<a href="../{fn}/"><strong>{label}</strong></a>')
+        lines.append(f'<small><code>{node}</code></small>')
+        if short_def:
+            lines.append(f'<br/><small style="color:#666">{short_def}</small>')
 
     return lines
 
@@ -221,6 +148,8 @@ def generate_index(sv, yaml_path, output_dir, verbose=False):
         if r: repo_url = str(r.value).rstrip('/')
 
     stem = Path(yaml_path).stem
+    enums = sv.all_enums()
+    total_concepts = sum(len(e.permissible_values) for e in enums.values())
 
     lines = []
     lines.append(f"# {title}")
@@ -232,6 +161,19 @@ def generate_index(sv, yaml_path, output_dir, verbose=False):
         lines.append(description)
         lines.append("")
 
+    # Browse section — BEFORE downloads
+    lines.append("## Browse the Vocabulary")
+    lines.append("")
+    lines.append(f"This vocabulary contains **{total_concepts} concepts**.")
+    lines.append("")
+    lines.append("All concepts are listed **alphabetically in the left sidebar**.")
+    lines.append("")
+    lines.append("To explore the **concept hierarchy** (broader/narrower relationships):")
+    lines.append("")
+    lines.append("[📊 View Concept Hierarchy](hierarchy.md){ .md-button .md-button--primary }")
+    lines.append("")
+
+    # Vocabulary metadata
     lines.append("## Vocabulary Information")
     lines.append("")
     lines.append("| | |")
@@ -258,6 +200,7 @@ def generate_index(sv, yaml_path, output_dir, verbose=False):
             lines.append(f"- [{link_str}]({link_str})")
         lines.append("")
 
+    # Downloads
     lines.append("## Downloads")
     lines.append("")
     lines.append("| Format | Description | Link |")
@@ -268,16 +211,6 @@ def generate_index(sv, yaml_path, output_dir, verbose=False):
     else:
         lines.append(f"| Turtle (SKOS) | Machine-readable SKOS vocabulary | `output/{stem}.ttl` |")
         lines.append(f"| YAML (LinkML) | Source vocabulary definition | `vocabulary/{stem}.yaml` |")
-    lines.append("")
-
-    enums = sv.all_enums()
-    total_concepts = sum(len(e.permissible_values) for e in enums.values())
-
-    lines.append("## Browse the Vocabulary")
-    lines.append("")
-    lines.append(f"This vocabulary contains **{total_concepts} concepts**.")
-    lines.append("")
-    lines.append("[📖 Browse — Alphabetical & Hierarchy](browse.md)")
     lines.append("")
 
     lines.append("---")
@@ -291,39 +224,47 @@ def generate_index(sv, yaml_path, output_dir, verbose=False):
     return output_path
 
 
-# ── Generate browse.md (tabbed: Alphabetical | Hierarchy) ─────────────────────
+# ── Generate hierarchy.md ─────────────────────────────────────────────────────
 
-def generate_browse(sv, output_dir, verbose=False):
-    """Generate combined browse page with two tabs."""
+def generate_hierarchy(sv, output_dir, verbose=False):
+    """
+    Generate hierarchy page with collapsible HTML trees.
+    Top-level concepts expanded, children collapsed.
+    """
     schema = sv.schema
     title = schema.title or schema.name or "Vocabulary"
     enums = sv.all_enums()
 
     lines = []
-    lines.append(f"# {title} — Browse")
+    lines.append(f"# {title} — Concept Hierarchy")
+    lines.append("")
+    lines.append("Click the **▶ arrow** to expand a concept and see its narrower terms. "
+                 "Click a **concept name** to view its full detail page.")
     lines.append("")
     lines.append("[← Back to index](index.md)")
     lines.append("")
 
-    # Tab 1: Alphabetical
-    lines.append('=== "🔤 Alphabetical"')
-    lines.append("")
-    alpha_lines = generate_alphabetical_content(enums, indent="    ")
-    for l in alpha_lines:
-        lines.append("    " + l if l.strip() and not l.startswith('<') else l)
-    lines.append("")
+    for enum_name, enum in enums.items():
+        if len(enums) > 1:
+            lines.append(f"## {enum_name}")
+            lines.append("")
 
-    # Tab 2: Hierarchy
-    lines.append('=== "📊 Hierarchy"')
-    lines.append("")
-    lines.append("    Click any concept name to view its full detail page.")
-    lines.append("")
-    hier_lines = generate_hierarchy_content(enums, indent="    ")
-    for l in hier_lines:
-        lines.append("    " + l if l.strip() and not l.startswith('<') else l)
-    lines.append("")
+        roots, children = build_tree(enum)
+        pvs = enum.permissible_values
 
-    output_path = Path(output_dir) / "browse.md"
+        lines.append('<ul class="vocab-tree" style="list-style:none;padding-left:0">')
+        for root in roots:
+            lines.append('<li style="margin-bottom:0.5em">')
+            lines.extend(render_collapsible_tree(root, children, pvs, depth=0))
+            lines.append('</li>')
+        lines.append('</ul>')
+        lines.append("")
+
+    lines.append("---")
+    lines.append("")
+    lines.append("[← Back to index](index.md)")
+
+    output_path = Path(output_dir) / "hierarchy.md"
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines) + '\n')
     if verbose:
@@ -379,11 +320,10 @@ def generate_concept_page(pv_name, pv, enum, enum_name, sv, output_dir):
     lines.append(f"| **Preferred label** | {pref_label} |")
     if alt_labels:
         lines.append(f"| **Alternative labels** | {' · '.join(alt_labels)} |")
+    lines.append(f"| **Concept URI** | [{concept_uri}]({concept_uri}) |")
     if uri_source == "adopted":
-        lines.append(f"| **Concept URI** | [{concept_uri}]({concept_uri}) |")
         lines.append(f"| **URI type** | Adopted from external vocabulary |")
     else:
-        lines.append(f"| **Concept URI** | [{concept_uri}]({concept_uri}) |")
         lines.append(f"| **URI type** | Minted in this vocabulary |")
     lines.append(f"| **Part of** | [{enum_name}](index.md) |")
     lines.append("")
@@ -407,7 +347,7 @@ def generate_concept_page(pv_name, pv, enum, enum_name, sv, output_dir):
         broader_pv = enum.permissible_values.get(broader)
         broader_label = get_pref_label(broader, broader_pv) if broader_pv else broader
         broader_fn = safe_filename(broader)
-        lines.append(f"**Broader concept:** [{broader_label}]({broader_fn}.md) `{broader}`")
+        lines.append(f"**Broader concept:** [{broader_label}](../{broader_fn}/) `{broader}`")
     else:
         lines.append("**Broader concept:** *(top concept — no broader term)*")
     lines.append("")
@@ -421,7 +361,7 @@ def generate_concept_page(pv_name, pv, enum, enum_name, sv, output_dir):
             n_def = clean_description(n_pv.description)
             if len(n_def) > 80:
                 n_def = n_def[:77] + "..."
-            lines.append(f"- [{n_label}]({n_fn}.md) `{n_name}` — {n_def}")
+            lines.append(f"- [{n_label}](../{n_fn}/) `{n_name}` — {n_def}")
         lines.append("")
     else:
         lines.append("**Narrower concepts:** *(leaf concept — no narrower terms)*")
@@ -465,7 +405,7 @@ def generate_concept_page(pv_name, pv, enum, enum_name, sv, output_dir):
 
     lines.append("---")
     lines.append("")
-    lines.append(f"[← Back to index](index.md) · [📖 Browse](browse.md)")
+    lines.append(f"[← Back to index](index.md) · [📊 Hierarchy](hierarchy.md)")
 
     fn = safe_filename(pv_name)
     output_path = Path(output_dir) / f"{fn}.md"
@@ -494,8 +434,8 @@ def generate_all(yaml_path, output_dir, verbose=False):
     if verbose: print("Generating index.md...")
     generate_index(sv, yaml_path, output_dir, verbose)
 
-    if verbose: print("Generating browse.md (tabbed)...")
-    generate_browse(sv, output_dir, verbose)
+    if verbose: print("Generating hierarchy.md...")
+    generate_hierarchy(sv, output_dir, verbose)
 
     enums = sv.all_enums()
     total = sum(len(e.permissible_values) for e in enums.values())
