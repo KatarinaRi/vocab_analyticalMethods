@@ -3,6 +3,7 @@
 # ===========================================================================
 # Controlled vocabulary of analytical methods used for chemical analysis
 # in environmental monitoring data.
+# Based on PARC WP9 deliverable D9.4-1.
 # ===========================================================================
 
 id: https://w3id.org/chemical-exposome/vocabulary/analytical-methods
@@ -13,7 +14,7 @@ description: >-
   in environmental monitoring samples. Covers spectroscopy, mass spectrometry,
   chromatography, mixed methods and other analytical techniques.
   Developed within the PARC (Partnership for the Assessment of Risks from
-  Chemicals) project, Environmental cluster (T7.2), aligned with PARC deliverable D9.4-1.
+  Chemicals) project, aligned with PARC deliverable D9.4-1.
 version: "2.1.0"
 license: https://creativecommons.org/licenses/by/4.0/
 created_by: https://orcid.org/0000-0003-0222-801x
@@ -21,7 +22,7 @@ created_on: "2026-07-30T00:00:00Z"
 last_updated_on: "2026-07-30T00:00:00Z"
 modified_by: https://orcid.org/0000-0003-0222-801x
 
-comments: # TBC
+comments:
   - >-
     CRediT contributor roles (https://credit.niso.org/contributor-roles/):
     Conceptualization: Katarína Řiháčková (https://orcid.org/0000-0003-0222-801x);
@@ -39,9 +40,13 @@ see_also:
   - https://www.parc-project.eu
 
 annotations:
-  schema_status: #When ready to publish officially, change draft to stable
+  schema_status:
     tag: schema_status
     value: draft
+
+  repo_url:
+    tag: repo_url
+    value: https://github.com/KatarinaRi/vocab_analyticalMethods
 
   funding:
     tag: funding
@@ -52,7 +57,7 @@ annotations:
 
 prefixes:
   linkml: https://w3id.org/linkml/
-  cenvo: https://w3id.org/chemical-exposome/term/
+  cenvo: https://w3id.org/chemical-exposome/terms/
   skos: http://www.w3.org/2004/02/skos/core#
 
 default_prefix: cenvo
