@@ -6,6 +6,7 @@ theme:
   name: material
   features:
     - content.code.copy
+    - content.tabs.link
     - navigation.top
 
 docs_dir: docs
@@ -16,6 +17,8 @@ markdown_extensions:
   - md_in_html
   - nl2br
   - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
