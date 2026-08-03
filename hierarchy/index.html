@@ -3900,531 +3900,530 @@
 <h3 id="analyticalmethod">AnalyticalMethod</h3>
 <p><em>Any method used for the chemical analysis of environmental samples. Top-level concept encompassing all analytical techniques.</em></p>
 <p><strong>129 narrower concepts</strong></p>
-<pre class="mermaid"><code>classDiagram
+<pre class="mermaid"><code>graph LR
     %% Branch: AnalyticalMethod
-    class AnalyticalMethod["AnalyticalMethod"]
-    click AnalyticalMethod href "../AnalyticalMethod/"
-    class Spectroscopy["Spectroscopic methods"]
-    click Spectroscopy href "../Spectroscopy/"
-    class AAS["Atomic Absorption Spectroscopy"]
-    click AAS href "../AAS/"
-    class DirectAAS["Direct AAS"]
-    click DirectAAS href "../DirectAAS/"
-    class FlameAAS["Flame AAS"]
-    click FlameAAS href "../FlameAAS/"
-    class GFAAS["Graphite Furnace AAS"]
-    click GFAAS href "../GFAAS/"
-    class CVAAS["Cold Vapour AAS"]
-    click CVAAS href "../CVAAS/"
-    class TDAAS["Thermal Decomposition AAS"]
-    click TDAAS href "../TDAAS/"
-    class AdvancedMercuryAnalyzer["AMA"]
-    click AdvancedMercuryAnalyzer href "../AdvancedMercuryAnalyzer/"
-    class DirectMercuryAnalyzer["DMA"]
-    click DirectMercuryAnalyzer href "../DirectMercuryAnalyzer/"
-    class AES["Atomic Emission Spectroscopy"]
-    click AES href "../AES/"
-    class DirectAES["Direct AES"]
-    click DirectAES href "../DirectAES/"
-    class FlameAES["Flame AES"]
-    click FlameAES href "../FlameAES/"
-    class PlasmaAES["Plasma AES"]
-    click PlasmaAES href "../PlasmaAES/"
-    class GDAES["Glow Discharge AES"]
-    click GDAES href "../GDAES/"
-    class AFS["Atomic Fluorescence Spectroscopy"]
-    click AFS href "../AFS/"
-    class DirectAFS["Direct AFS"]
-    click DirectAFS href "../DirectAFS/"
-    class HGAFS["Hydride Generation AFS"]
-    click HGAFS href "../HGAFS/"
-    class FIAFS["Flow Injection AFS"]
-    click FIAFS href "../FIAFS/"
-    class CVAFS["Cold Vapour AFS"]
-    click CVAFS href "../CVAFS/"
-    class ICP["Inductively Coupled Plasma Spectroscopy"]
-    click ICP href "../ICP/"
-    class ICPAES["ICP-AES"]
-    click ICPAES href "../ICPAES/"
-    class ICPOES["ICP-OES"]
-    click ICPOES href "../ICPOES/"
-    class XRF["X-ray Fluorescence Spectroscopy"]
-    click XRF href "../XRF/"
-    class EDXRF["Energy-Dispersive XRF"]
-    click EDXRF href "../EDXRF/"
-    class WDXRF["Wavelength-Dispersive XRF"]
-    click WDXRF href "../WDXRF/"
-    class TXRF["Total Reflection XRF"]
-    click TXRF href "../TXRF/"
-    class NMR["Nuclear Magnetic Resonance Spectroscopy"]
-    click NMR href "../NMR/"
-    class H1NMR["Proton NMR"]
-    click H1NMR href "../H1NMR/"
-    class C13NMR["Carbon-13 NMR"]
-    click C13NMR href "../C13NMR/"
-    class UVVis["UV-Visible Spectroscopy"]
-    click UVVis href "../UVVis/"
-    class SingleWavelengthUVVis["Single Wavelength UV-Vis"]
-    click SingleWavelengthUVVis href "../SingleWavelengthUVVis/"
-    class DADUVVis["DAD UV-Vis"]
-    click DADUVVis href "../DADUVVis/"
-    class MassSpectrometry["MS methods"]
-    click MassSpectrometry href "../MassSpectrometry/"
-    class ICPMS["ICP-MS"]
-    click ICPMS href "../ICPMS/"
-    class ICPMSMS["ICP-MS/MS"]
-    click ICPMSMS href "../ICPMSMS/"
-    class ICPDRCMS["ICP-DRC-MS"]
-    click ICPDRCMS href "../ICPDRCMS/"
-    class ICPKEDMS["ICP-KED-MS"]
-    click ICPKEDMS href "../ICPKEDMS/"
-    class GCMS["GC-MS"]
-    click GCMS href "../GCMS/"
-    class GCMSMS["GC-MS/MS"]
-    click GCMSMS href "../GCMSMS/"
-    class GCHRMS["GC-HRMS"]
-    click GCHRMS href "../GCHRMS/"
-    class GCHRMSMS["GC-HRMS/MS"]
-    click GCHRMSMS href "../GCHRMSMS/"
-    class GCEIMS["GC-EI-MS"]
-    click GCEIMS href "../GCEIMS/"
-    class GCEIMSMS["GC-EI-MS/MS"]
-    click GCEIMSMS href "../GCEIMSMS/"
-    class GCEIHMS["GC-EI-HRMS"]
-    click GCEIHMS href "../GCEIHMS/"
-    class GCEIHRMSMSt["GC-EI-HRMS/MS"]
-    click GCEIHRMSMSt href "../GCEIHRMSMSt/"
-    class GCNCIMS["GC-NCI-MS"]
-    click GCNCIMS href "../GCNCIMS/"
-    class GCNCIMSMSt["GC-NCI-MS/MS"]
-    click GCNCIMSMSt href "../GCNCIMSMSt/"
-    class GCNCIHRMS["GC-NCI-HRMS"]
-    click GCNCIHRMS href "../GCNCIHRMS/"
-    class GCNCIHRMSMSt["GC-NCI-HRMS/MS"]
-    click GCNCIHRMSMSt href "../GCNCIHRMSMSt/"
-    class GCCIMS["GC-CI-MS"]
-    click GCCIMS href "../GCCIMS/"
-    class GCCIMSMSt["GC-CI-MS/MS"]
-    click GCCIMSMSt href "../GCCIMSMSt/"
-    class GCCIHRMS["GC-CI-HRMS"]
-    click GCCIHRMS href "../GCCIHRMS/"
-    class GCCIHRMSMSt["GC-CI-HRMS/MS"]
-    click GCCIHRMSMSt href "../GCCIHRMSMSt/"
-    class GCAPPIMS["GC-APPI-MS"]
-    click GCAPPIMS href "../GCAPPIMS/"
-    class GCAPPIMSMSt["GC-APPI-MS/MS"]
-    click GCAPPIMSMSt href "../GCAPPIMSMSt/"
-    class GCAPPIHRMS["GC-APPI-HRMS"]
-    click GCAPPIHRMS href "../GCAPPIHRMS/"
-    class GCAPPIHRMSMSt["GC-APPI-HRMS/MS"]
-    click GCAPPIHRMSMSt href "../GCAPPIHRMSMSt/"
-    class GCAPCIMS["GC-APCI-MS"]
-    click GCAPCIMS href "../GCAPCIMS/"
-    class GCAPCIMSMSt["GC-APCI-MS/MS"]
-    click GCAPCIMSMSt href "../GCAPCIMSMSt/"
-    class GCAPCIHRMS["GC-APCI-HRMS"]
-    click GCAPCIHRMS href "../GCAPCIHRMS/"
-    class GCAPCIHRMSMSt["GC-APCI-HRMS/MS"]
-    click GCAPCIHRMSMSt href "../GCAPCIHRMSMSt/"
-    class GCxGCMS["GCxGC-MS"]
-    click GCxGCMS href "../GCxGCMS/"
-    class GCxGCMSMSt["GCxGC-MS/MS"]
-    click GCxGCMSMSt href "../GCxGCMSMSt/"
-    class GCxGCHRMS["GCxGC-HRMS"]
-    click GCxGCHRMS href "../GCxGCHRMS/"
-    class LCMS["LC-MS"]
-    click LCMS href "../LCMS/"
-    class LCMSMSt["LC-MS/MS"]
-    click LCMSMSt href "../LCMSMSt/"
-    class LCHRMS["LC-HRMS"]
-    click LCHRMS href "../LCHRMS/"
-    class LCHRMSMSt["LC-HRMS/MS"]
-    click LCHRMSMSt href "../LCHRMSMSt/"
-    class HPLCMS["HPLC-MS"]
-    click HPLCMS href "../HPLCMS/"
-    class HPLCMSMSt["HPLC-MS/MS"]
-    click HPLCMSMSt href "../HPLCMSMSt/"
-    class HPLCHRMS["HPLC-HRMS"]
-    click HPLCHRMS href "../HPLCHRMS/"
-    class HPLCHRMSMSt["HPLC-HRMS/MS"]
-    click HPLCHRMSMSt href "../HPLCHRMSMSt/"
-    class HPLCECD["HPLC-ECD"]
-    click HPLCECD href "../HPLCECD/"
-    class UPLCMS["UPLC-MS"]
-    click UPLCMS href "../UPLCMS/"
-    class UPLCMSMSt["UPLC-MS/MS"]
-    click UPLCMSMSt href "../UPLCMSMSt/"
-    class UPLCHRMS["UPLC-HRMS"]
-    click UPLCHRMS href "../UPLCHRMS/"
-    class UPLCHRMSMSt["UPLC-HRMS/MS"]
-    click UPLCHRMSMSt href "../UPLCHRMSMSt/"
-    class ICMS["IC-MS"]
-    click ICMS href "../ICMS/"
-    class ICMSMSt["IC-MS/MS"]
-    click ICMSMSt href "../ICMSMSt/"
-    class ICHRMS["IC-HRMS"]
-    click ICHRMS href "../ICHRMS/"
-    class ICHRMSMSt["IC-HRMS/MS"]
-    click ICHRMSMSt href "../ICHRMSMSt/"
-    class ICESIMS["IC-ESI-MS"]
-    click ICESIMS href "../ICESIMS/"
-    class ICESIMSMSt["IC-ESI-MS/MS"]
-    click ICESIMSMSt href "../ICESIMSMSt/"
-    class ICESIHRMS["IC-ESI-HRMS"]
-    click ICESIHRMS href "../ICESIHRMS/"
-    class ICESIHRMSMSt["IC-ESI-HRMS/MS"]
-    click ICESIHRMSMSt href "../ICESIHRMSMSt/"
-    class SFCMS["SFC-MS"]
-    click SFCMS href "../SFCMS/"
-    class SFCMSMSt["SFC-MS/MS"]
-    click SFCMSMSt href "../SFCMSMSt/"
-    class SFCHRMS["SFC-HRMS"]
-    click SFCHRMS href "../SFCHRMS/"
-    class SFCHRMSMSt["SFC-HRMS/MS"]
-    click SFCHRMSMSt href "../SFCHRMSMSt/"
-    class Chromatography["Chromatographic methods"]
-    click Chromatography href "../Chromatography/"
-    class LC["Liquid Chromatography"]
-    click LC href "../LC/"
-    class LCDAD["LC-DAD"]
-    click LCDAD href "../LCDAD/"
-    class LCFLD["LC-FLD"]
-    click LCFLD href "../LCFLD/"
-    class LCUV["LC-UV"]
-    click LCUV href "../LCUV/"
-    class LCVIS["LC-VIS"]
-    click LCVIS href "../LCVIS/"
-    class HPLC["High Performance Liquid Chromatography"]
-    click HPLC href "../HPLC/"
-    class HPLCDAD["HPLC-DAD"]
-    click HPLCDAD href "../HPLCDAD/"
-    class HPLCFLD["HPLC-FLD"]
-    click HPLCFLD href "../HPLCFLD/"
-    class HPLCUV["HPLC-UV"]
-    click HPLCUV href "../HPLCUV/"
-    class HPLCVIS["HPLC-VIS"]
-    click HPLCVIS href "../HPLCVIS/"
-    class UPLC["Ultra Performance Liquid Chromatography"]
-    click UPLC href "../UPLC/"
-    class UPLCDAD["UPLC-DAD"]
-    click UPLCDAD href "../UPLCDAD/"
-    class UPLCFLD["UPLC-FLD"]
-    click UPLCFLD href "../UPLCFLD/"
-    class UPLCUV["UPLC-UV"]
-    click UPLCUV href "../UPLCUV/"
-    class UPLCVIS["UPLC-VIS"]
-    click UPLCVIS href "../UPLCVIS/"
-    class GC["Gas Chromatography"]
-    click GC href "../GC/"
-    class GCECD["GC-ECD"]
-    click GCECD href "../GCECD/"
-    class GCFID["GC-FID"]
-    click GCFID href "../GCFID/"
-    class GCPID["GC-PID"]
-    click GCPID href "../GCPID/"
-    class GCFPD["GC-FPD"]
-    click GCFPD href "../GCFPD/"
-    class GCNPD["GC-NPD"]
-    click GCNPD href "../GCNPD/"
-    class IC["Ion Chromatography"]
-    click IC href "../IC/"
-    class ICUV["IC-UV"]
-    click ICUV href "../ICUV/"
-    class ICDAD["IC-DAD"]
-    click ICDAD href "../ICDAD/"
-    class ICFLD["IC-FLD"]
-    click ICFLD href "../ICFLD/"
-    class MixedMethods["Hyphenated methods"]
-    click MixedMethods href "../MixedMethods/"
-    class MixICP["Mix-ICP"]
-    click MixICP href "../MixICP/"
-    class LCICPMS["LC-ICP-MS"]
-    click LCICPMS href "../LCICPMS/"
-    class LCICPMSMSt["LC-ICP-MS/MS"]
-    click LCICPMSMSt href "../LCICPMSMSt/"
-    class GCICPMS["GC-ICP-MS"]
-    click GCICPMS href "../GCICPMS/"
-    class ICICPMS["IC-ICP-MS"]
-    click ICICPMS href "../ICICPMS/"
-    class MixOthers["Mix-Others"]
-    click MixOthers href "../MixOthers/"
-    class LCIR["LC-IR"]
-    click LCIR href "../LCIR/"
-    class LCNMR["LC-NMR"]
-    click LCNMR href "../LCNMR/"
-    class Other["Other"]
-    click Other href "../Other/"
-    class Spectrophotometry["Spectrophotometric methods"]
-    click Spectrophotometry href "../Spectrophotometry/"
-    class Colorimetry["Colorimetric methods"]
-    click Colorimetry href "../Colorimetry/"
-    class Electrophoresis["Electrophoretic methods"]
-    click Electrophoresis href "../Electrophoresis/"
-    class CZE["Capillary Zone Electrophoresis"]
-    click CZE href "../CZE/"
-    AnalyticalMethod &lt;|-- Spectroscopy
-    Spectroscopy &lt;|-- AAS
-    AAS &lt;|-- DirectAAS
-    AAS &lt;|-- FlameAAS
-    AAS &lt;|-- GFAAS
-    AAS &lt;|-- CVAAS
-    AAS &lt;|-- TDAAS
-    AAS &lt;|-- AdvancedMercuryAnalyzer
-    AAS &lt;|-- DirectMercuryAnalyzer
-    Spectroscopy &lt;|-- AES
-    AES &lt;|-- DirectAES
-    AES &lt;|-- FlameAES
-    AES &lt;|-- PlasmaAES
-    AES &lt;|-- GDAES
-    Spectroscopy &lt;|-- AFS
-    AFS &lt;|-- DirectAFS
-    AFS &lt;|-- HGAFS
-    AFS &lt;|-- FIAFS
-    AFS &lt;|-- CVAFS
-    Spectroscopy &lt;|-- ICP
-    ICP &lt;|-- ICPAES
-    ICP &lt;|-- ICPOES
-    Spectroscopy &lt;|-- XRF
-    XRF &lt;|-- EDXRF
-    XRF &lt;|-- WDXRF
-    XRF &lt;|-- TXRF
-    Spectroscopy &lt;|-- NMR
-    NMR &lt;|-- H1NMR
-    NMR &lt;|-- C13NMR
-    Spectroscopy &lt;|-- UVVis
-    UVVis &lt;|-- SingleWavelengthUVVis
-    UVVis &lt;|-- DADUVVis
-    AnalyticalMethod &lt;|-- MassSpectrometry
-    MassSpectrometry &lt;|-- ICPMS
-    ICPMS &lt;|-- ICPMSMS
-    ICPMS &lt;|-- ICPDRCMS
-    ICPMS &lt;|-- ICPKEDMS
-    MassSpectrometry &lt;|-- GCMS
-    GCMS &lt;|-- GCMSMS
-    GCMS &lt;|-- GCHRMS
-    GCMS &lt;|-- GCHRMSMS
-    GCMS &lt;|-- GCEIMS
-    GCMS &lt;|-- GCEIMSMS
-    GCMS &lt;|-- GCEIHMS
-    GCMS &lt;|-- GCEIHRMSMSt
-    GCMS &lt;|-- GCNCIMS
-    GCMS &lt;|-- GCNCIMSMSt
-    GCMS &lt;|-- GCNCIHRMS
-    GCMS &lt;|-- GCNCIHRMSMSt
-    GCMS &lt;|-- GCCIMS
-    GCMS &lt;|-- GCCIMSMSt
-    GCMS &lt;|-- GCCIHRMS
-    GCMS &lt;|-- GCCIHRMSMSt
-    GCMS &lt;|-- GCAPPIMS
-    GCMS &lt;|-- GCAPPIMSMSt
-    GCMS &lt;|-- GCAPPIHRMS
-    GCMS &lt;|-- GCAPPIHRMSMSt
-    GCMS &lt;|-- GCAPCIMS
-    GCMS &lt;|-- GCAPCIMSMSt
-    GCMS &lt;|-- GCAPCIHRMS
-    GCMS &lt;|-- GCAPCIHRMSMSt
-    GCMS &lt;|-- GCxGCMS
-    GCMS &lt;|-- GCxGCMSMSt
-    GCMS &lt;|-- GCxGCHRMS
-    MassSpectrometry &lt;|-- LCMS
-    LCMS &lt;|-- LCMSMSt
-    LCMS &lt;|-- LCHRMS
-    LCMS &lt;|-- LCHRMSMSt
-    LCMS &lt;|-- HPLCMS
-    LCMS &lt;|-- HPLCMSMSt
-    LCMS &lt;|-- HPLCHRMS
-    LCMS &lt;|-- HPLCHRMSMSt
-    LCMS &lt;|-- HPLCECD
-    LCMS &lt;|-- UPLCMS
-    LCMS &lt;|-- UPLCMSMSt
-    LCMS &lt;|-- UPLCHRMS
-    LCMS &lt;|-- UPLCHRMSMSt
-    MassSpectrometry &lt;|-- ICMS
-    ICMS &lt;|-- ICMSMSt
-    ICMS &lt;|-- ICHRMS
-    ICMS &lt;|-- ICHRMSMSt
-    ICMS &lt;|-- ICESIMS
-    ICMS &lt;|-- ICESIMSMSt
-    ICMS &lt;|-- ICESIHRMS
-    ICMS &lt;|-- ICESIHRMSMSt
-    MassSpectrometry &lt;|-- SFCMS
-    SFCMS &lt;|-- SFCMSMSt
-    SFCMS &lt;|-- SFCHRMS
-    SFCMS &lt;|-- SFCHRMSMSt
-    AnalyticalMethod &lt;|-- Chromatography
-    Chromatography &lt;|-- LC
-    LC &lt;|-- LCDAD
-    LC &lt;|-- LCFLD
-    LC &lt;|-- LCUV
-    LC &lt;|-- LCVIS
-    LC &lt;|-- HPLC
-    HPLC &lt;|-- HPLCDAD
-    HPLC &lt;|-- HPLCFLD
-    HPLC &lt;|-- HPLCUV
-    HPLC &lt;|-- HPLCVIS
-    LC &lt;|-- UPLC
-    UPLC &lt;|-- UPLCDAD
-    UPLC &lt;|-- UPLCFLD
-    UPLC &lt;|-- UPLCUV
-    UPLC &lt;|-- UPLCVIS
-    Chromatography &lt;|-- GC
-    GC &lt;|-- GCECD
-    GC &lt;|-- GCFID
-    GC &lt;|-- GCPID
-    GC &lt;|-- GCFPD
-    GC &lt;|-- GCNPD
-    Chromatography &lt;|-- IC
-    IC &lt;|-- ICUV
-    IC &lt;|-- ICDAD
-    IC &lt;|-- ICFLD
-    AnalyticalMethod &lt;|-- MixedMethods
-    MixedMethods &lt;|-- MixICP
-    MixICP &lt;|-- LCICPMS
-    MixICP &lt;|-- LCICPMSMSt
-    MixICP &lt;|-- GCICPMS
-    MixICP &lt;|-- ICICPMS
-    MixedMethods &lt;|-- MixOthers
-    MixOthers &lt;|-- LCIR
-    MixOthers &lt;|-- LCNMR
-    AnalyticalMethod &lt;|-- Other
-    Other &lt;|-- Spectrophotometry
-    Spectrophotometry &lt;|-- Colorimetry
-    Other &lt;|-- Electrophoresis
-    Electrophoresis &lt;|-- CZE</code></pre>
+    AnalyticalMethod["AnalyticalMethod"]
+    click AnalyticalMethod "../AnalyticalMethod/" _self
+    Spectroscopy["Spectroscopic methods"]
+    click Spectroscopy "../Spectroscopy/" _self
+    AnalyticalMethod --&gt; Spectroscopy
+    AAS["Atomic Absorption Spectroscopy"]
+    click AAS "../AAS/" _self
+    Spectroscopy --&gt; AAS
+    DirectAAS["Direct AAS"]
+    click DirectAAS "../DirectAAS/" _self
+    AAS --&gt; DirectAAS
+    FlameAAS["Flame AAS"]
+    click FlameAAS "../FlameAAS/" _self
+    AAS --&gt; FlameAAS
+    GFAAS["Graphite Furnace AAS"]
+    click GFAAS "../GFAAS/" _self
+    AAS --&gt; GFAAS
+    CVAAS["Cold Vapour AAS"]
+    click CVAAS "../CVAAS/" _self
+    AAS --&gt; CVAAS
+    TDAAS["Thermal Decomposition AAS"]
+    click TDAAS "../TDAAS/" _self
+    AAS --&gt; TDAAS
+    AdvancedMercuryAnalyzer["AMA"]
+    click AdvancedMercuryAnalyzer "../AdvancedMercuryAnalyzer/" _self
+    AAS --&gt; AdvancedMercuryAnalyzer
+    DirectMercuryAnalyzer["DMA"]
+    click DirectMercuryAnalyzer "../DirectMercuryAnalyzer/" _self
+    AAS --&gt; DirectMercuryAnalyzer
+    AES["Atomic Emission Spectroscopy"]
+    click AES "../AES/" _self
+    Spectroscopy --&gt; AES
+    DirectAES["Direct AES"]
+    click DirectAES "../DirectAES/" _self
+    AES --&gt; DirectAES
+    FlameAES["Flame AES"]
+    click FlameAES "../FlameAES/" _self
+    AES --&gt; FlameAES
+    PlasmaAES["Plasma AES"]
+    click PlasmaAES "../PlasmaAES/" _self
+    AES --&gt; PlasmaAES
+    GDAES["Glow Discharge AES"]
+    click GDAES "../GDAES/" _self
+    AES --&gt; GDAES
+    AFS["Atomic Fluorescence Spectroscopy"]
+    click AFS "../AFS/" _self
+    Spectroscopy --&gt; AFS
+    DirectAFS["Direct AFS"]
+    click DirectAFS "../DirectAFS/" _self
+    AFS --&gt; DirectAFS
+    HGAFS["Hydride Generation AFS"]
+    click HGAFS "../HGAFS/" _self
+    AFS --&gt; HGAFS
+    FIAFS["Flow Injection AFS"]
+    click FIAFS "../FIAFS/" _self
+    AFS --&gt; FIAFS
+    CVAFS["Cold Vapour AFS"]
+    click CVAFS "../CVAFS/" _self
+    AFS --&gt; CVAFS
+    ICP["Inductively Coupled Plasma Spectroscopy"]
+    click ICP "../ICP/" _self
+    Spectroscopy --&gt; ICP
+    ICPAES["ICP-AES"]
+    click ICPAES "../ICPAES/" _self
+    ICP --&gt; ICPAES
+    ICPOES["ICP-OES"]
+    click ICPOES "../ICPOES/" _self
+    ICP --&gt; ICPOES
+    XRF["X-ray Fluorescence Spectroscopy"]
+    click XRF "../XRF/" _self
+    Spectroscopy --&gt; XRF
+    EDXRF["Energy-Dispersive XRF"]
+    click EDXRF "../EDXRF/" _self
+    XRF --&gt; EDXRF
+    WDXRF["Wavelength-Dispersive XRF"]
+    click WDXRF "../WDXRF/" _self
+    XRF --&gt; WDXRF
+    TXRF["Total Reflection XRF"]
+    click TXRF "../TXRF/" _self
+    XRF --&gt; TXRF
+    NMR["Nuclear Magnetic Resonance Spectroscopy"]
+    click NMR "../NMR/" _self
+    Spectroscopy --&gt; NMR
+    H1NMR["Proton NMR"]
+    click H1NMR "../H1NMR/" _self
+    NMR --&gt; H1NMR
+    C13NMR["Carbon-13 NMR"]
+    click C13NMR "../C13NMR/" _self
+    NMR --&gt; C13NMR
+    UVVis["UV-Visible Spectroscopy"]
+    click UVVis "../UVVis/" _self
+    Spectroscopy --&gt; UVVis
+    SingleWavelengthUVVis["Single Wavelength UV-Vis"]
+    click SingleWavelengthUVVis "../SingleWavelengthUVVis/" _self
+    UVVis --&gt; SingleWavelengthUVVis
+    DADUVVis["DAD UV-Vis"]
+    click DADUVVis "../DADUVVis/" _self
+    UVVis --&gt; DADUVVis
+    MassSpectrometry["MS methods"]
+    click MassSpectrometry "../MassSpectrometry/" _self
+    AnalyticalMethod --&gt; MassSpectrometry
+    ICPMS["ICP-MS"]
+    click ICPMS "../ICPMS/" _self
+    MassSpectrometry --&gt; ICPMS
+    ICPMSMS["ICP-MS/MS"]
+    click ICPMSMS "../ICPMSMS/" _self
+    ICPMS --&gt; ICPMSMS
+    ICPDRCMS["ICP-DRC-MS"]
+    click ICPDRCMS "../ICPDRCMS/" _self
+    ICPMS --&gt; ICPDRCMS
+    ICPKEDMS["ICP-KED-MS"]
+    click ICPKEDMS "../ICPKEDMS/" _self
+    ICPMS --&gt; ICPKEDMS
+    GCMS["GC-MS"]
+    click GCMS "../GCMS/" _self
+    MassSpectrometry --&gt; GCMS
+    GCMSMS["GC-MS/MS"]
+    click GCMSMS "../GCMSMS/" _self
+    GCMS --&gt; GCMSMS
+    GCHRMS["GC-HRMS"]
+    click GCHRMS "../GCHRMS/" _self
+    GCMS --&gt; GCHRMS
+    GCHRMSMS["GC-HRMS/MS"]
+    click GCHRMSMS "../GCHRMSMS/" _self
+    GCMS --&gt; GCHRMSMS
+    GCEIMS["GC-EI-MS"]
+    click GCEIMS "../GCEIMS/" _self
+    GCMS --&gt; GCEIMS
+    GCEIMSMS["GC-EI-MS/MS"]
+    click GCEIMSMS "../GCEIMSMS/" _self
+    GCMS --&gt; GCEIMSMS
+    GCEIHMS["GC-EI-HRMS"]
+    click GCEIHMS "../GCEIHMS/" _self
+    GCMS --&gt; GCEIHMS
+    GCEIHRMSMSt["GC-EI-HRMS/MS"]
+    click GCEIHRMSMSt "../GCEIHRMSMSt/" _self
+    GCMS --&gt; GCEIHRMSMSt
+    GCNCIMS["GC-NCI-MS"]
+    click GCNCIMS "../GCNCIMS/" _self
+    GCMS --&gt; GCNCIMS
+    GCNCIMSMSt["GC-NCI-MS/MS"]
+    click GCNCIMSMSt "../GCNCIMSMSt/" _self
+    GCMS --&gt; GCNCIMSMSt
+    GCNCIHRMS["GC-NCI-HRMS"]
+    click GCNCIHRMS "../GCNCIHRMS/" _self
+    GCMS --&gt; GCNCIHRMS
+    GCNCIHRMSMSt["GC-NCI-HRMS/MS"]
+    click GCNCIHRMSMSt "../GCNCIHRMSMSt/" _self
+    GCMS --&gt; GCNCIHRMSMSt
+    GCCIMS["GC-CI-MS"]
+    click GCCIMS "../GCCIMS/" _self
+    GCMS --&gt; GCCIMS
+    GCCIMSMSt["GC-CI-MS/MS"]
+    click GCCIMSMSt "../GCCIMSMSt/" _self
+    GCMS --&gt; GCCIMSMSt
+    GCCIHRMS["GC-CI-HRMS"]
+    click GCCIHRMS "../GCCIHRMS/" _self
+    GCMS --&gt; GCCIHRMS
+    GCCIHRMSMSt["GC-CI-HRMS/MS"]
+    click GCCIHRMSMSt "../GCCIHRMSMSt/" _self
+    GCMS --&gt; GCCIHRMSMSt
+    GCAPPIMS["GC-APPI-MS"]
+    click GCAPPIMS "../GCAPPIMS/" _self
+    GCMS --&gt; GCAPPIMS
+    GCAPPIMSMSt["GC-APPI-MS/MS"]
+    click GCAPPIMSMSt "../GCAPPIMSMSt/" _self
+    GCMS --&gt; GCAPPIMSMSt
+    GCAPPIHRMS["GC-APPI-HRMS"]
+    click GCAPPIHRMS "../GCAPPIHRMS/" _self
+    GCMS --&gt; GCAPPIHRMS
+    GCAPPIHRMSMSt["GC-APPI-HRMS/MS"]
+    click GCAPPIHRMSMSt "../GCAPPIHRMSMSt/" _self
+    GCMS --&gt; GCAPPIHRMSMSt
+    GCAPCIMS["GC-APCI-MS"]
+    click GCAPCIMS "../GCAPCIMS/" _self
+    GCMS --&gt; GCAPCIMS
+    GCAPCIMSMSt["GC-APCI-MS/MS"]
+    click GCAPCIMSMSt "../GCAPCIMSMSt/" _self
+    GCMS --&gt; GCAPCIMSMSt
+    GCAPCIHRMS["GC-APCI-HRMS"]
+    click GCAPCIHRMS "../GCAPCIHRMS/" _self
+    GCMS --&gt; GCAPCIHRMS
+    GCAPCIHRMSMSt["GC-APCI-HRMS/MS"]
+    click GCAPCIHRMSMSt "../GCAPCIHRMSMSt/" _self
+    GCMS --&gt; GCAPCIHRMSMSt
+    GCxGCMS["GCxGC-MS"]
+    click GCxGCMS "../GCxGCMS/" _self
+    GCMS --&gt; GCxGCMS
+    GCxGCMSMSt["GCxGC-MS/MS"]
+    click GCxGCMSMSt "../GCxGCMSMSt/" _self
+    GCMS --&gt; GCxGCMSMSt
+    GCxGCHRMS["GCxGC-HRMS"]
+    click GCxGCHRMS "../GCxGCHRMS/" _self
+    GCMS --&gt; GCxGCHRMS
+    LCMS["LC-MS"]
+    click LCMS "../LCMS/" _self
+    MassSpectrometry --&gt; LCMS
+    LCMSMSt["LC-MS/MS"]
+    click LCMSMSt "../LCMSMSt/" _self
+    LCMS --&gt; LCMSMSt
+    LCHRMS["LC-HRMS"]
+    click LCHRMS "../LCHRMS/" _self
+    LCMS --&gt; LCHRMS
+    LCHRMSMSt["LC-HRMS/MS"]
+    click LCHRMSMSt "../LCHRMSMSt/" _self
+    LCMS --&gt; LCHRMSMSt
+    HPLCMS["HPLC-MS"]
+    click HPLCMS "../HPLCMS/" _self
+    LCMS --&gt; HPLCMS
+    HPLCMSMSt["HPLC-MS/MS"]
+    click HPLCMSMSt "../HPLCMSMSt/" _self
+    LCMS --&gt; HPLCMSMSt
+    HPLCHRMS["HPLC-HRMS"]
+    click HPLCHRMS "../HPLCHRMS/" _self
+    LCMS --&gt; HPLCHRMS
+    HPLCHRMSMSt["HPLC-HRMS/MS"]
+    click HPLCHRMSMSt "../HPLCHRMSMSt/" _self
+    LCMS --&gt; HPLCHRMSMSt
+    HPLCECD["HPLC-ECD"]
+    click HPLCECD "../HPLCECD/" _self
+    LCMS --&gt; HPLCECD
+    UPLCMS["UPLC-MS"]
+    click UPLCMS "../UPLCMS/" _self
+    LCMS --&gt; UPLCMS
+    UPLCMSMSt["UPLC-MS/MS"]
+    click UPLCMSMSt "../UPLCMSMSt/" _self
+    LCMS --&gt; UPLCMSMSt
+    UPLCHRMS["UPLC-HRMS"]
+    click UPLCHRMS "../UPLCHRMS/" _self
+    LCMS --&gt; UPLCHRMS
+    UPLCHRMSMSt["UPLC-HRMS/MS"]
+    click UPLCHRMSMSt "../UPLCHRMSMSt/" _self
+    LCMS --&gt; UPLCHRMSMSt
+    ICMS["IC-MS"]
+    click ICMS "../ICMS/" _self
+    MassSpectrometry --&gt; ICMS
+    ICMSMSt["IC-MS/MS"]
+    click ICMSMSt "../ICMSMSt/" _self
+    ICMS --&gt; ICMSMSt
+    ICHRMS["IC-HRMS"]
+    click ICHRMS "../ICHRMS/" _self
+    ICMS --&gt; ICHRMS
+    ICHRMSMSt["IC-HRMS/MS"]
+    click ICHRMSMSt "../ICHRMSMSt/" _self
+    ICMS --&gt; ICHRMSMSt
+    ICESIMS["IC-ESI-MS"]
+    click ICESIMS "../ICESIMS/" _self
+    ICMS --&gt; ICESIMS
+    ICESIMSMSt["IC-ESI-MS/MS"]
+    click ICESIMSMSt "../ICESIMSMSt/" _self
+    ICMS --&gt; ICESIMSMSt
+    ICESIHRMS["IC-ESI-HRMS"]
+    click ICESIHRMS "../ICESIHRMS/" _self
+    ICMS --&gt; ICESIHRMS
+    ICESIHRMSMSt["IC-ESI-HRMS/MS"]
+    click ICESIHRMSMSt "../ICESIHRMSMSt/" _self
+    ICMS --&gt; ICESIHRMSMSt
+    SFCMS["SFC-MS"]
+    click SFCMS "../SFCMS/" _self
+    MassSpectrometry --&gt; SFCMS
+    SFCMSMSt["SFC-MS/MS"]
+    click SFCMSMSt "../SFCMSMSt/" _self
+    SFCMS --&gt; SFCMSMSt
+    SFCHRMS["SFC-HRMS"]
+    click SFCHRMS "../SFCHRMS/" _self
+    SFCMS --&gt; SFCHRMS
+    SFCHRMSMSt["SFC-HRMS/MS"]
+    click SFCHRMSMSt "../SFCHRMSMSt/" _self
+    SFCMS --&gt; SFCHRMSMSt
+    Chromatography["Chromatographic methods"]
+    click Chromatography "../Chromatography/" _self
+    AnalyticalMethod --&gt; Chromatography
+    LC["Liquid Chromatography"]
+    click LC "../LC/" _self
+    Chromatography --&gt; LC
+    LCDAD["LC-DAD"]
+    click LCDAD "../LCDAD/" _self
+    LC --&gt; LCDAD
+    LCFLD["LC-FLD"]
+    click LCFLD "../LCFLD/" _self
+    LC --&gt; LCFLD
+    LCUV["LC-UV"]
+    click LCUV "../LCUV/" _self
+    LC --&gt; LCUV
+    LCVIS["LC-VIS"]
+    click LCVIS "../LCVIS/" _self
+    LC --&gt; LCVIS
+    HPLC["High Performance Liquid Chromatography"]
+    click HPLC "../HPLC/" _self
+    LC --&gt; HPLC
+    HPLCDAD["HPLC-DAD"]
+    click HPLCDAD "../HPLCDAD/" _self
+    HPLC --&gt; HPLCDAD
+    HPLCFLD["HPLC-FLD"]
+    click HPLCFLD "../HPLCFLD/" _self
+    HPLC --&gt; HPLCFLD
+    HPLCUV["HPLC-UV"]
+    click HPLCUV "../HPLCUV/" _self
+    HPLC --&gt; HPLCUV
+    HPLCVIS["HPLC-VIS"]
+    click HPLCVIS "../HPLCVIS/" _self
+    HPLC --&gt; HPLCVIS
+    UPLC["Ultra Performance Liquid Chromatography"]
+    click UPLC "../UPLC/" _self
+    LC --&gt; UPLC
+    UPLCDAD["UPLC-DAD"]
+    click UPLCDAD "../UPLCDAD/" _self
+    UPLC --&gt; UPLCDAD
+    UPLCFLD["UPLC-FLD"]
+    click UPLCFLD "../UPLCFLD/" _self
+    UPLC --&gt; UPLCFLD
+    UPLCUV["UPLC-UV"]
+    click UPLCUV "../UPLCUV/" _self
+    UPLC --&gt; UPLCUV
+    UPLCVIS["UPLC-VIS"]
+    click UPLCVIS "../UPLCVIS/" _self
+    UPLC --&gt; UPLCVIS
+    GC["Gas Chromatography"]
+    click GC "../GC/" _self
+    Chromatography --&gt; GC
+    GCECD["GC-ECD"]
+    click GCECD "../GCECD/" _self
+    GC --&gt; GCECD
+    GCFID["GC-FID"]
+    click GCFID "../GCFID/" _self
+    GC --&gt; GCFID
+    GCPID["GC-PID"]
+    click GCPID "../GCPID/" _self
+    GC --&gt; GCPID
+    GCFPD["GC-FPD"]
+    click GCFPD "../GCFPD/" _self
+    GC --&gt; GCFPD
+    GCNPD["GC-NPD"]
+    click GCNPD "../GCNPD/" _self
+    GC --&gt; GCNPD
+    IC["Ion Chromatography"]
+    click IC "../IC/" _self
+    Chromatography --&gt; IC
+    ICUV["IC-UV"]
+    click ICUV "../ICUV/" _self
+    IC --&gt; ICUV
+    ICDAD["IC-DAD"]
+    click ICDAD "../ICDAD/" _self
+    IC --&gt; ICDAD
+    ICFLD["IC-FLD"]
+    click ICFLD "../ICFLD/" _self
+    IC --&gt; ICFLD
+    MixedMethods["Hyphenated methods"]
+    click MixedMethods "../MixedMethods/" _self
+    AnalyticalMethod --&gt; MixedMethods
+    MixICP["Mix-ICP"]
+    click MixICP "../MixICP/" _self
+    MixedMethods --&gt; MixICP
+    LCICPMS["LC-ICP-MS"]
+    click LCICPMS "../LCICPMS/" _self
+    MixICP --&gt; LCICPMS
+    LCICPMSMSt["LC-ICP-MS/MS"]
+    click LCICPMSMSt "../LCICPMSMSt/" _self
+    MixICP --&gt; LCICPMSMSt
+    GCICPMS["GC-ICP-MS"]
+    click GCICPMS "../GCICPMS/" _self
+    MixICP --&gt; GCICPMS
+    ICICPMS["IC-ICP-MS"]
+    click ICICPMS "../ICICPMS/" _self
+    MixICP --&gt; ICICPMS
+    MixOthers["Mix-Others"]
+    click MixOthers "../MixOthers/" _self
+    MixedMethods --&gt; MixOthers
+    LCIR["LC-IR"]
+    click LCIR "../LCIR/" _self
+    MixOthers --&gt; LCIR
+    LCNMR["LC-NMR"]
+    click LCNMR "../LCNMR/" _self
+    MixOthers --&gt; LCNMR
+    Other["Other"]
+    click Other "../Other/" _self
+    AnalyticalMethod --&gt; Other
+    Spectrophotometry["Spectrophotometric methods"]
+    click Spectrophotometry "../Spectrophotometry/" _self
+    Other --&gt; Spectrophotometry
+    Colorimetry["Colorimetric methods"]
+    click Colorimetry "../Colorimetry/" _self
+    Spectrophotometry --&gt; Colorimetry
+    Electrophoresis["Electrophoretic methods"]
+    click Electrophoresis "../Electrophoresis/" _self
+    Other --&gt; Electrophoresis
+    CZE["Capillary Zone Electrophoresis"]
+    click CZE "../CZE/" _self
+    Electrophoresis --&gt; CZE</code></pre>
 <details>
-<summary>Show as text tree</summary>
+<summary>Show as clickable text tree</summary>
 
-<div class="highlight"><pre><span></span><code>[AnalyticalMethod](AnalyticalMethod.md) `AnalyticalMethod`
-    └── [Chromatographic methods](Chromatography.md) `Chromatography`
-        └── [Gas Chromatography](GC.md) `GC`
-            └── [GC-ECD](GCECD.md) `GCECD`
-            └── [GC-FID](GCFID.md) `GCFID`
-            └── [GC-FPD](GCFPD.md) `GCFPD`
-            └── [GC-NPD](GCNPD.md) `GCNPD`
-            └── [GC-PID](GCPID.md) `GCPID`
-        └── [Ion Chromatography](IC.md) `IC`
-            └── [IC-DAD](ICDAD.md) `ICDAD`
-            └── [IC-FLD](ICFLD.md) `ICFLD`
-            └── [IC-UV](ICUV.md) `ICUV`
-        └── [Liquid Chromatography](LC.md) `LC`
-            └── [High Performance Liquid Chromatography](HPLC.md) `HPLC`
-                └── [HPLC-DAD](HPLCDAD.md) `HPLCDAD`
-                └── [HPLC-FLD](HPLCFLD.md) `HPLCFLD`
-                └── [HPLC-UV](HPLCUV.md) `HPLCUV`
-                └── [HPLC-VIS](HPLCVIS.md) `HPLCVIS`
-            └── [LC-DAD](LCDAD.md) `LCDAD`
-            └── [LC-FLD](LCFLD.md) `LCFLD`
-            └── [LC-UV](LCUV.md) `LCUV`
-            └── [LC-VIS](LCVIS.md) `LCVIS`
-            └── [Ultra Performance Liquid Chromatography](UPLC.md) `UPLC`
-                └── [UPLC-DAD](UPLCDAD.md) `UPLCDAD`
-                └── [UPLC-FLD](UPLCFLD.md) `UPLCFLD`
-                └── [UPLC-UV](UPLCUV.md) `UPLCUV`
-                └── [UPLC-VIS](UPLCVIS.md) `UPLCVIS`
-    └── [MS methods](MassSpectrometry.md) `MassSpectrometry`
-        └── [GC-MS](GCMS.md) `GCMS`
-            └── [GC-APCI-HRMS](GCAPCIHRMS.md) `GCAPCIHRMS`
-            └── [GC-APCI-HRMS/MS](GCAPCIHRMSMSt.md) `GCAPCIHRMSMSt`
-            └── [GC-APCI-MS](GCAPCIMS.md) `GCAPCIMS`
-            └── [GC-APCI-MS/MS](GCAPCIMSMSt.md) `GCAPCIMSMSt`
-            └── [GC-APPI-HRMS](GCAPPIHRMS.md) `GCAPPIHRMS`
-            └── [GC-APPI-HRMS/MS](GCAPPIHRMSMSt.md) `GCAPPIHRMSMSt`
-            └── [GC-APPI-MS](GCAPPIMS.md) `GCAPPIMS`
-            └── [GC-APPI-MS/MS](GCAPPIMSMSt.md) `GCAPPIMSMSt`
-            └── [GC-CI-HRMS](GCCIHRMS.md) `GCCIHRMS`
-            └── [GC-CI-HRMS/MS](GCCIHRMSMSt.md) `GCCIHRMSMSt`
-            └── [GC-CI-MS](GCCIMS.md) `GCCIMS`
-            └── [GC-CI-MS/MS](GCCIMSMSt.md) `GCCIMSMSt`
-            └── [GC-EI-HRMS](GCEIHMS.md) `GCEIHMS`
-            └── [GC-EI-HRMS/MS](GCEIHRMSMSt.md) `GCEIHRMSMSt`
-            └── [GC-EI-MS](GCEIMS.md) `GCEIMS`
-            └── [GC-EI-MS/MS](GCEIMSMS.md) `GCEIMSMS`
-            └── [GC-HRMS](GCHRMS.md) `GCHRMS`
-            └── [GC-HRMS/MS](GCHRMSMS.md) `GCHRMSMS`
-            └── [GC-MS/MS](GCMSMS.md) `GCMSMS`
-            └── [GC-NCI-HRMS](GCNCIHRMS.md) `GCNCIHRMS`
-            └── [GC-NCI-HRMS/MS](GCNCIHRMSMSt.md) `GCNCIHRMSMSt`
-            └── [GC-NCI-MS](GCNCIMS.md) `GCNCIMS`
-            └── [GC-NCI-MS/MS](GCNCIMSMSt.md) `GCNCIMSMSt`
-            └── [GCxGC-HRMS](GCxGCHRMS.md) `GCxGCHRMS`
-            └── [GCxGC-MS](GCxGCMS.md) `GCxGCMS`
-            └── [GCxGC-MS/MS](GCxGCMSMSt.md) `GCxGCMSMSt`
-        └── [IC-MS](ICMS.md) `ICMS`
-            └── [IC-ESI-HRMS](ICESIHRMS.md) `ICESIHRMS`
-            └── [IC-ESI-HRMS/MS](ICESIHRMSMSt.md) `ICESIHRMSMSt`
-            └── [IC-ESI-MS](ICESIMS.md) `ICESIMS`
-            └── [IC-ESI-MS/MS](ICESIMSMSt.md) `ICESIMSMSt`
-            └── [IC-HRMS](ICHRMS.md) `ICHRMS`
-            └── [IC-HRMS/MS](ICHRMSMSt.md) `ICHRMSMSt`
-            └── [IC-MS/MS](ICMSMSt.md) `ICMSMSt`
-        └── [ICP-MS](ICPMS.md) `ICPMS`
-            └── [ICP-DRC-MS](ICPDRCMS.md) `ICPDRCMS`
-            └── [ICP-KED-MS](ICPKEDMS.md) `ICPKEDMS`
-            └── [ICP-MS/MS](ICPMSMS.md) `ICPMSMS`
-        └── [LC-MS](LCMS.md) `LCMS`
-            └── [HPLC-ECD](HPLCECD.md) `HPLCECD`
-            └── [HPLC-HRMS](HPLCHRMS.md) `HPLCHRMS`
-            └── [HPLC-HRMS/MS](HPLCHRMSMSt.md) `HPLCHRMSMSt`
-            └── [HPLC-MS](HPLCMS.md) `HPLCMS`
-            └── [HPLC-MS/MS](HPLCMSMSt.md) `HPLCMSMSt`
-            └── [LC-HRMS](LCHRMS.md) `LCHRMS`
-            └── [LC-HRMS/MS](LCHRMSMSt.md) `LCHRMSMSt`
-            └── [LC-MS/MS](LCMSMSt.md) `LCMSMSt`
-            └── [UPLC-HRMS](UPLCHRMS.md) `UPLCHRMS`
-            └── [UPLC-HRMS/MS](UPLCHRMSMSt.md) `UPLCHRMSMSt`
-            └── [UPLC-MS](UPLCMS.md) `UPLCMS`
-            └── [UPLC-MS/MS](UPLCMSMSt.md) `UPLCMSMSt`
-        └── [SFC-MS](SFCMS.md) `SFCMS`
-            └── [SFC-HRMS](SFCHRMS.md) `SFCHRMS`
-            └── [SFC-HRMS/MS](SFCHRMSMSt.md) `SFCHRMSMSt`
-            └── [SFC-MS/MS](SFCMSMSt.md) `SFCMSMSt`
-    └── [Hyphenated methods](MixedMethods.md) `MixedMethods`
-        └── [Mix-ICP](MixICP.md) `MixICP`
-            └── [GC-ICP-MS](GCICPMS.md) `GCICPMS`
-            └── [IC-ICP-MS](ICICPMS.md) `ICICPMS`
-            └── [LC-ICP-MS](LCICPMS.md) `LCICPMS`
-            └── [LC-ICP-MS/MS](LCICPMSMSt.md) `LCICPMSMSt`
-        └── [Mix-Others](MixOthers.md) `MixOthers`
-            └── [LC-IR](LCIR.md) `LCIR`
-            └── [LC-NMR](LCNMR.md) `LCNMR`
-    └── [Other](Other.md) `Other`
-        └── [Electrophoretic methods](Electrophoresis.md) `Electrophoresis`
-            └── [Capillary Zone Electrophoresis](CZE.md) `CZE`
-        └── [Spectrophotometric methods](Spectrophotometry.md) `Spectrophotometry`
-            └── [Colorimetric methods](Colorimetry.md) `Colorimetry`
-    └── [Spectroscopic methods](Spectroscopy.md) `Spectroscopy`
-        └── [Atomic Absorption Spectroscopy](AAS.md) `AAS`
-            └── [AMA](AdvancedMercuryAnalyzer.md) `AdvancedMercuryAnalyzer`
-            └── [Cold Vapour AAS](CVAAS.md) `CVAAS`
-            └── [Direct AAS](DirectAAS.md) `DirectAAS`
-            └── [DMA](DirectMercuryAnalyzer.md) `DirectMercuryAnalyzer`
-            └── [Flame AAS](FlameAAS.md) `FlameAAS`
-            └── [Graphite Furnace AAS](GFAAS.md) `GFAAS`
-            └── [Thermal Decomposition AAS](TDAAS.md) `TDAAS`
-        └── [Atomic Emission Spectroscopy](AES.md) `AES`
-            └── [Direct AES](DirectAES.md) `DirectAES`
-            └── [Flame AES](FlameAES.md) `FlameAES`
-            └── [Glow Discharge AES](GDAES.md) `GDAES`
-            └── [Plasma AES](PlasmaAES.md) `PlasmaAES`
-        └── [Atomic Fluorescence Spectroscopy](AFS.md) `AFS`
-            └── [Cold Vapour AFS](CVAFS.md) `CVAFS`
-            └── [Direct AFS](DirectAFS.md) `DirectAFS`
-            └── [Flow Injection AFS](FIAFS.md) `FIAFS`
-            └── [Hydride Generation AFS](HGAFS.md) `HGAFS`
-        └── [Inductively Coupled Plasma Spectroscopy](ICP.md) `ICP`
-            └── [ICP-AES](ICPAES.md) `ICPAES`
-            └── [ICP-OES](ICPOES.md) `ICPOES`
-        └── [Nuclear Magnetic Resonance Spectroscopy](NMR.md) `NMR`
-            └── [Carbon-13 NMR](C13NMR.md) `C13NMR`
-            └── [Proton NMR](H1NMR.md) `H1NMR`
-        └── [UV-Visible Spectroscopy](UVVis.md) `UVVis`
-            └── [DAD UV-Vis](DADUVVis.md) `DADUVVis`
-            └── [Single Wavelength UV-Vis](SingleWavelengthUVVis.md) `SingleWavelengthUVVis`
-        └── [X-ray Fluorescence Spectroscopy](XRF.md) `XRF`
-            └── [Energy-Dispersive XRF](EDXRF.md) `EDXRF`
-            └── [Total Reflection XRF](TXRF.md) `TXRF`
-            └── [Wavelength-Dispersive XRF](WDXRF.md) `WDXRF`
-</code></pre></div>
+📌 [**AnalyticalMethod**](AnalyticalMethod.md) `AnalyticalMethod`  
+&nbsp;&nbsp;&nbsp;&nbsp;└── [**Chromatographic methods**](Chromatography.md) `Chromatography`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Gas Chromatography**](GC.md) `GC`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-ECD**](GCECD.md) `GCECD`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-FID**](GCFID.md) `GCFID`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-FPD**](GCFPD.md) `GCFPD`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-NPD**](GCNPD.md) `GCNPD`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-PID**](GCPID.md) `GCPID`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Ion Chromatography**](IC.md) `IC`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**IC-DAD**](ICDAD.md) `ICDAD`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**IC-FLD**](ICFLD.md) `ICFLD`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**IC-UV**](ICUV.md) `ICUV`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Liquid Chromatography**](LC.md) `LC`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**High Performance Liquid Chromatography**](HPLC.md) `HPLC`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**HPLC-DAD**](HPLCDAD.md) `HPLCDAD`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**HPLC-FLD**](HPLCFLD.md) `HPLCFLD`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**HPLC-UV**](HPLCUV.md) `HPLCUV`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**HPLC-VIS**](HPLCVIS.md) `HPLCVIS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**LC-DAD**](LCDAD.md) `LCDAD`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**LC-FLD**](LCFLD.md) `LCFLD`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**LC-UV**](LCUV.md) `LCUV`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**LC-VIS**](LCVIS.md) `LCVIS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Ultra Performance Liquid Chromatography**](UPLC.md) `UPLC`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**UPLC-DAD**](UPLCDAD.md) `UPLCDAD`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**UPLC-FLD**](UPLCFLD.md) `UPLCFLD`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**UPLC-UV**](UPLCUV.md) `UPLCUV`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**UPLC-VIS**](UPLCVIS.md) `UPLCVIS`  
+&nbsp;&nbsp;&nbsp;&nbsp;└── [**MS methods**](MassSpectrometry.md) `MassSpectrometry`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-MS**](GCMS.md) `GCMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-APCI-HRMS**](GCAPCIHRMS.md) `GCAPCIHRMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-APCI-HRMS/MS**](GCAPCIHRMSMSt.md) `GCAPCIHRMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-APCI-MS**](GCAPCIMS.md) `GCAPCIMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-APCI-MS/MS**](GCAPCIMSMSt.md) `GCAPCIMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-APPI-HRMS**](GCAPPIHRMS.md) `GCAPPIHRMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-APPI-HRMS/MS**](GCAPPIHRMSMSt.md) `GCAPPIHRMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-APPI-MS**](GCAPPIMS.md) `GCAPPIMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-APPI-MS/MS**](GCAPPIMSMSt.md) `GCAPPIMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-CI-HRMS**](GCCIHRMS.md) `GCCIHRMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-CI-HRMS/MS**](GCCIHRMSMSt.md) `GCCIHRMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-CI-MS**](GCCIMS.md) `GCCIMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-CI-MS/MS**](GCCIMSMSt.md) `GCCIMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-EI-HRMS**](GCEIHMS.md) `GCEIHMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-EI-HRMS/MS**](GCEIHRMSMSt.md) `GCEIHRMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-EI-MS**](GCEIMS.md) `GCEIMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-EI-MS/MS**](GCEIMSMS.md) `GCEIMSMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-HRMS**](GCHRMS.md) `GCHRMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-HRMS/MS**](GCHRMSMS.md) `GCHRMSMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-MS/MS**](GCMSMS.md) `GCMSMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-NCI-HRMS**](GCNCIHRMS.md) `GCNCIHRMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-NCI-HRMS/MS**](GCNCIHRMSMSt.md) `GCNCIHRMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-NCI-MS**](GCNCIMS.md) `GCNCIMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-NCI-MS/MS**](GCNCIMSMSt.md) `GCNCIMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GCxGC-HRMS**](GCxGCHRMS.md) `GCxGCHRMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GCxGC-MS**](GCxGCMS.md) `GCxGCMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GCxGC-MS/MS**](GCxGCMSMSt.md) `GCxGCMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**IC-MS**](ICMS.md) `ICMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**IC-ESI-HRMS**](ICESIHRMS.md) `ICESIHRMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**IC-ESI-HRMS/MS**](ICESIHRMSMSt.md) `ICESIHRMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**IC-ESI-MS**](ICESIMS.md) `ICESIMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**IC-ESI-MS/MS**](ICESIMSMSt.md) `ICESIMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**IC-HRMS**](ICHRMS.md) `ICHRMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**IC-HRMS/MS**](ICHRMSMSt.md) `ICHRMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**IC-MS/MS**](ICMSMSt.md) `ICMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**ICP-MS**](ICPMS.md) `ICPMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**ICP-DRC-MS**](ICPDRCMS.md) `ICPDRCMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**ICP-KED-MS**](ICPKEDMS.md) `ICPKEDMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**ICP-MS/MS**](ICPMSMS.md) `ICPMSMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**LC-MS**](LCMS.md) `LCMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**HPLC-ECD**](HPLCECD.md) `HPLCECD`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**HPLC-HRMS**](HPLCHRMS.md) `HPLCHRMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**HPLC-HRMS/MS**](HPLCHRMSMSt.md) `HPLCHRMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**HPLC-MS**](HPLCMS.md) `HPLCMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**HPLC-MS/MS**](HPLCMSMSt.md) `HPLCMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**LC-HRMS**](LCHRMS.md) `LCHRMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**LC-HRMS/MS**](LCHRMSMSt.md) `LCHRMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**LC-MS/MS**](LCMSMSt.md) `LCMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**UPLC-HRMS**](UPLCHRMS.md) `UPLCHRMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**UPLC-HRMS/MS**](UPLCHRMSMSt.md) `UPLCHRMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**UPLC-MS**](UPLCMS.md) `UPLCMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**UPLC-MS/MS**](UPLCMSMSt.md) `UPLCMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**SFC-MS**](SFCMS.md) `SFCMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**SFC-HRMS**](SFCHRMS.md) `SFCHRMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**SFC-HRMS/MS**](SFCHRMSMSt.md) `SFCHRMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**SFC-MS/MS**](SFCMSMSt.md) `SFCMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;└── [**Hyphenated methods**](MixedMethods.md) `MixedMethods`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Mix-ICP**](MixICP.md) `MixICP`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**GC-ICP-MS**](GCICPMS.md) `GCICPMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**IC-ICP-MS**](ICICPMS.md) `ICICPMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**LC-ICP-MS**](LCICPMS.md) `LCICPMS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**LC-ICP-MS/MS**](LCICPMSMSt.md) `LCICPMSMSt`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Mix-Others**](MixOthers.md) `MixOthers`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**LC-IR**](LCIR.md) `LCIR`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**LC-NMR**](LCNMR.md) `LCNMR`  
+&nbsp;&nbsp;&nbsp;&nbsp;└── [**Other**](Other.md) `Other`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Electrophoretic methods**](Electrophoresis.md) `Electrophoresis`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Capillary Zone Electrophoresis**](CZE.md) `CZE`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Spectrophotometric methods**](Spectrophotometry.md) `Spectrophotometry`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Colorimetric methods**](Colorimetry.md) `Colorimetry`  
+&nbsp;&nbsp;&nbsp;&nbsp;└── [**Spectroscopic methods**](Spectroscopy.md) `Spectroscopy`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Atomic Absorption Spectroscopy**](AAS.md) `AAS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**AMA**](AdvancedMercuryAnalyzer.md) `AdvancedMercuryAnalyzer`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Cold Vapour AAS**](CVAAS.md) `CVAAS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Direct AAS**](DirectAAS.md) `DirectAAS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**DMA**](DirectMercuryAnalyzer.md) `DirectMercuryAnalyzer`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Flame AAS**](FlameAAS.md) `FlameAAS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Graphite Furnace AAS**](GFAAS.md) `GFAAS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Thermal Decomposition AAS**](TDAAS.md) `TDAAS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Atomic Emission Spectroscopy**](AES.md) `AES`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Direct AES**](DirectAES.md) `DirectAES`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Flame AES**](FlameAES.md) `FlameAES`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Glow Discharge AES**](GDAES.md) `GDAES`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Plasma AES**](PlasmaAES.md) `PlasmaAES`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Atomic Fluorescence Spectroscopy**](AFS.md) `AFS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Cold Vapour AFS**](CVAFS.md) `CVAFS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Direct AFS**](DirectAFS.md) `DirectAFS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Flow Injection AFS**](FIAFS.md) `FIAFS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Hydride Generation AFS**](HGAFS.md) `HGAFS`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Inductively Coupled Plasma Spectroscopy**](ICP.md) `ICP`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**ICP-AES**](ICPAES.md) `ICPAES`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**ICP-OES**](ICPOES.md) `ICPOES`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Nuclear Magnetic Resonance Spectroscopy**](NMR.md) `NMR`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Carbon-13 NMR**](C13NMR.md) `C13NMR`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Proton NMR**](H1NMR.md) `H1NMR`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**UV-Visible Spectroscopy**](UVVis.md) `UVVis`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**DAD UV-Vis**](DADUVVis.md) `DADUVVis`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Single Wavelength UV-Vis**](SingleWavelengthUVVis.md) `SingleWavelengthUVVis`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**X-ray Fluorescence Spectroscopy**](XRF.md) `XRF`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Energy-Dispersive XRF**](EDXRF.md) `EDXRF`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Total Reflection XRF**](TXRF.md) `TXRF`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── [**Wavelength-Dispersive XRF**](WDXRF.md) `WDXRF`  
 
 </details>
 
