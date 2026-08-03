@@ -127,11 +127,14 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git pull --rebase origin main
           git add output/*.ttl 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
+            git stash
+            git pull --rebase origin main
+            git stash pop
+            git add output/*.ttl 2>/dev/null || true
             git commit -m "Auto-generate SKOS from vocabulary YAML [skip ci]"
             git push origin main
             echo "Generated files committed to repository"
