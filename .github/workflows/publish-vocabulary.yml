@@ -100,48 +100,20 @@ jobs:
           echo "Generated files in output/:"
           ls -la output/
 
-      - name: Generate vocabulary index
+      - name: Generate vocabulary documentation
         run: |
-          echo "Generating vocabulary index..."
+          echo "Generating vocabulary documentation..."
           rm -rf docs/
           mkdir -p docs
           for vocab_file in vocabulary/*.yaml vocabulary/*.yml; do
             [ -f "$vocab_file" ] || continue
-            echo "  Generating index for: $vocab_file"
-            PYTHONUTF8=1 python3 scripts/generate_vocab_index.py \
+            echo "  Generating docs for: $vocab_file"
+            PYTHONUTF8=1 python3 scripts/generate_vocab_pages.py \
               --input "$vocab_file" \
-              --output docs/index.md \
+              --output docs/ \
               --verbose
           done
-          echo "Vocabulary index generated"
-
-      - name: Generate concept pages (gen-doc)
-        run: |
-          echo "Generating concept pages..."
-          for vocab_file in vocabulary/*.yaml vocabulary/*.yml; do
-            [ -f "$vocab_file" ] || continue
-            echo "  Generating concept pages for: $vocab_file"
-            PYTHONUTF8=1 gen-doc "$vocab_file" -d ./docs -f markdown
-          done
-          echo "Concept pages generated"
-
-      - name: Fix table rendering in documentation
-        run: |
-          echo "Fixing br tags in Markdown tables..."
-          python3 scripts/fix_tables.py --dir docs --verbose
-          echo "Table fix complete"
-
-      - name: Generate hierarchy diagram
-        run: |
-          echo "Generating hierarchy diagram..."
-          for vocab_file in vocabulary/*.yaml vocabulary/*.yml; do
-            [ -f "$vocab_file" ] || continue
-            PYTHONUTF8=1 python3 scripts/generate_hierarchy_diagram.py \
-              --yaml "$vocab_file" \
-              --output docs/hierarchy.md \
-              --verbose
-          done
-          echo "Hierarchy diagram generated"
+          echo "Documentation generated"
 
       - name: Deploy to GitHub Pages
         run: |
@@ -164,4 +136,3 @@ jobs:
             git push origin main
             echo "Generated files committed to repository"
           fi
-# Vocabulary Publishing Pipeline
