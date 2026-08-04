@@ -4,17 +4,19 @@ A GitHub template repository for publishing SKOS controlled vocabularies
 defined in LinkML YAML format. Push a vocabulary YAML — get a validated,
 SKOSified Turtle file and human-readable documentation automatically.
 
+This template is reusable by **any user**, on **any GitHub account**
+(personal, organisation or enterprise), for **any SKOS vocabulary**.
+
 ---
 
 ## What this template does
 
-Every time you push a vocabulary YAML file to this repository, GitHub Actions
-automatically:
+Every time you push a vocabulary YAML file, GitHub Actions automatically:
 
 1. **Validates** the YAML using `linkml-lint`
-2. **Generates SKOS** Turtle from the LinkML YAML (Python script)
+2. **Generates SKOS** Turtle from the LinkML YAML
 3. **Repairs and validates** the SKOS using Skosify
-4. **Generates HTML documentation** using `gen-doc` + MkDocs
+4. **Generates HTML documentation** with index, hierarchy and concept pages
 5. **Deploys documentation** to GitHub Pages
 6. **Commits generated TTL** files back to the repository
 
@@ -25,113 +27,114 @@ automatically:
 ```
 .
 ├── .github/
-│   └── workflows/
-│       └── publish-vocabulary.yml   ← GitHub Actions pipeline
+│   ├── workflows/
+│   │   └── publish-vocabulary.yml   ← automated pipeline (do not edit)
+│   └── ISSUE_TEMPLATE/
+│       └── term-request.md          ← template for community term requests
 ├── vocabulary/
-│   └── my-vocabulary.yaml           ← your LinkML vocabulary YAML (edit this)
-├── scripts/
-│   ├── generate_skos.py             ← SKOS generation script
-│   ├── skosify_vocab.py             ← Skosify wrapper
-│   └── fix_tables.py                ← MkDocs table fix
-├── output/                          ← generated TTL files (auto-generated)
+│   └── my-vocabulary.yaml           ← [USER DEFINED] your vocabulary source
+├── scripts/                         ← pipeline scripts (do not edit)
+│   ├── generate_skos.py
+│   ├── generate_vocab_pages.py
+│   └── skosify_vocab.py
+├── output/                          ← auto-generated TTL files
 │   ├── my-vocabulary-raw.ttl        ← raw SKOS (before Skosify)
-│   └── my-vocabulary.ttl            ← final SKOS (after Skosify) ← USE THIS
-├── docs/                            ← generated HTML documentation (auto-generated)
-├── mkdocs.yml                       ← MkDocs configuration
-├── CHANGELOG.md                     ← version history
+│   └── my-vocabulary.ttl            ← final SKOS — use this for submission
+├── docs/                            ← auto-generated documentation
+├── mkdocs.yml                       ← [USER DEFINED] site name and URL
+├── CHANGELOG.md                     ← [USER DEFINED] version history
 └── README.md                        ← this file
 ```
 
 ---
 
-## Quick start
+## Quick start — what YOU need to define
 
-### 1. Use this template
+### Step 1 — Edit `vocabulary/my-vocabulary.yaml`
 
-Click **Use this template** on GitHub to create your own repository.
+This is your vocabulary source file. All fields marked `[USER DEFINED]`
+must be filled in before pushing:
 
-### 2. Edit the vocabulary YAML
+| Field | Description |
+| --- | --- |
+| `id` | Persistent URI for your vocabulary (e.g. w3id.org namespace) |
+| `name` | Machine-readable name — no spaces, use hyphens |
+| `title` | Human-readable vocabulary title |
+| `description` | What this vocabulary covers and who it is for |
+| `version` | Semantic version e.g. `"1.0.0"` |
+| `license` | License URI — CC-BY 4.0 recommended |
+| `created_by` | Your ORCID URI |
+| `created_on` | Creation date in ISO 8601 format |
+| `last_updated_on` | Last update date in ISO 8601 format |
+| `modified_by` | ORCID of person who last modified |
+| `annotations.schema_status` | `draft` / `review` / `stable` / `deprecated` |
+| `annotations.repo_url` | Your GitHub repository URL — used for download links |
+| `prefixes` | Add your vocabulary namespace prefix |
+| `default_prefix` | Your prefix name (e.g. `myv`) |
+| `enums` | Your vocabulary concepts — rename and fill in |
 
-Open `vocabulary/my-vocabulary.yaml` and:
-- Fill in the header fields (id, title, description, license, creator etc.)
-- Define your vocabulary concepts in the `enums` section
-- Use `is_a:` for hierarchy, `aliases:` for alternative labels,
-  `description:` for definitions, `meaning:` for external URI adoption
+### Step 2 — Edit `mkdocs.yml`
 
-### 3. Configure MkDocs
+| Field | Description |
+| --- | --- |
+| `site_name` | Your vocabulary name |
+| `site_url` | Your GitHub Pages URL: `https://{username}.github.io/{repo-name}/` |
+| `site_description` | Short description |
 
-Edit `mkdocs.yml`:
-- Set `site_name` to your vocabulary name
-- Set `site_url` to your GitHub Pages URL
+### Step 3 — Enable GitHub Pages
 
-### 4. Enable GitHub Pages
+Go to your repository → **Settings** → **Pages** →
+Source: `gh-pages` branch, `/ (root)` → **Save**.
 
-Go to your repository → Settings → Pages → Source: `gh-pages` branch, `/ (root)`
+### Step 4 — Push and watch
 
-### 5. Push and watch
-
-Push your vocabulary YAML — GitHub Actions will run automatically.
-Check the Actions tab for progress.
+Push your vocabulary YAML — GitHub Actions runs automatically.
+Check the **Actions** tab for progress.
 
 ---
 
-## LinkML vocabulary YAML structure
+## Vocabulary YAML — concept definition guide
 
 ```yaml
-# Required header fields
-id: https://w3id.org/your-namespace/vocabulary/my-vocabulary
-name: my-vocabulary
-title: My Controlled Vocabulary
-description: >-
-  What this vocabulary covers and who it is for.
-version: "1.0.0"
-license: https://creativecommons.org/licenses/by/4.0/
-created_by: https://orcid.org/0000-0000-0000-0000
-created_on: "2026-01-01T00:00:00Z"
-last_updated_on: "2026-01-01T00:00:00Z"
-
-prefixes:
-  linkml: https://w3id.org/linkml/
-  # add your namespace prefixes here
-
-default_prefix: myv   # prefix for minted URIs
-imports:
-  - linkml:types
-
 enums:
   MyVocabulary:
     description: Description of this concept scheme
     permissible_values:
 
+      # Top-level concept (no is_a = no broader term)
       TopConcept:
-        description: Definition of the top concept
+        description: Formal definition        # → skos:definition
         aliases:
-          - Alternative name
+          - Preferred label                   # → skos:prefLabel (first alias)
+          - Alternative name                  # → skos:altLabel
+        comments:
+          - Scope note — when to use this     # → skos:scopeNote
 
+      # Child concept (is_a = has a broader concept)
       ChildConcept:
-        is_a: TopConcept          # → skos:broader
+        is_a: TopConcept                      # → skos:broader
         description: Definition
         aliases:
-          - Alternative name
-        comments:
-          - Scope note — when to use this vs other concepts
-        meaning: https://external-vocab.org/ChildConcept  # adopt external URI
+          - Child preferred label
+        meaning: https://external.org/Concept # → adopt external URI
 ```
 
 ### LinkML → SKOS mapping
 
-| LinkML property | SKOS property | Notes |
-|----------------|---------------|-------|
+| LinkML | SKOS | Notes |
+| --- | --- | --- |
 | Enum | `skos:ConceptScheme` | One scheme per enum |
 | Permissible value | `skos:Concept` | One concept per value |
-| `is_a:` | `skos:broader` | Hierarchy |
+| `is_a:` | `skos:broader` | Hierarchical parent |
 | `description:` | `skos:definition` | Formal definition |
-| `aliases:` | `skos:altLabel` | Alternative labels |
+| `aliases:` first | `skos:prefLabel` | Preferred label |
+| `aliases:` rest | `skos:altLabel` | Alternative labels |
 | `comments:` | `skos:scopeNote` | Usage guidance |
-| `meaning:` | `skos:exactMatch` + identity | Adopts external URI |
+| `meaning:` | Adopts external URI | No new URI minted |
 | `exact_mappings:` | `skos:exactMatch` | Maps to external, keeps own URI |
 | `broad_mappings:` | `skos:broadMatch` | External is broader |
-| No `is_a:` | `skos:topConceptOf` | Root concept |
+| `narrow_mappings:` | `skos:narrowMatch` | External is narrower |
+| No `is_a:` | `skos:topConceptOf` | Root/top concept |
 
 ---
 
@@ -155,10 +158,12 @@ python3 scripts/skosify_vocab.py \
   --verbose
 
 # Generate documentation
-PYTHONUTF8=1 gen-doc vocabulary/my-vocabulary.yaml -d ./docs -f markdown
-python3 scripts/fix_tables.py --dir docs
+PYTHONUTF8=1 python3 scripts/generate_vocab_pages.py \
+  --input vocabulary/my-vocabulary.yaml \
+  --output docs/ \
+  --verbose
 
-# Preview documentation locally
+# Preview locally
 mkdocs serve
 
 # Deploy to GitHub Pages
@@ -167,79 +172,56 @@ mkdocs gh-deploy
 
 ---
 
-## Output files
+## Publishing your vocabulary
 
-After the pipeline runs:
+Once the pipeline runs successfully:
 
-| File | Description | Use for |
-|------|-------------|---------|
-| `output/my-vocabulary-raw.ttl` | Raw SKOS (before Skosify) | Debugging |
-| `output/my-vocabulary.ttl` | Final SKOS (after Skosify) | Submission to registries |
-| `docs/` | HTML documentation | GitHub Pages |
-
-### Submit to vocabulary registries
-
-Once your vocabulary is published, you can register it in:
-
-- **LOV** (Linked Open Vocabularies) — https://lov.linkeddata.es
-- **BARTOC** — https://bartoc.org
-- **AgroPortal** — https://agroportal.lirmm.fr
-- **EcoPortal** — https://ecoportal.lifewatch.eu
-- **vocabs.repo.cz** — https://vocabs.repo.cz (Czech Republic)
-
-Submit the `output/my-vocabulary.ttl` file.
+1. **Set up w3id.org redirects** — submit a PR to
+   https://github.com/perma-id/w3id.org with your `.htaccess` rules
+2. **Deposit on Zenodo** — upload `output/my-vocabulary.ttl` for a DOI
+3. **Register in vocabulary registries:**
+   - LOV: https://lov.linkeddata.es
+   - BARTOC: https://bartoc.org
+   - AgroPortal: https://agroportal.lirmm.fr
+   - EcoPortal: https://ecoportal.lifewatch.eu
 
 ---
 
-## w3id.org persistent URIs
+## Contributing new terms
 
-To make your vocabulary URIs persistent via w3id.org:
+To propose a new term, open a GitHub Issue using the
+**Term Request** template. The editorial board will review
+and respond.
 
-1. Fork https://github.com/perma-id/w3id.org
-2. Create `.htaccess` redirect rules for your namespace
-3. Submit a pull request
+---
 
-```apache
-RewriteEngine on
+## Reusability
 
-# Vocabulary TTL for RDF clients
-RewriteCond %{HTTP_ACCEPT} text/turtle
-RewriteRule ^vocabulary/my-vocabulary$
-  https://raw.githubusercontent.com/your-username/your-repo/main/output/my-vocabulary.ttl
-  [R=303,L]
+This template is designed to be reusable by:
+- **Any GitHub account** — personal, organisation or enterprise
+- **Any user** — no credentials or account names hardcoded
+- **Any SKOS vocabulary** — generic scripts work on any
+  LinkML vocabulary YAML following this template structure
 
-# HTML for browsers
-RewriteRule ^vocabulary/my-vocabulary$
-  https://your-username.github.io/your-repo/
-  [R=303,L]
-```
+The only account-specific values are in `vocabulary/my-vocabulary.yaml`
+(`created_by`, `repo_url`) and `mkdocs.yml` (`site_url`) —
+update these for your own vocabulary.
 
 ---
 
 ## Tools used
 
 | Tool | Purpose | License |
-|------|---------|---------|
-| [LinkML](https://linkml.io) | Schema language and generators | Apache 2.0 |
+| --- | --- | --- |
+| [LinkML](https://linkml.io) | Schema language and validators | Apache 2.0 |
 | [Skosify](https://github.com/NatLibFi/Skosify) | SKOS validation and repair | MIT |
 | [rdflib](https://rdflib.readthedocs.io) | RDF processing | BSD |
-| [MkDocs](https://www.mkdocs.org) | Documentation site generator | BSD |
+| [MkDocs](https://www.mkdocs.org) | Documentation generator | BSD |
 | [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) | Documentation theme | MIT |
-
----
-
-## Contributing vocabulary terms
-
-To propose a new term:
-
-1. Open a GitHub Issue using the **Term Request** template
-2. Provide: term name, definition, broader concept, references
-3. The editorial board will review and respond
-4. Approved terms are added to the YAML and the pipeline runs automatically
 
 ---
 
 ## License
 
-The vocabulary publishing template code is released under the MIT License.
-Vocabulary content is released under the license specified in the vocabulary YAML header.
+Template code: MIT License.
+Vocabulary content: license specified in vocabulary YAML header.
