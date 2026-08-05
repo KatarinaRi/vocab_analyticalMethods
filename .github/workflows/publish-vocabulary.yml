@@ -95,6 +95,66 @@ jobs:
           done
           echo "Skosify complete"
 
+      - name: Validate concept URIs
+        run: |
+          echo "Validating concept URIs..."
+          for ttl_file in output/*.ttl; do
+            [ -f "$ttl_file" ] || continue
+            [[ "$ttl_file" == *"-raw.ttl" ]] && continue
+            echo "  Checking: $ttl_file"
+            python3 scripts/validate_uris.py \
+              --input "$ttl_file" \
+              --verbose
+          done
+          echo "URI validation complete"
+
+      - name: Register new URIs in central terms registry
+        run: |
+          echo "Registering new URIs in central terms registry..."
+          for ttl_file in output/*.ttl; do
+            [ -f "$ttl_file" ] || continue
+            [[ "$ttl_file" == *"-raw.ttl" ]] && continue
+            echo "  Registering: $ttl_file"
+            python3 scripts/register_terms.py \
+              --input "$ttl_file" \
+              --verbose
+          done
+          echo "Registration complete"
+
+      - name: Push updated terms registry
+        run: |
+          # Check if terms.ttl was updated
+          if [ ! -f terms.ttl ]; then
+            echo "No terms.ttl generated - skipping push"
+            exit 0
+          fi
+
+          # ==================================================================
+          # NOTE [USER DEFINED]: Update the repository URL below to match
+          # your central terms repository location.
+          # If the repository moves to an enterprise GitHub account,
+          # update this URL and the TERMS_DEPLOY_KEY secret accordingly.
+          #
+          # Current: https://github.com/KatarinaRi/chemical-exposome-terms
+          # Enterprise: https://{enterprise-host}/{owner}/chemical-exposome-terms
+          # ==================================================================
+          TERMS_REPO="https://x-access-token:${{ secrets.TERMS_REPO_TOKEN }}@github.com/KatarinaRi/chemical-exposome-terms.git"
+
+          git clone "$TERMS_REPO" terms-repo
+          cp terms.ttl terms-repo/terms.ttl
+          cd terms-repo
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add terms.ttl
+
+          if git diff --staged --quiet; then
+            echo "No new URIs to register"
+          else
+            git commit -m "Register new URIs from $(basename ${{ github.repository }}) [skip ci]"
+            git push
+            echo "Terms registry updated"
+          fi
+
       - name: List generated SKOS files
         run: |
           echo "Generated files in output/:"
