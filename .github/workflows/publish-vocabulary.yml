@@ -122,6 +122,7 @@ jobs:
           echo "Registration complete"
 
       - name: Push updated terms registry
+        continue-on-error: true # Delete this once the terms repository is set up
         run: |
           # Check if terms.ttl was updated
           if [ ! -f terms.ttl ]; then
