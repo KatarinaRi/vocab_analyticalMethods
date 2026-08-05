@@ -128,12 +128,12 @@ cenvo:GCAPCIHRMS a skos:Concept ;
     skos:notation "GCAPCIHRMS" ;
     skos:prefLabel "GCAPCIHRMS"@en .
 
-cenvo:GCAPCIHRMSMSt a skos:Concept ;
+cenvo:GCAPCIHRMSMS a skos:Concept ;
     skos:altLabel "GC-APCI-HRMS/MS"@en ;
     skos:broader cenvo:GCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "GCAPCIHRMSMSt" ;
-    skos:prefLabel "GCAPCIHRMSMSt"@en .
+    skos:notation "GCAPCIHRMSMS" ;
+    skos:prefLabel "GCAPCIHRMSMS"@en .
 
 cenvo:GCAPCIMS a skos:Concept ;
     skos:altLabel "GC-APCI-MS"@en ;
@@ -142,12 +142,12 @@ cenvo:GCAPCIMS a skos:Concept ;
     skos:notation "GCAPCIMS" ;
     skos:prefLabel "GCAPCIMS"@en .
 
-cenvo:GCAPCIMSMSt a skos:Concept ;
+cenvo:GCAPCIMSMS a skos:Concept ;
     skos:altLabel "GC-APCI-MS/MS"@en ;
     skos:broader cenvo:GCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "GCAPCIMSMSt" ;
-    skos:prefLabel "GCAPCIMSMSt"@en .
+    skos:notation "GCAPCIMSMS" ;
+    skos:prefLabel "GCAPCIMSMS"@en .
 
 cenvo:GCAPPIHRMS a skos:Concept ;
     skos:altLabel "GC-APPI-HRMS"@en ;
@@ -156,12 +156,12 @@ cenvo:GCAPPIHRMS a skos:Concept ;
     skos:notation "GCAPPIHRMS" ;
     skos:prefLabel "GCAPPIHRMS"@en .
 
-cenvo:GCAPPIHRMSMSt a skos:Concept ;
+cenvo:GCAPPIHRMSMS a skos:Concept ;
     skos:altLabel "GC-APPI-HRMS/MS"@en ;
     skos:broader cenvo:GCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "GCAPPIHRMSMSt" ;
-    skos:prefLabel "GCAPPIHRMSMSt"@en .
+    skos:notation "GCAPPIHRMSMS" ;
+    skos:prefLabel "GCAPPIHRMSMS"@en .
 
 cenvo:GCAPPIMS a skos:Concept ;
     skos:altLabel "GC-APPI-MS"@en ;
@@ -170,12 +170,12 @@ cenvo:GCAPPIMS a skos:Concept ;
     skos:notation "GCAPPIMS" ;
     skos:prefLabel "GCAPPIMS"@en .
 
-cenvo:GCAPPIMSMSt a skos:Concept ;
+cenvo:GCAPPIMSMS a skos:Concept ;
     skos:altLabel "GC-APPI-MS/MS"@en ;
     skos:broader cenvo:GCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "GCAPPIMSMSt" ;
-    skos:prefLabel "GCAPPIMSMSt"@en .
+    skos:notation "GCAPPIMSMS" ;
+    skos:prefLabel "GCAPPIMSMS"@en .
 
 cenvo:GCCIHRMS a skos:Concept ;
     skos:altLabel "GC-CI-HRMS"@en ;
@@ -184,12 +184,12 @@ cenvo:GCCIHRMS a skos:Concept ;
     skos:notation "GCCIHRMS" ;
     skos:prefLabel "GCCIHRMS"@en .
 
-cenvo:GCCIHRMSMSt a skos:Concept ;
+cenvo:GCCIHRMSMS a skos:Concept ;
     skos:altLabel "GC-CI-HRMS/MS"@en ;
     skos:broader cenvo:GCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "GCCIHRMSMSt" ;
-    skos:prefLabel "GCCIHRMSMSt"@en .
+    skos:notation "GCCIHRMSMS" ;
+    skos:prefLabel "GCCIHRMSMS"@en .
 
 cenvo:GCCIMS a skos:Concept ;
     skos:altLabel "GC-CI-MS"@en ;
@@ -198,12 +198,12 @@ cenvo:GCCIMS a skos:Concept ;
     skos:notation "GCCIMS" ;
     skos:prefLabel "GCCIMS"@en .
 
-cenvo:GCCIMSMSt a skos:Concept ;
+cenvo:GCCIMSMS a skos:Concept ;
     skos:altLabel "GC-CI-MS/MS"@en ;
     skos:broader cenvo:GCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "GCCIMSMSt" ;
-    skos:prefLabel "GCCIMSMSt"@en .
+    skos:notation "GCCIMSMS" ;
+    skos:prefLabel "GCCIMSMS"@en .
 
 cenvo:GCECD a skos:Concept ;
     skos:altLabel "GC-ECD"@en ;
@@ -219,12 +219,12 @@ cenvo:GCEIHMS a skos:Concept ;
     skos:notation "GCEIHMS" ;
     skos:prefLabel "GCEIHMS"@en .
 
-cenvo:GCEIHRMSMSt a skos:Concept ;
+cenvo:GCEIHRMSMS a skos:Concept ;
     skos:altLabel "GC-EI-HRMS/MS"@en ;
     skos:broader cenvo:GCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "GCEIHRMSMSt" ;
-    skos:prefLabel "GCEIHRMSMSt"@en .
+    skos:notation "GCEIHRMSMS" ;
+    skos:prefLabel "GCEIHRMSMS"@en .
 
 cenvo:GCEIMS a skos:Concept ;
     skos:altLabel "GC-EI-MS"@en ;
@@ -292,12 +292,12 @@ cenvo:GCNCIHRMS a skos:Concept ;
     skos:notation "GCNCIHRMS" ;
     skos:prefLabel "GCNCIHRMS"@en .
 
-cenvo:GCNCIHRMSMSt a skos:Concept ;
+cenvo:GCNCIHRMSMS a skos:Concept ;
     skos:altLabel "GC-NCI-HRMS/MS"@en ;
     skos:broader cenvo:GCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "GCNCIHRMSMSt" ;
-    skos:prefLabel "GCNCIHRMSMSt"@en .
+    skos:notation "GCNCIHRMSMS" ;
+    skos:prefLabel "GCNCIHRMSMS"@en .
 
 cenvo:GCNCIMS a skos:Concept ;
     skos:altLabel "GC-NCI-MS"@en ;
@@ -306,12 +306,12 @@ cenvo:GCNCIMS a skos:Concept ;
     skos:notation "GCNCIMS" ;
     skos:prefLabel "GCNCIMS"@en .
 
-cenvo:GCNCIMSMSt a skos:Concept ;
+cenvo:GCNCIMSMS a skos:Concept ;
     skos:altLabel "GC-NCI-MS/MS"@en ;
     skos:broader cenvo:GCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "GCNCIMSMSt" ;
-    skos:prefLabel "GCNCIMSMSt"@en .
+    skos:notation "GCNCIMSMS" ;
+    skos:prefLabel "GCNCIMSMS"@en .
 
 cenvo:GCNPD a skos:Concept ;
     skos:altLabel "GC-NPD"@en ;
@@ -345,13 +345,13 @@ cenvo:GCxGCMS a skos:Concept ;
     skos:notation "GCxGCMS" ;
     skos:prefLabel "GCxGCMS"@en .
 
-cenvo:GCxGCMSMSt a skos:Concept ;
+cenvo:GCxGCMSMS a skos:Concept ;
     skos:altLabel "GCxGC-MS/MS"@en,
         "GC×GC-MS/MS"@en ;
     skos:broader cenvo:GCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "GCxGCMSMSt" ;
-    skos:prefLabel "GCxGCMSMSt"@en .
+    skos:notation "GCxGCMSMS" ;
+    skos:prefLabel "GCxGCMSMS"@en .
 
 cenvo:GDAES a skos:Concept ;
     skos:altLabel "GD-AES"@en,
@@ -418,12 +418,12 @@ cenvo:HPLCHRMS a skos:Concept ;
     skos:notation "HPLCHRMS" ;
     skos:prefLabel "HPLCHRMS"@en .
 
-cenvo:HPLCHRMSMSt a skos:Concept ;
+cenvo:HPLCHRMSMS a skos:Concept ;
     skos:altLabel "HPLC-HRMS/MS"@en ;
     skos:broader cenvo:LCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "HPLCHRMSMSt" ;
-    skos:prefLabel "HPLCHRMSMSt"@en .
+    skos:notation "HPLCHRMSMS" ;
+    skos:prefLabel "HPLCHRMSMS"@en .
 
 cenvo:HPLCMS a skos:Concept ;
     skos:altLabel "HPLC-MS"@en ;
@@ -432,12 +432,12 @@ cenvo:HPLCMS a skos:Concept ;
     skos:notation "HPLCMS" ;
     skos:prefLabel "HPLCMS"@en .
 
-cenvo:HPLCMSMSt a skos:Concept ;
+cenvo:HPLCMSMS a skos:Concept ;
     skos:altLabel "HPLC-MS/MS"@en ;
     skos:broader cenvo:LCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "HPLCMSMSt" ;
-    skos:prefLabel "HPLCMSMSt"@en .
+    skos:notation "HPLCMSMS" ;
+    skos:prefLabel "HPLCMSMS"@en .
 
 cenvo:HPLCUV a skos:Concept ;
     skos:altLabel "HPLC-UV"@en ;
@@ -468,12 +468,12 @@ cenvo:ICESIHRMS a skos:Concept ;
     skos:notation "ICESIHRMS" ;
     skos:prefLabel "ICESIHRMS"@en .
 
-cenvo:ICESIHRMSMSt a skos:Concept ;
+cenvo:ICESIHRMSMS a skos:Concept ;
     skos:altLabel "IC-ESI-HRMS/MS"@en ;
     skos:broader cenvo:ICMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "ICESIHRMSMSt" ;
-    skos:prefLabel "ICESIHRMSMSt"@en .
+    skos:notation "ICESIHRMSMS" ;
+    skos:prefLabel "ICESIHRMSMS"@en .
 
 cenvo:ICESIMS a skos:Concept ;
     skos:altLabel "IC-ESI-MS"@en ;
@@ -482,12 +482,12 @@ cenvo:ICESIMS a skos:Concept ;
     skos:notation "ICESIMS" ;
     skos:prefLabel "ICESIMS"@en .
 
-cenvo:ICESIMSMSt a skos:Concept ;
+cenvo:ICESIMSMS a skos:Concept ;
     skos:altLabel "IC-ESI-MS/MS"@en ;
     skos:broader cenvo:ICMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "ICESIMSMSt" ;
-    skos:prefLabel "ICESIMSMSt"@en .
+    skos:notation "ICESIMSMS" ;
+    skos:prefLabel "ICESIMSMS"@en .
 
 cenvo:ICFLD a skos:Concept ;
     skos:altLabel "IC-FLD"@en ;
@@ -503,12 +503,12 @@ cenvo:ICHRMS a skos:Concept ;
     skos:notation "ICHRMS" ;
     skos:prefLabel "ICHRMS"@en .
 
-cenvo:ICHRMSMSt a skos:Concept ;
+cenvo:ICHRMSMS a skos:Concept ;
     skos:altLabel "IC-HRMS/MS"@en ;
     skos:broader cenvo:ICMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "ICHRMSMSt" ;
-    skos:prefLabel "ICHRMSMSt"@en .
+    skos:notation "ICHRMSMS" ;
+    skos:prefLabel "ICHRMSMS"@en .
 
 cenvo:ICICPMS a skos:Concept ;
     skos:altLabel "IC-ICP-MS"@en ;
@@ -517,12 +517,12 @@ cenvo:ICICPMS a skos:Concept ;
     skos:notation "ICICPMS" ;
     skos:prefLabel "ICICPMS"@en .
 
-cenvo:ICMSMSt a skos:Concept ;
+cenvo:ICMSMS a skos:Concept ;
     skos:altLabel "IC-MS/MS"@en ;
     skos:broader cenvo:ICMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "ICMSMSt" ;
-    skos:prefLabel "ICMSMSt"@en .
+    skos:notation "ICMSMS" ;
+    skos:prefLabel "ICMSMS"@en .
 
 cenvo:ICPAES a skos:Concept ;
     skos:altLabel "ICP Atomic Emission Spectroscopy"@en,
@@ -594,12 +594,12 @@ cenvo:LCHRMS a skos:Concept ;
     skos:notation "LCHRMS" ;
     skos:prefLabel "LCHRMS"@en .
 
-cenvo:LCHRMSMSt a skos:Concept ;
+cenvo:LCHRMSMS a skos:Concept ;
     skos:altLabel "LC-HRMS/MS"@en ;
     skos:broader cenvo:LCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "LCHRMSMSt" ;
-    skos:prefLabel "LCHRMSMSt"@en .
+    skos:notation "LCHRMSMS" ;
+    skos:prefLabel "LCHRMSMS"@en .
 
 cenvo:LCICPMS a skos:Concept ;
     skos:altLabel "LC-ICP-MS"@en ;
@@ -608,12 +608,12 @@ cenvo:LCICPMS a skos:Concept ;
     skos:notation "LCICPMS" ;
     skos:prefLabel "LCICPMS"@en .
 
-cenvo:LCICPMSMSt a skos:Concept ;
+cenvo:LCICPMSMS a skos:Concept ;
     skos:altLabel "LC-ICP-MS/MS"@en ;
     skos:broader cenvo:MixICP ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "LCICPMSMSt" ;
-    skos:prefLabel "LCICPMSMSt"@en .
+    skos:notation "LCICPMSMS" ;
+    skos:prefLabel "LCICPMSMS"@en .
 
 cenvo:LCIR a skos:Concept ;
     skos:altLabel "LC-IR"@en ;
@@ -622,12 +622,12 @@ cenvo:LCIR a skos:Concept ;
     skos:notation "LCIR" ;
     skos:prefLabel "LCIR"@en .
 
-cenvo:LCMSMSt a skos:Concept ;
+cenvo:LCMSMS a skos:Concept ;
     skos:altLabel "LC-MS/MS"@en ;
     skos:broader cenvo:LCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "LCMSMSt" ;
-    skos:prefLabel "LCMSMSt"@en .
+    skos:notation "LCMSMS" ;
+    skos:prefLabel "LCMSMS"@en .
 
 cenvo:LCNMR a skos:Concept ;
     skos:altLabel "LC-NMR"@en ;
@@ -665,19 +665,19 @@ cenvo:SFCHRMS a skos:Concept ;
     skos:notation "SFCHRMS" ;
     skos:prefLabel "SFCHRMS"@en .
 
-cenvo:SFCHRMSMSt a skos:Concept ;
+cenvo:SFCHRMSMS a skos:Concept ;
     skos:altLabel "SFC-HRMS/MS"@en ;
     skos:broader cenvo:SFCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "SFCHRMSMSt" ;
-    skos:prefLabel "SFCHRMSMSt"@en .
+    skos:notation "SFCHRMSMS" ;
+    skos:prefLabel "SFCHRMSMS"@en .
 
-cenvo:SFCMSMSt a skos:Concept ;
+cenvo:SFCMSMS a skos:Concept ;
     skos:altLabel "SFC-MS/MS"@en ;
     skos:broader cenvo:SFCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "SFCMSMSt" ;
-    skos:prefLabel "SFCMSMSt"@en .
+    skos:notation "SFCMSMS" ;
+    skos:prefLabel "SFCMSMS"@en .
 
 cenvo:SingleWavelengthUVVis a skos:Concept ;
     skos:altLabel "Single Wavelength UV-Vis"@en ;
@@ -723,12 +723,12 @@ cenvo:UPLCHRMS a skos:Concept ;
     skos:notation "UPLCHRMS" ;
     skos:prefLabel "UPLCHRMS"@en .
 
-cenvo:UPLCHRMSMSt a skos:Concept ;
+cenvo:UPLCHRMSMS a skos:Concept ;
     skos:altLabel "UPLC-HRMS/MS"@en ;
     skos:broader cenvo:LCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "UPLCHRMSMSt" ;
-    skos:prefLabel "UPLCHRMSMSt"@en .
+    skos:notation "UPLCHRMSMS" ;
+    skos:prefLabel "UPLCHRMSMS"@en .
 
 cenvo:UPLCMS a skos:Concept ;
     skos:altLabel "UPLC-MS"@en ;
@@ -737,12 +737,12 @@ cenvo:UPLCMS a skos:Concept ;
     skos:notation "UPLCMS" ;
     skos:prefLabel "UPLCMS"@en .
 
-cenvo:UPLCMSMSt a skos:Concept ;
+cenvo:UPLCMSMS a skos:Concept ;
     skos:altLabel "UPLC-MS/MS"@en ;
     skos:broader cenvo:LCMS ;
     skos:inScheme vocab:AnalyticalMethod ;
-    skos:notation "UPLCMSMSt" ;
-    skos:prefLabel "UPLCMSMSt"@en .
+    skos:notation "UPLCMSMS" ;
+    skos:prefLabel "UPLCMSMS"@en .
 
 cenvo:UPLCUV a skos:Concept ;
     skos:altLabel "UPLC-UV"@en ;
