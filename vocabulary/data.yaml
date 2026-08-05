@@ -375,7 +375,7 @@ enums:
         aliases:
           - GC-EI-HRMS
 
-      GCEIHRMSMSt:
+      GCEIHRMSMS:
         is_a: GCMS
         aliases:
           - GC-EI-HRMS/MS
@@ -385,7 +385,7 @@ enums:
         aliases:
           - GC-NCI-MS
 
-      GCNCIMSMSt:
+      GCNCIMSMS:
         is_a: GCMS
         aliases:
           - GC-NCI-MS/MS
@@ -395,7 +395,7 @@ enums:
         aliases:
           - GC-NCI-HRMS
 
-      GCNCIHRMSMSt:
+      GCNCIHRMSMS:
         is_a: GCMS
         aliases:
           - GC-NCI-HRMS/MS
@@ -405,7 +405,7 @@ enums:
         aliases:
           - GC-CI-MS
 
-      GCCIMSMSt:
+      GCCIMSMS:
         is_a: GCMS
         aliases:
           - GC-CI-MS/MS
@@ -415,7 +415,7 @@ enums:
         aliases:
           - GC-CI-HRMS
 
-      GCCIHRMSMSt:
+      GCCIHRMSMS:
         is_a: GCMS
         aliases:
           - GC-CI-HRMS/MS
@@ -425,7 +425,7 @@ enums:
         aliases:
           - GC-APPI-MS
 
-      GCAPPIMSMSt:
+      GCAPPIMSMS:
         is_a: GCMS
         aliases:
           - GC-APPI-MS/MS
@@ -435,7 +435,7 @@ enums:
         aliases:
           - GC-APPI-HRMS
 
-      GCAPPIHRMSMSt:
+      GCAPPIHRMSMS:
         is_a: GCMS
         aliases:
           - GC-APPI-HRMS/MS
@@ -445,7 +445,7 @@ enums:
         aliases:
           - GC-APCI-MS
 
-      GCAPCIMSMSt:
+      GCAPCIMSMS:
         is_a: GCMS
         aliases:
           - GC-APCI-MS/MS
@@ -455,7 +455,7 @@ enums:
         aliases:
           - GC-APCI-HRMS
 
-      GCAPCIHRMSMSt:
+      GCAPCIHRMSMS:
         is_a: GCMS
         aliases:
           - GC-APCI-HRMS/MS
@@ -467,7 +467,7 @@ enums:
           - GC×GC-MS
           - Two-Dimensional GC-MS
 
-      GCxGCMSMSt:
+      GCxGCMSMS:
         is_a: GCMS
         aliases:
           - GCxGC-MS/MS
@@ -486,7 +486,7 @@ enums:
           - LC-MS
           - Liquid Chromatography Mass Spectrometry
 
-      LCMSMSt:
+      LCMSMS:
         is_a: LCMS
         aliases:
           - LC-MS/MS
@@ -496,7 +496,7 @@ enums:
         aliases:
           - LC-HRMS
 
-      LCHRMSMSt:
+      LCHRMSMS:
         is_a: LCMS
         aliases:
           - LC-HRMS/MS
@@ -506,7 +506,7 @@ enums:
         aliases:
           - HPLC-MS
 
-      HPLCMSMSt:
+      HPLCMSMS:
         is_a: LCMS
         aliases:
           - HPLC-MS/MS
@@ -516,7 +516,7 @@ enums:
         aliases:
           - HPLC-HRMS
 
-      HPLCHRMSMSt:
+      HPLCHRMSMS:
         is_a: LCMS
         aliases:
           - HPLC-HRMS/MS
@@ -534,7 +534,7 @@ enums:
         aliases:
           - UPLC-MS
 
-      UPLCMSMSt:
+      UPLCMSMS:
         is_a: LCMS
         aliases:
           - UPLC-MS/MS
@@ -544,7 +544,7 @@ enums:
         aliases:
           - UPLC-HRMS
 
-      UPLCHRMSMSt:
+      UPLCHRMSMS:
         is_a: LCMS
         aliases:
           - UPLC-HRMS/MS
@@ -556,7 +556,7 @@ enums:
           - IC-MS
           - Ion Chromatography Mass Spectrometry
 
-      ICMSMSt:
+      ICMSMS:
         is_a: ICMS
         aliases:
           - IC-MS/MS
@@ -566,7 +566,7 @@ enums:
         aliases:
           - IC-HRMS
 
-      ICHRMSMSt:
+      ICHRMSMS:
         is_a: ICMS
         aliases:
           - IC-HRMS/MS
@@ -576,7 +576,7 @@ enums:
         aliases:
           - IC-ESI-MS
 
-      ICESIMSMSt:
+      ICESIMSMS:
         is_a: ICMS
         aliases:
           - IC-ESI-MS/MS
@@ -586,7 +586,7 @@ enums:
         aliases:
           - IC-ESI-HRMS
 
-      ICESIHRMSMSt:
+      ICESIHRMSMS:
         is_a: ICMS
         aliases:
           - IC-ESI-HRMS/MS
@@ -598,7 +598,7 @@ enums:
           - SFC-MS
           - Supercritical Fluid Chromatography Mass Spectrometry
 
-      SFCMSMSt:
+      SFCMSMS:
         is_a: SFCMS
         aliases:
           - SFC-MS/MS
@@ -608,7 +608,7 @@ enums:
         aliases:
           - SFC-HRMS
 
-      SFCHRMSMSt:
+      SFCHRMSMS:
         is_a: SFCMS
         aliases:
           - SFC-HRMS/MS
@@ -774,7 +774,7 @@ enums:
         aliases:
           - LC-ICP-MS
 
-      LCICPMSMSt:
+      LCICPMSMS:
         is_a: MixICP
         aliases:
           - LC-ICP-MS/MS
