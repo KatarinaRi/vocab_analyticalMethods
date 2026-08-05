@@ -1,6 +1,17 @@
-site_name: Analytical Methods Vocabulary
-site_url: https://katarinari.github.io/vocab_analyticalMethods/
-site_description: Controlled vocabulary of analytical methods for chemical analysis in environmental monitoring samples
+# ===========================================================================
+# MKDOCS CONFIGURATION
+# [USER DEFINED] Update site_name and site_url before deploying
+# ===========================================================================
+
+# [USER DEFINED] Your vocabulary name
+site_name: My Controlled Vocabulary
+
+# [USER DEFINED] Your GitHub Pages URL
+# Format: https://{github-username}.github.io/{repo-name}/
+site_url: https://your-username.github.io/your-repo-name/
+
+# [USER DEFINED] Short description of your vocabulary
+site_description: Human-readable documentation for the controlled vocabulary
 
 theme:
   name: material

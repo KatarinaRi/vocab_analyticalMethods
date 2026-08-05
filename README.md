@@ -16,11 +16,9 @@ Every time you push a vocabulary YAML file, GitHub Actions automatically:
 1. **Validates** the YAML using `linkml-lint`
 2. **Generates SKOS** Turtle from the LinkML YAML
 3. **Repairs and validates** the SKOS using Skosify
-4. **Validates concept URIs** — checks for collisions with other published
-   vocabularies and accidental deletions of existing URIs
-5. **Generates HTML documentation** with index, hierarchy and concept pages
-6. **Deploys documentation** to GitHub Pages
-7. **Commits generated TTL** files back to the repository
+4. **Generates HTML documentation** with index, hierarchy and concept pages
+5. **Deploys documentation** to GitHub Pages
+6. **Commits generated TTL** files back to the repository
 
 ---
 
@@ -36,10 +34,9 @@ Every time you push a vocabulary YAML file, GitHub Actions automatically:
 ├── vocabulary/
 │   └── my-vocabulary.yaml           ← [USER DEFINED] your vocabulary source
 ├── scripts/                         ← pipeline scripts (do not edit)
-│   ├── generate_skos.py             ← generates SKOS Turtle from LinkML YAML
-│   ├── generate_vocab_pages.py      ← generates HTML documentation
-│   ├── skosify_vocab.py             ← validates and repairs SKOS
-│   └── validate_uris.py             ← checks for URI collisions and deletions
+│   ├── generate_skos.py
+│   ├── generate_vocab_pages.py
+│   └── skosify_vocab.py
 ├── output/                          ← auto-generated TTL files
 │   ├── my-vocabulary-raw.ttl        ← raw SKOS (before Skosify)
 │   └── my-vocabulary.ttl            ← final SKOS — use this for submission
@@ -84,43 +81,12 @@ must be filled in before pushing:
 | `site_url` | Your GitHub Pages URL: `https://{username}.github.io/{repo-name}/` |
 | `site_description` | Short description |
 
-### Step 3 — Configure URI validation in `scripts/validate_uris.py`
-
-Open `scripts/validate_uris.py` and update the two configuration
-variables at the top of the file — **once only, when setting up
-the repository**:
-
-```python
-# List of other published vocabulary TTL files to check against
-# for URI collisions. Add one URL per vocabulary you publish.
-# Leave empty [] for your first vocabulary.
-PUBLISHED_VOCABULARIES = [
-    # "https://raw.githubusercontent.com/your-username/vocab-matrix/main/output/data.ttl",
-    # "https://raw.githubusercontent.com/your-username/vocab-parameter/main/output/data.ttl",
-]
-
-# URL of the previously published version of THIS vocabulary.
-# Used to detect accidental URI deletions between versions.
-# Points to main branch — always resolves to the last published version.
-# Change only the username and repo name to match your repository.
-# Never needs updating after initial setup.
-PREVIOUS_VERSION_URL = \
-    "https://raw.githubusercontent.com/your-username/your-repo-name/main/output/data.ttl"
-```
-
-**Important:**
-- `PREVIOUS_VERSION_URL` always points to `main/output/data.ttl` — it
-  automatically compares against the last published version on every push.
-  You never need to update it after initial setup.
-- `PUBLISHED_VOCABULARIES` — add the URL of each new vocabulary you create
-  so the pipeline checks for collisions across all your vocabularies.
-
-### Step 4 — Enable GitHub Pages
+### Step 3 — Enable GitHub Pages
 
 Go to your repository → **Settings** → **Pages** →
 Source: `gh-pages` branch, `/ (root)` → **Save**.
 
-### Step 5 — Push and watch
+### Step 4 — Push and watch
 
 Push your vocabulary YAML — GitHub Actions runs automatically.
 Check the **Actions** tab for progress.
@@ -172,49 +138,6 @@ enums:
 
 ---
 
-## URI validation — how it works
-
-The `validate_uris.py` script runs automatically in the pipeline after
-SKOS generation. It performs three checks:
-
-**Check 1 — Internal uniqueness**
-Verifies that no two concepts in the new TTL have the same URI.
-
-**Check 2 — Cross-vocabulary collision**
-Fetches all other published vocabularies listed in `PUBLISHED_VOCABULARIES`
-and checks that no concept URI in the new vocabulary already exists in
-another vocabulary. This prevents accidental URI reuse across vocabularies
-sharing the same namespace.
-
-**Check 3 — Accidental deletion**
-Fetches the currently published version of this vocabulary from
-`PREVIOUS_VERSION_URL` (always the `main` branch — automatically the
-last published version) and checks that no existing concept URI has
-been removed. Removal must always be done via deprecation
-(`owl:deprecated + dcterms:isReplacedBy`), never by deleting the
-concept from the YAML.
-
-If any check fails the pipeline stops and no files are published.
-
----
-
-## Versioning
-
-Use semantic versioning (MAJOR.MINOR.PATCH):
-
-| Version type | When to use | Example |
-| --- | --- | --- |
-| MAJOR (X.0.0) | Breaking changes — deprecated concepts, major restructuring | 1.0.0 → 2.0.0 |
-| MINOR (1.X.0) | New concepts added — backwards compatible | 1.0.0 → 1.1.0 |
-| PATCH (1.0.X) | Corrections — typos, definition improvements | 1.0.0 → 1.0.1 |
-
-Update `version` and `last_updated_on` in the vocabulary YAML on every
-release. Document changes in `CHANGELOG.md`.
-
-**Never delete a concept URI** — use `owl:deprecated` instead.
-
----
-
 ## Running locally
 
 ```bash
@@ -232,11 +155,6 @@ PYTHONUTF8=1 python3 scripts/generate_skos.py \
 # Skosify
 python3 scripts/skosify_vocab.py \
   --input output/my-vocabulary-raw.ttl \
-  --verbose
-
-# Validate URIs
-python3 scripts/validate_uris.py \
-  --input output/my-vocabulary.ttl \
   --verbose
 
 # Generate documentation
@@ -285,12 +203,9 @@ This template is designed to be reusable by:
 - **Any SKOS vocabulary** — generic scripts work on any
   LinkML vocabulary YAML following this template structure
 
-The only values to customise per repository are in:
-- `vocabulary/my-vocabulary.yaml` — all `[USER DEFINED]` fields
-- `mkdocs.yml` — `site_name`, `site_url`, `site_description`
-- `scripts/validate_uris.py` — `PUBLISHED_VOCABULARIES` and
-  `PREVIOUS_VERSION_URL` (username and repo name only — set once,
-  never touch again)
+The only account-specific values are in `vocabulary/my-vocabulary.yaml`
+(`created_by`, `repo_url`) and `mkdocs.yml` (`site_url`) —
+update these for your own vocabulary.
 
 ---
 

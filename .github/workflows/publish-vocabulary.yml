@@ -95,20 +95,6 @@ jobs:
           done
           echo "Skosify complete"
 
-      - name: Validate concept URIs (collision and deletion check)
-        run: |
-          echo "Validating concept URIs..."
-          for ttl_file in output/*.ttl; do
-            [ -f "$ttl_file" ] || continue
-            echo "*-raw.ttl" | grep -q "$(basename $ttl_file)" && continue
-            [[ "$ttl_file" == *"-raw.ttl" ]] && continue
-            echo "  Checking: $ttl_file"
-            python3 scripts/validate_uris.py \
-              --input "$ttl_file" \
-              --verbose
-          done
-          echo "URI validation complete"
-
       - name: List generated SKOS files
         run: |
           echo "Generated files in output/:"

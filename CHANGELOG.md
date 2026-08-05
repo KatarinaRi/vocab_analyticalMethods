@@ -16,6 +16,3 @@ This vocabulary adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.
 ### Added
 - Initial vocabulary release
 - [List initial concepts here]
-
-### ConceptScheme
-- `MyVocabulary` — [description]
