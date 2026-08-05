@@ -1,312 +1,190 @@
-# Vocabulary Publishing Template
+# Analytical Methods Vocabulary
 
-A GitHub template repository for publishing SKOS controlled vocabularies
-defined in LinkML YAML format. Push a vocabulary YAML — get a validated,
-SKOSified Turtle file and human-readable documentation automatically.
-
-This template is reusable by **any user**, on **any GitHub account**
-(personal, organisation or enterprise), for **any SKOS vocabulary**.
+A controlled vocabulary of analytical methods used for chemical analysis
+in environmental monitoring samples. Developed within the
+[PARC project](https://www.eu-parc.eu) (Partnership for the Assessment
+of Risks from Chemicals).
 
 ---
 
-## What this template does
+## Overview
 
-Every time you push a vocabulary YAML file, GitHub Actions automatically:
-
-1. **Validates** the YAML using `linkml-lint`
-2. **Generates SKOS** Turtle from the LinkML YAML
-3. **Repairs and validates** the SKOS using Skosify
-4. **Validates concept URIs** — checks for collisions with other published
-   vocabularies and accidental deletions of existing URIs
-5. **Generates HTML documentation** with index, hierarchy and concept pages
-6. **Deploys documentation** to GitHub Pages
-7. **Commits generated TTL** files back to the repository
-
----
-
-## Repository structure
-
-```
-.
-├── .github/
-│   ├── workflows/
-│   │   └── publish-vocabulary.yml   ← automated pipeline (do not edit)
-│   └── ISSUE_TEMPLATE/
-│       └── term-request.md          ← template for community term requests
-├── vocabulary/
-│   └── my-vocabulary.yaml           ← [USER DEFINED] your vocabulary source
-├── scripts/                         ← pipeline scripts (do not edit)
-│   ├── generate_skos.py             ← generates SKOS Turtle from LinkML YAML
-│   ├── generate_vocab_pages.py      ← generates HTML documentation
-│   ├── skosify_vocab.py             ← validates and repairs SKOS
-│   └── validate_uris.py             ← checks for URI collisions and deletions
-├── output/                          ← auto-generated TTL files
-│   ├── my-vocabulary-raw.ttl        ← raw SKOS (before Skosify)
-│   └── my-vocabulary.ttl            ← final SKOS — use this for submission
-├── docs/                            ← auto-generated documentation
-├── mkdocs.yml                       ← [USER DEFINED] site name and URL
-├── CHANGELOG.md                     ← [USER DEFINED] version history
-└── README.md                        ← this file
-```
-
----
-
-## Quick start — what YOU need to define
-
-### Step 1 — Edit `vocabulary/my-vocabulary.yaml`
-
-This is your vocabulary source file. All fields marked `[USER DEFINED]`
-must be filled in before pushing:
-
-| Field | Description |
+| | |
 | --- | --- |
-| `id` | Persistent URI for your vocabulary (e.g. w3id.org namespace) |
-| `name` | Machine-readable name — no spaces, use hyphens |
-| `title` | Human-readable vocabulary title |
-| `description` | What this vocabulary covers and who it is for |
-| `version` | Semantic version e.g. `"1.0.0"` |
-| `license` | License URI — CC-BY 4.0 recommended |
-| `created_by` | Your ORCID URI |
-| `created_on` | Creation date in ISO 8601 format |
-| `last_updated_on` | Last update date in ISO 8601 format |
-| `modified_by` | ORCID of person who last modified |
-| `annotations.schema_status` | `draft` / `review` / `stable` / `deprecated` |
-| `annotations.repo_url` | Your GitHub repository URL — used for download links |
-| `prefixes` | Add your vocabulary namespace prefix |
-| `default_prefix` | Your prefix name (e.g. `myv`) |
-| `enums` | Your vocabulary concepts — rename and fill in |
-
-### Step 2 — Edit `mkdocs.yml`
-
-| Field | Description |
-| --- | --- |
-| `site_name` | Your vocabulary name |
-| `site_url` | Your GitHub Pages URL: `https://{username}.github.io/{repo-name}/` |
-| `site_description` | Short description |
-
-### Step 3 — Configure URI validation in `scripts/validate_uris.py`
-
-Open `scripts/validate_uris.py` and update the two configuration
-variables at the top of the file — **once only, when setting up
-the repository**:
-
-```python
-# List of other published vocabulary TTL files to check against
-# for URI collisions. Add one URL per vocabulary you publish.
-# Leave empty [] for your first vocabulary.
-PUBLISHED_VOCABULARIES = [
-    # "https://raw.githubusercontent.com/your-username/vocab-matrix/main/output/data.ttl",
-    # "https://raw.githubusercontent.com/your-username/vocab-parameter/main/output/data.ttl",
-]
-
-# URL of the previously published version of THIS vocabulary.
-# Used to detect accidental URI deletions between versions.
-# Points to main branch — always resolves to the last published version.
-# Change only the username and repo name to match your repository.
-# Never needs updating after initial setup.
-PREVIOUS_VERSION_URL = \
-    "https://raw.githubusercontent.com/your-username/your-repo-name/main/output/data.ttl"
-```
-
-**Important:**
-- `PREVIOUS_VERSION_URL` always points to `main/output/data.ttl` — it
-  automatically compares against the last published version on every push.
-  You never need to update it after initial setup.
-- `PUBLISHED_VOCABULARIES` — add the URL of each new vocabulary you create
-  so the pipeline checks for collisions across all your vocabularies.
-
-### Step 4 — Enable GitHub Pages
-
-Go to your repository → **Settings** → **Pages** →
-Source: `gh-pages` branch, `/ (root)` → **Save**.
-
-### Step 5 — Push and watch
-
-Push your vocabulary YAML — GitHub Actions runs automatically.
-Check the **Actions** tab for progress.
+| **Persistent URI** | https://w3id.org/chemical-exposome/vocabulary/analytical-methods |
+| **Version** | 2.1.0 |
+| **Status** | 🟡 Draft |
+| **License** | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| **Creator** | [Katarína Řiháčková](https://orcid.org/0000-0003-0222-801x) (Masaryk University) |
+| **Created** | 2026-01-01 |
+| **Last updated** | 2026-07-30 |
+| **Funding** | Horizon Europe, PARC project, grant No 101057014 |
 
 ---
 
-## Vocabulary YAML — concept definition guide
+## Documentation and downloads
+
+| Resource | Link |
+| --- | --- |
+| **Browse online** | [GitHub Pages documentation](https://katarinari.github.io/vocab_analyticalMethods/) |
+| **Concept hierarchy** | [Hierarchy view](https://katarinari.github.io/vocab_analyticalMethods/hierarchy) |
+| **Download SKOS TTL** | [output/data.ttl](output/data.ttl) |
+| **Source YAML** | [vocabulary/data.yaml](vocabulary/data.yaml) |
+| **Zenodo DOI** | [PLACEHOLDER — add after Zenodo deposit] |
+
+---
+
+## Scope
+
+This vocabulary provides a standardised set of terms for describing
+analytical methods used in environmental monitoring. It covers:
+
+- **Spectroscopy** — Atomic Absorption (AAS), Atomic Emission (AES),
+  Atomic Fluorescence (AFS), ICP, X-ray Fluorescence (XRF), NMR, UV-Vis
+- **Mass Spectrometry** — ICP-MS, GC-MS, LC-MS, IC-MS, SFC-MS with
+  full coverage of ionisation modes (EI, NCI, CI, APPI, APCI) and
+  resolution variants (MS, MS/MS, HRMS, HRMS/MS)
+- **Chromatography** — Gas (GC), Liquid (HPLC, UPLC), Ion (IC)
+  with detection variants (DAD, FLD, UV, ECD, FID etc.)
+- **Mixed methods** — Chromatography coupled to ICP-MS (LC, GC, IC),
+  LC-IR, LC-NMR
+- **Other** — Spectrophotometry, Colorimetry, Electrophoresis
+
+The vocabulary currently contains **[PLACEHOLDER — number] concepts**
+organised in a hierarchy with [PLACEHOLDER — number] top-level categories.
+
+---
+
+## Alignment
+
+This vocabulary is aligned with:
+
+- **PARC deliverable D9.4-1** — [PLACEHOLDER — add reference]
+- **[PLACEHOLDER — add other relevant standards or vocabularies]**
+
+---
+
+## How to use this vocabulary
+
+### In data annotation
+
+Reference concept URIs in your data:
+
+```
+https://w3id.org/chemical-exposome/term/GFAAS
+https://w3id.org/chemical-exposome/term/GCMS
+https://w3id.org/chemical-exposome/term/ICPMS
+```
+
+### In a LinkML schema
+
+Reference concepts via `meaning:` in your schema enums:
 
 ```yaml
 enums:
-  MyVocabulary:
-    description: Description of this concept scheme
+  AnalyticalMethod:
     permissible_values:
-
-      # Top-level concept (no is_a = no broader term)
-      TopConcept:
-        description: Formal definition        # → skos:definition
-        aliases:
-          - Preferred label                   # → skos:prefLabel (first alias)
-          - Alternative name                  # → skos:altLabel
-        comments:
-          - Scope note — when to use this     # → skos:scopeNote
-
-      # Child concept (is_a = has a broader concept)
-      ChildConcept:
-        is_a: TopConcept                      # → skos:broader
-        description: Definition
-        aliases:
-          - Child preferred label
-        meaning: https://external.org/Concept # → adopt external URI
+      GFAAS:
+        meaning: https://w3id.org/chemical-exposome/term/GFAAS
+      GCMS:
+        meaning: https://w3id.org/chemical-exposome/term/GCMS
 ```
 
-### LinkML → SKOS mapping
+### In RDF/SPARQL
 
-| LinkML | SKOS | Notes |
-| --- | --- | --- |
-| Enum | `skos:ConceptScheme` | One scheme per enum |
-| Permissible value | `skos:Concept` | One concept per value |
-| `is_a:` | `skos:broader` | Hierarchical parent |
-| `description:` | `skos:definition` | Formal definition |
-| `aliases:` first | `skos:prefLabel` | Preferred label |
-| `aliases:` rest | `skos:altLabel` | Alternative labels |
-| `comments:` | `skos:scopeNote` | Usage guidance |
-| `meaning:` | Adopts external URI | No new URI minted |
-| `exact_mappings:` | `skos:exactMatch` | Maps to external, keeps own URI |
-| `broad_mappings:` | `skos:broadMatch` | External is broader |
-| `narrow_mappings:` | `skos:narrowMatch` | External is narrower |
-| No `is_a:` | `skos:topConceptOf` | Root/top concept |
+```sparql
+PREFIX cenvo: <https://w3id.org/chemical-exposome/term/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
----
-
-## URI validation — how it works
-
-The `validate_uris.py` script runs automatically in the pipeline after
-SKOS generation. It performs three checks:
-
-**Check 1 — Internal uniqueness**
-Verifies that no two concepts in the new TTL have the same URI.
-
-**Check 2 — Cross-vocabulary collision**
-Fetches all other published vocabularies listed in `PUBLISHED_VOCABULARIES`
-and checks that no concept URI in the new vocabulary already exists in
-another vocabulary. This prevents accidental URI reuse across vocabularies
-sharing the same namespace.
-
-**Check 3 — Accidental deletion**
-Fetches the currently published version of this vocabulary from
-`PREVIOUS_VERSION_URL` (always the `main` branch — automatically the
-last published version) and checks that no existing concept URI has
-been removed. Removal must always be done via deprecation
-(`owl:deprecated + dcterms:isReplacedBy`), never by deleting the
-concept from the YAML.
-
-If any check fails the pipeline stops and no files are published.
-
----
-
-## Versioning
-
-Use semantic versioning (MAJOR.MINOR.PATCH):
-
-| Version type | When to use | Example |
-| --- | --- | --- |
-| MAJOR (X.0.0) | Breaking changes — deprecated concepts, major restructuring | 1.0.0 → 2.0.0 |
-| MINOR (1.X.0) | New concepts added — backwards compatible | 1.0.0 → 1.1.0 |
-| PATCH (1.0.X) | Corrections — typos, definition improvements | 1.0.0 → 1.0.1 |
-
-Update `version` and `last_updated_on` in the vocabulary YAML on every
-release. Document changes in `CHANGELOG.md`.
-
-**Never delete a concept URI** — use `owl:deprecated` instead.
-
----
-
-## Running locally
-
-```bash
-# Install dependencies
-pip install linkml rdflib skosify mkdocs mkdocs-material
-
-# Validate
-PYTHONUTF8=1 linkml-lint vocabulary/my-vocabulary.yaml
-
-# Generate SKOS
-PYTHONUTF8=1 python3 scripts/generate_skos.py \
-  --input vocabulary/my-vocabulary.yaml \
-  --verbose
-
-# Skosify
-python3 scripts/skosify_vocab.py \
-  --input output/my-vocabulary-raw.ttl \
-  --verbose
-
-# Validate URIs
-python3 scripts/validate_uris.py \
-  --input output/my-vocabulary.ttl \
-  --verbose
-
-# Generate documentation
-PYTHONUTF8=1 python3 scripts/generate_vocab_pages.py \
-  --input vocabulary/my-vocabulary.yaml \
-  --output docs/ \
-  --verbose
-
-# Preview locally
-mkdocs serve
-
-# Deploy to GitHub Pages
-mkdocs gh-deploy
+# Find all GC-MS methods
+SELECT ?method ?label WHERE {
+    ?method skos:broader+ cenvo:GCMS ;
+            skos:prefLabel ?label .
+}
 ```
 
 ---
 
-## Publishing your vocabulary
+## Provenance
 
-Once the pipeline runs successfully:
+### Development
 
-1. **Set up w3id.org redirects** — submit a PR to
-   https://github.com/perma-id/w3id.org with your `.htaccess` rules
-2. **Deposit on Zenodo** — upload `output/my-vocabulary.ttl` for a DOI
-3. **Register in vocabulary registries:**
-   - LOV: https://lov.linkeddata.es
-   - BARTOC: https://bartoc.org
-   - AgroPortal: https://agroportal.lirmm.fr
-   - EcoPortal: https://ecoportal.lifewatch.eu
+[PLACEHOLDER — describe how the vocabulary was developed,
+e.g. based on which sources, expert review process, etc.]
 
----
+### Contributors
 
-## Contributing new terms
+| Name | ORCID | Role | Institution |
+| --- | --- | --- | --- |
+| Katarína Řiháčková | [0000-0003-0222-801x](https://orcid.org/0000-0003-0222-801x) | Conceptualization, Data curation | Masaryk University |
+| [PLACEHOLDER] | [PLACEHOLDER] | [PLACEHOLDER] | [PLACEHOLDER] |
 
-To propose a new term, open a GitHub Issue using the
-**Term Request** template. The editorial board will review
-and respond.
+### Funding
 
----
+This vocabulary was developed within the PARC project (Partnership for
+the Assessment of Risks from Chemicals), funded by the European Union
+under Horizon Europe grant agreement No 101057014.
 
-## Reusability
+### Citation
 
-This template is designed to be reusable by:
-- **Any GitHub account** — personal, organisation or enterprise
-- **Any user** — no credentials or account names hardcoded
-- **Any SKOS vocabulary** — generic scripts work on any
-  LinkML vocabulary YAML following this template structure
+If you use this vocabulary in your work, please cite:
 
-The only values to customise per repository are in:
-- `vocabulary/my-vocabulary.yaml` — all `[USER DEFINED]` fields
-- `mkdocs.yml` — `site_name`, `site_url`, `site_description`
-- `scripts/validate_uris.py` — `PUBLISHED_VOCABULARIES` and
-  `PREVIOUS_VERSION_URL` (username and repo name only — set once,
-  never touch again)
+> [PLACEHOLDER — add citation after Zenodo deposit]
+> Řiháčková, K. et al. (2026). Analytical Methods Vocabulary (v2.1.0).
+> Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
 
 ---
 
-## Tools used
+## Versioning and changelog
 
-| Tool | Purpose | License |
-| --- | --- | --- |
-| [LinkML](https://linkml.io) | Schema language and validators | Apache 2.0 |
-| [Skosify](https://github.com/NatLibFi/Skosify) | SKOS validation and repair | MIT |
-| [rdflib](https://rdflib.readthedocs.io) | RDF processing | BSD |
-| [MkDocs](https://www.mkdocs.org) | Documentation generator | BSD |
-| [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) | Documentation theme | MIT |
+See [CHANGELOG.md](CHANGELOG.md) for a full history of changes.
+
+This vocabulary follows [semantic versioning](https://semver.org/):
+- **MAJOR** — breaking changes (deprecated concepts, restructuring)
+- **MINOR** — new concepts added
+- **PATCH** — corrections and improvements
+
+**Concept URIs are permanent** — once minted, a URI never changes.
+Retired concepts are deprecated with `owl:deprecated`, not deleted.
+
+---
+
+## Contributing
+
+To propose a new term or report an error, open a GitHub Issue
+using the [Term Request](.github/ISSUE_TEMPLATE/term-request.md) template.
+
+Please provide:
+- Proposed term name and definition
+- Why the term is needed
+- Broader concept (parent in hierarchy)
+- References or sources
+- Any equivalent terms in external vocabularies
+
+All proposals are reviewed by the editorial board before publication.
+
+---
+
+## Technical notes
+
+This vocabulary is published using the
+[vocab-template](https://github.com/KatarinaRi/vocab-template)
+pipeline. The source is a LinkML YAML file which is automatically
+converted to SKOS Turtle, validated, and published to GitHub Pages
+on every push.
+
+| File | Description |
+| --- | --- |
+| `vocabulary/data.yaml` | Source vocabulary in LinkML YAML format |
+| `output/data-raw.ttl` | Raw SKOS Turtle (before Skosify validation) |
+| `output/data.ttl` | Final SKOS Turtle — use this for submission to registries |
 
 ---
 
 ## License
 
-Template code: MIT License.
-Vocabulary content: license specified in vocabulary YAML header.
+This vocabulary is released under the
+[Creative Commons Attribution 4.0 International License (CC-BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+You are free to share and adapt this vocabulary for any purpose,
+provided you give appropriate credit.
