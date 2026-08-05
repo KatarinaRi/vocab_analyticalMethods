@@ -8,7 +8,6 @@
 cenvo:AdvancedMercuryAnalyzer a skos:Concept ;
     skos:altLabel "AMA"@en ;
     skos:broader cenvo:AAS ;
-    skos:definition "Advanced Mercury Analyzer — instrument dedicated to mercury determination using thermal decomposition and atomic absorption."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "AdvancedMercuryAnalyzer" ;
     skos:prefLabel "AdvancedMercuryAnalyzer"@en .
@@ -17,7 +16,6 @@ cenvo:C13NMR a skos:Concept ;
     skos:altLabel "13C NMR"@en,
         "Carbon-13 NMR"@en ;
     skos:broader cenvo:NMR ;
-    skos:definition "Carbon-13 Nuclear Magnetic Resonance Spectroscopy — measures the NMR signal from carbon-13 nuclei."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "C13NMR" ;
     skos:prefLabel "C13NMR"@en .
@@ -26,7 +24,6 @@ cenvo:CVAAS a skos:Concept ;
     skos:altLabel "CV-AAS"@en,
         "Cold Vapour AAS"@en ;
     skos:broader cenvo:AAS ;
-    skos:definition "Cold Vapour Atomic Absorption Spectroscopy — used for mercury determination; mercury vapour is generated and swept into the light path for measurement."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "CVAAS" ;
     skos:prefLabel "CVAAS"@en ;
@@ -36,7 +33,6 @@ cenvo:CVAFS a skos:Concept ;
     skos:altLabel "CV-AFS"@en,
         "Cold Vapour AFS"@en ;
     skos:broader cenvo:AFS ;
-    skos:definition "Cold Vapour Atomic Fluorescence Spectroscopy — used for mercury determination; mercury vapour is generated and measured by fluorescence."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "CVAFS" ;
     skos:prefLabel "CVAFS"@en .
@@ -45,7 +41,6 @@ cenvo:CZE a skos:Concept ;
     skos:altLabel "Capillary Electrophoresis"@en,
         "Capillary Zone Electrophoresis"@en ;
     skos:broader cenvo:Electrophoresis ;
-    skos:definition "Capillary Zone Electrophoresis — electrophoretic separation in a narrow capillary using an electric field."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "CZE" ;
     skos:prefLabel "CZE"@en ;
@@ -54,7 +49,6 @@ cenvo:CZE a skos:Concept ;
 cenvo:Colorimetry a skos:Concept ;
     skos:altLabel "Colorimetric methods"@en ;
     skos:broader cenvo:Spectrophotometry ;
-    skos:definition "Colorimetry — measurement of colour or light absorption in the visible range, often after a colour-forming reaction."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "Colorimetry" ;
     skos:prefLabel "Colorimetry"@en ;
@@ -64,7 +58,6 @@ cenvo:DADUVVis a skos:Concept ;
     skos:altLabel "DAD UV-Vis"@en,
         "Diode Array Detection UV-Vis"@en ;
     skos:broader cenvo:UVVis ;
-    skos:definition "Multi-Wavelength UV-Visible Spectroscopy with Diode Array Detection — simultaneous measurement across a range of wavelengths using a diode array detector."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "DADUVVis" ;
     skos:prefLabel "DADUVVis"@en .
@@ -72,7 +65,6 @@ cenvo:DADUVVis a skos:Concept ;
 cenvo:DirectAAS a skos:Concept ;
     skos:altLabel "Direct AAS"@en ;
     skos:broader cenvo:AAS ;
-    skos:definition "Direct Atomic Absorption Spectroscopy — direct measurement without prior separation or generation steps."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "DirectAAS" ;
     skos:prefLabel "DirectAAS"@en .
@@ -80,7 +72,6 @@ cenvo:DirectAAS a skos:Concept ;
 cenvo:DirectAES a skos:Concept ;
     skos:altLabel "Direct AES"@en ;
     skos:broader cenvo:AES ;
-    skos:definition "Direct Atomic Emission Spectroscopy — direct measurement without prior separation or generation steps."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "DirectAES" ;
     skos:prefLabel "DirectAES"@en .
@@ -88,7 +79,6 @@ cenvo:DirectAES a skos:Concept ;
 cenvo:DirectAFS a skos:Concept ;
     skos:altLabel "Direct AFS"@en ;
     skos:broader cenvo:AFS ;
-    skos:definition "Direct Atomic Fluorescence Spectroscopy — direct measurement without prior separation or generation steps."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "DirectAFS" ;
     skos:prefLabel "DirectAFS"@en .
@@ -96,7 +86,6 @@ cenvo:DirectAFS a skos:Concept ;
 cenvo:DirectMercuryAnalyzer a skos:Concept ;
     skos:altLabel "DMA"@en ;
     skos:broader cenvo:AAS ;
-    skos:definition "Direct Mercury Analyzer — instrument for direct mercury determination in solid and liquid samples without prior digestion."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "DirectMercuryAnalyzer" ;
     skos:prefLabel "DirectMercuryAnalyzer"@en .
@@ -105,7 +94,6 @@ cenvo:EDXRF a skos:Concept ;
     skos:altLabel "ED-XRF"@en,
         "Energy-Dispersive XRF"@en ;
     skos:broader cenvo:XRF ;
-    skos:definition "Energy-Dispersive X-ray Fluorescence Spectroscopy — separates fluorescent X-rays by energy using a semiconductor detector."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "EDXRF" ;
     skos:prefLabel "EDXRF"@en .
@@ -114,7 +102,6 @@ cenvo:FIAFS a skos:Concept ;
     skos:altLabel "FI-AFS"@en,
         "Flow Injection AFS"@en ;
     skos:broader cenvo:AFS ;
-    skos:definition "Flow Injection Atomic Fluorescence Spectroscopy — flow injection analysis coupled with atomic fluorescence spectroscopy."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "FIAFS" ;
     skos:prefLabel "FIAFS"@en .
@@ -123,7 +110,6 @@ cenvo:FlameAAS a skos:Concept ;
     skos:altLabel "FAAS"@en,
         "Flame AAS"@en ;
     skos:broader cenvo:AAS ;
-    skos:definition "Flame Atomic Absorption Spectroscopy — sample is aspirated into a flame to produce free atoms for measurement."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "FlameAAS" ;
     skos:prefLabel "FlameAAS"@en .
@@ -131,7 +117,6 @@ cenvo:FlameAAS a skos:Concept ;
 cenvo:FlameAES a skos:Concept ;
     skos:altLabel "Flame AES"@en ;
     skos:broader cenvo:AES ;
-    skos:definition "Flame Atomic Emission Spectroscopy — uses a flame to excite atoms which then emit characteristic radiation."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "FlameAES" ;
     skos:prefLabel "FlameAES"@en .
@@ -139,7 +124,6 @@ cenvo:FlameAES a skos:Concept ;
 cenvo:GCAPCIHRMS a skos:Concept ;
     skos:altLabel "GC-APCI-HRMS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Atmospheric Pressure Chemical Ionisation High Resolution Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCAPCIHRMS" ;
     skos:prefLabel "GCAPCIHRMS"@en .
@@ -147,7 +131,6 @@ cenvo:GCAPCIHRMS a skos:Concept ;
 cenvo:GCAPCIHRMSMSt a skos:Concept ;
     skos:altLabel "GC-APCI-HRMS/MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Atmospheric Pressure Chemical Ionisation High Resolution Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCAPCIHRMSMSt" ;
     skos:prefLabel "GCAPCIHRMSMSt"@en .
@@ -155,7 +138,6 @@ cenvo:GCAPCIHRMSMSt a skos:Concept ;
 cenvo:GCAPCIMS a skos:Concept ;
     skos:altLabel "GC-APCI-MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Atmospheric Pressure Chemical Ionisation Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCAPCIMS" ;
     skos:prefLabel "GCAPCIMS"@en .
@@ -163,7 +145,6 @@ cenvo:GCAPCIMS a skos:Concept ;
 cenvo:GCAPCIMSMSt a skos:Concept ;
     skos:altLabel "GC-APCI-MS/MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Atmospheric Pressure Chemical Ionisation Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCAPCIMSMSt" ;
     skos:prefLabel "GCAPCIMSMSt"@en .
@@ -171,7 +152,6 @@ cenvo:GCAPCIMSMSt a skos:Concept ;
 cenvo:GCAPPIHRMS a skos:Concept ;
     skos:altLabel "GC-APPI-HRMS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Atmospheric Pressure Photoionisation High Resolution Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCAPPIHRMS" ;
     skos:prefLabel "GCAPPIHRMS"@en .
@@ -179,7 +159,6 @@ cenvo:GCAPPIHRMS a skos:Concept ;
 cenvo:GCAPPIHRMSMSt a skos:Concept ;
     skos:altLabel "GC-APPI-HRMS/MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Atmospheric Pressure Photoionisation High Resolution Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCAPPIHRMSMSt" ;
     skos:prefLabel "GCAPPIHRMSMSt"@en .
@@ -187,7 +166,6 @@ cenvo:GCAPPIHRMSMSt a skos:Concept ;
 cenvo:GCAPPIMS a skos:Concept ;
     skos:altLabel "GC-APPI-MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Atmospheric Pressure Photoionisation Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCAPPIMS" ;
     skos:prefLabel "GCAPPIMS"@en .
@@ -195,7 +173,6 @@ cenvo:GCAPPIMS a skos:Concept ;
 cenvo:GCAPPIMSMSt a skos:Concept ;
     skos:altLabel "GC-APPI-MS/MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Atmospheric Pressure Photoionisation Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCAPPIMSMSt" ;
     skos:prefLabel "GCAPPIMSMSt"@en .
@@ -203,7 +180,6 @@ cenvo:GCAPPIMSMSt a skos:Concept ;
 cenvo:GCCIHRMS a skos:Concept ;
     skos:altLabel "GC-CI-HRMS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Chemical Ionisation High Resolution Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCCIHRMS" ;
     skos:prefLabel "GCCIHRMS"@en .
@@ -211,7 +187,6 @@ cenvo:GCCIHRMS a skos:Concept ;
 cenvo:GCCIHRMSMSt a skos:Concept ;
     skos:altLabel "GC-CI-HRMS/MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Chemical Ionisation High Resolution Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCCIHRMSMSt" ;
     skos:prefLabel "GCCIHRMSMSt"@en .
@@ -219,7 +194,6 @@ cenvo:GCCIHRMSMSt a skos:Concept ;
 cenvo:GCCIMS a skos:Concept ;
     skos:altLabel "GC-CI-MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Chemical Ionisation Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCCIMS" ;
     skos:prefLabel "GCCIMS"@en .
@@ -227,7 +201,6 @@ cenvo:GCCIMS a skos:Concept ;
 cenvo:GCCIMSMSt a skos:Concept ;
     skos:altLabel "GC-CI-MS/MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Chemical Ionisation Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCCIMSMSt" ;
     skos:prefLabel "GCCIMSMSt"@en .
@@ -235,7 +208,6 @@ cenvo:GCCIMSMSt a skos:Concept ;
 cenvo:GCECD a skos:Concept ;
     skos:altLabel "GC-ECD"@en ;
     skos:broader cenvo:GC ;
-    skos:definition "Gas Chromatography – Electron Capture Detection — highly sensitive detector for halogenated compounds."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCECD" ;
     skos:prefLabel "GCECD"@en .
@@ -243,7 +215,6 @@ cenvo:GCECD a skos:Concept ;
 cenvo:GCEIHMS a skos:Concept ;
     skos:altLabel "GC-EI-HRMS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Electron Ionisation High Resolution Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCEIHMS" ;
     skos:prefLabel "GCEIHMS"@en .
@@ -251,7 +222,6 @@ cenvo:GCEIHMS a skos:Concept ;
 cenvo:GCEIHRMSMSt a skos:Concept ;
     skos:altLabel "GC-EI-HRMS/MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Electron Ionisation High Resolution Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCEIHRMSMSt" ;
     skos:prefLabel "GCEIHRMSMSt"@en .
@@ -259,7 +229,6 @@ cenvo:GCEIHRMSMSt a skos:Concept ;
 cenvo:GCEIMS a skos:Concept ;
     skos:altLabel "GC-EI-MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Electron Ionisation Mass Spectrometry — uses electron ionisation as the ionisation technique."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCEIMS" ;
     skos:prefLabel "GCEIMS"@en .
@@ -267,7 +236,6 @@ cenvo:GCEIMS a skos:Concept ;
 cenvo:GCEIMSMS a skos:Concept ;
     skos:altLabel "GC-EI-MS/MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Electron Ionisation Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCEIMSMS" ;
     skos:prefLabel "GCEIMSMS"@en .
@@ -275,7 +243,6 @@ cenvo:GCEIMSMS a skos:Concept ;
 cenvo:GCFID a skos:Concept ;
     skos:altLabel "GC-FID"@en ;
     skos:broader cenvo:GC ;
-    skos:definition "Gas Chromatography – Flame Ionisation Detection — universal detector for organic compounds containing carbon-hydrogen bonds."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCFID" ;
     skos:prefLabel "GCFID"@en .
@@ -283,7 +250,6 @@ cenvo:GCFID a skos:Concept ;
 cenvo:GCFPD a skos:Concept ;
     skos:altLabel "GC-FPD"@en ;
     skos:broader cenvo:GC ;
-    skos:definition "Gas Chromatography – Flame Photometric Detection — selective detector for phosphorus and sulfur compounds."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCFPD" ;
     skos:prefLabel "GCFPD"@en ;
@@ -293,7 +259,6 @@ cenvo:GCHRMS a skos:Concept ;
     skos:altLabel "GC High Resolution MS"@en,
         "GC-HRMS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – High Resolution Mass Spectrometry — uses a high resolution mass analyser after gas chromatographic separation."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCHRMS" ;
     skos:prefLabel "GCHRMS"@en .
@@ -301,7 +266,6 @@ cenvo:GCHRMS a skos:Concept ;
 cenvo:GCHRMSMS a skos:Concept ;
     skos:altLabel "GC-HRMS/MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – High Resolution Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCHRMSMS" ;
     skos:prefLabel "GCHRMSMS"@en .
@@ -309,7 +273,6 @@ cenvo:GCHRMSMS a skos:Concept ;
 cenvo:GCICPMS a skos:Concept ;
     skos:altLabel "GC-ICP-MS"@en ;
     skos:broader cenvo:MixICP ;
-    skos:definition "Gas Chromatography – ICP Mass Spectrometry — for volatile element species."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCICPMS" ;
     skos:prefLabel "GCICPMS"@en .
@@ -318,7 +281,6 @@ cenvo:GCMSMS a skos:Concept ;
     skos:altLabel "GC Tandem MS"@en,
         "GC-MS/MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Tandem Mass Spectrometry — uses two mass analysers in series after gas chromatographic separation."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCMSMS" ;
     skos:prefLabel "GCMSMS"@en .
@@ -326,7 +288,6 @@ cenvo:GCMSMS a skos:Concept ;
 cenvo:GCNCIHRMS a skos:Concept ;
     skos:altLabel "GC-NCI-HRMS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Negative Chemical Ionisation High Resolution Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCNCIHRMS" ;
     skos:prefLabel "GCNCIHRMS"@en .
@@ -334,7 +295,6 @@ cenvo:GCNCIHRMS a skos:Concept ;
 cenvo:GCNCIHRMSMSt a skos:Concept ;
     skos:altLabel "GC-NCI-HRMS/MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Negative Chemical Ionisation High Resolution Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCNCIHRMSMSt" ;
     skos:prefLabel "GCNCIHRMSMSt"@en .
@@ -342,7 +302,6 @@ cenvo:GCNCIHRMSMSt a skos:Concept ;
 cenvo:GCNCIMS a skos:Concept ;
     skos:altLabel "GC-NCI-MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Negative Chemical Ionisation Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCNCIMS" ;
     skos:prefLabel "GCNCIMS"@en .
@@ -350,7 +309,6 @@ cenvo:GCNCIMS a skos:Concept ;
 cenvo:GCNCIMSMSt a skos:Concept ;
     skos:altLabel "GC-NCI-MS/MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Gas Chromatography – Negative Chemical Ionisation Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCNCIMSMSt" ;
     skos:prefLabel "GCNCIMSMSt"@en .
@@ -358,7 +316,6 @@ cenvo:GCNCIMSMSt a skos:Concept ;
 cenvo:GCNPD a skos:Concept ;
     skos:altLabel "GC-NPD"@en ;
     skos:broader cenvo:GC ;
-    skos:definition "Gas Chromatography – Nitrogen-Phosphorus Detection — selective detector for nitrogen and phosphorus compounds."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCNPD" ;
     skos:prefLabel "GCNPD"@en ;
@@ -367,7 +324,6 @@ cenvo:GCNPD a skos:Concept ;
 cenvo:GCPID a skos:Concept ;
     skos:altLabel "GC-PID"@en ;
     skos:broader cenvo:GC ;
-    skos:definition "Gas Chromatography – Photoionisation Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCPID" ;
     skos:prefLabel "GCPID"@en .
@@ -376,7 +332,6 @@ cenvo:GCxGCHRMS a skos:Concept ;
     skos:altLabel "GCxGC-HRMS"@en,
         "GC×GC-HRMS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Comprehensive Two-Dimensional Gas Chromatography – High Resolution Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCxGCHRMS" ;
     skos:prefLabel "GCxGCHRMS"@en .
@@ -386,7 +341,6 @@ cenvo:GCxGCMS a skos:Concept ;
         "GC×GC-MS"@en,
         "Two-Dimensional GC-MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Comprehensive Two-Dimensional Gas Chromatography – Mass Spectrometry — uses two GC columns with different selectivities in series."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCxGCMS" ;
     skos:prefLabel "GCxGCMS"@en .
@@ -395,7 +349,6 @@ cenvo:GCxGCMSMSt a skos:Concept ;
     skos:altLabel "GCxGC-MS/MS"@en,
         "GC×GC-MS/MS"@en ;
     skos:broader cenvo:GCMS ;
-    skos:definition "Comprehensive Two-Dimensional Gas Chromatography – Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCxGCMSMSt" ;
     skos:prefLabel "GCxGCMSMSt"@en .
@@ -404,7 +357,6 @@ cenvo:GDAES a skos:Concept ;
     skos:altLabel "GD-AES"@en,
         "Glow Discharge AES"@en ;
     skos:broader cenvo:AES ;
-    skos:definition "Glow Discharge Atomic Emission Spectroscopy — uses a glow discharge plasma to atomise and excite the sample."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GDAES" ;
     skos:prefLabel "GDAES"@en .
@@ -415,7 +367,6 @@ cenvo:GFAAS a skos:Concept ;
         "GF-AAS"@en,
         "Graphite Furnace AAS"@en ;
     skos:broader cenvo:AAS ;
-    skos:definition "Graphite Furnace Atomic Absorption Spectroscopy — uses a graphite furnace to atomise the sample, providing higher sensitivity than flame AAS."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GFAAS" ;
     skos:prefLabel "GFAAS"@en ;
@@ -425,7 +376,6 @@ cenvo:H1NMR a skos:Concept ;
     skos:altLabel "1H NMR"@en,
         "Proton NMR"@en ;
     skos:broader cenvo:NMR ;
-    skos:definition "Proton Nuclear Magnetic Resonance Spectroscopy — measures the NMR signal from hydrogen-1 nuclei."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "H1NMR" ;
     skos:prefLabel "H1NMR"@en .
@@ -434,7 +384,6 @@ cenvo:HGAFS a skos:Concept ;
     skos:altLabel "HG-AFS"@en,
         "Hydride Generation AFS"@en ;
     skos:broader cenvo:AFS ;
-    skos:definition "Hydride Generation Atomic Fluorescence Spectroscopy — volatile hydrides of the analyte are generated and introduced into the fluorescence detector."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "HGAFS" ;
     skos:prefLabel "HGAFS"@en .
@@ -442,7 +391,6 @@ cenvo:HGAFS a skos:Concept ;
 cenvo:HPLCDAD a skos:Concept ;
     skos:altLabel "HPLC-DAD"@en ;
     skos:broader cenvo:HPLC ;
-    skos:definition "High Performance Liquid Chromatography – Diode Array Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "HPLCDAD" ;
     skos:prefLabel "HPLCDAD"@en .
@@ -451,7 +399,6 @@ cenvo:HPLCECD a skos:Concept ;
     skos:altLabel "HPLC Electrochemical Detection"@en,
         "HPLC-ECD"@en ;
     skos:broader cenvo:LCMS ;
-    skos:definition "High Performance Liquid Chromatography – Electrochemical Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "HPLCECD" ;
     skos:prefLabel "HPLCECD"@en ;
@@ -460,7 +407,6 @@ cenvo:HPLCECD a skos:Concept ;
 cenvo:HPLCFLD a skos:Concept ;
     skos:altLabel "HPLC-FLD"@en ;
     skos:broader cenvo:HPLC ;
-    skos:definition "High Performance Liquid Chromatography – Fluorescence Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "HPLCFLD" ;
     skos:prefLabel "HPLCFLD"@en .
@@ -468,7 +414,6 @@ cenvo:HPLCFLD a skos:Concept ;
 cenvo:HPLCHRMS a skos:Concept ;
     skos:altLabel "HPLC-HRMS"@en ;
     skos:broader cenvo:LCMS ;
-    skos:definition "High Performance Liquid Chromatography – High Resolution Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "HPLCHRMS" ;
     skos:prefLabel "HPLCHRMS"@en .
@@ -476,7 +421,6 @@ cenvo:HPLCHRMS a skos:Concept ;
 cenvo:HPLCHRMSMSt a skos:Concept ;
     skos:altLabel "HPLC-HRMS/MS"@en ;
     skos:broader cenvo:LCMS ;
-    skos:definition "High Performance Liquid Chromatography – High Resolution Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "HPLCHRMSMSt" ;
     skos:prefLabel "HPLCHRMSMSt"@en .
@@ -484,7 +428,6 @@ cenvo:HPLCHRMSMSt a skos:Concept ;
 cenvo:HPLCMS a skos:Concept ;
     skos:altLabel "HPLC-MS"@en ;
     skos:broader cenvo:LCMS ;
-    skos:definition "High Performance Liquid Chromatography – Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "HPLCMS" ;
     skos:prefLabel "HPLCMS"@en .
@@ -492,7 +435,6 @@ cenvo:HPLCMS a skos:Concept ;
 cenvo:HPLCMSMSt a skos:Concept ;
     skos:altLabel "HPLC-MS/MS"@en ;
     skos:broader cenvo:LCMS ;
-    skos:definition "High Performance Liquid Chromatography – Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "HPLCMSMSt" ;
     skos:prefLabel "HPLCMSMSt"@en .
@@ -500,7 +442,6 @@ cenvo:HPLCMSMSt a skos:Concept ;
 cenvo:HPLCUV a skos:Concept ;
     skos:altLabel "HPLC-UV"@en ;
     skos:broader cenvo:HPLC ;
-    skos:definition "High Performance Liquid Chromatography – Ultraviolet Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "HPLCUV" ;
     skos:prefLabel "HPLCUV"@en .
@@ -508,7 +449,6 @@ cenvo:HPLCUV a skos:Concept ;
 cenvo:HPLCVIS a skos:Concept ;
     skos:altLabel "HPLC-VIS"@en ;
     skos:broader cenvo:HPLC ;
-    skos:definition "High Performance Liquid Chromatography – Visible Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "HPLCVIS" ;
     skos:prefLabel "HPLCVIS"@en ;
@@ -517,7 +457,6 @@ cenvo:HPLCVIS a skos:Concept ;
 cenvo:ICDAD a skos:Concept ;
     skos:altLabel "IC-DAD"@en ;
     skos:broader cenvo:IC ;
-    skos:definition "Ion Chromatography – Diode Array Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICDAD" ;
     skos:prefLabel "ICDAD"@en .
@@ -525,7 +464,6 @@ cenvo:ICDAD a skos:Concept ;
 cenvo:ICESIHRMS a skos:Concept ;
     skos:altLabel "IC-ESI-HRMS"@en ;
     skos:broader cenvo:ICMS ;
-    skos:definition "Ion Chromatography – Electrospray Ionisation High Resolution Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICESIHRMS" ;
     skos:prefLabel "ICESIHRMS"@en .
@@ -533,7 +471,6 @@ cenvo:ICESIHRMS a skos:Concept ;
 cenvo:ICESIHRMSMSt a skos:Concept ;
     skos:altLabel "IC-ESI-HRMS/MS"@en ;
     skos:broader cenvo:ICMS ;
-    skos:definition "Ion Chromatography – Electrospray Ionisation High Resolution Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICESIHRMSMSt" ;
     skos:prefLabel "ICESIHRMSMSt"@en .
@@ -541,7 +478,6 @@ cenvo:ICESIHRMSMSt a skos:Concept ;
 cenvo:ICESIMS a skos:Concept ;
     skos:altLabel "IC-ESI-MS"@en ;
     skos:broader cenvo:ICMS ;
-    skos:definition "Ion Chromatography – Electrospray Ionisation Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICESIMS" ;
     skos:prefLabel "ICESIMS"@en .
@@ -549,7 +485,6 @@ cenvo:ICESIMS a skos:Concept ;
 cenvo:ICESIMSMSt a skos:Concept ;
     skos:altLabel "IC-ESI-MS/MS"@en ;
     skos:broader cenvo:ICMS ;
-    skos:definition "Ion Chromatography – Electrospray Ionisation Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICESIMSMSt" ;
     skos:prefLabel "ICESIMSMSt"@en .
@@ -557,7 +492,6 @@ cenvo:ICESIMSMSt a skos:Concept ;
 cenvo:ICFLD a skos:Concept ;
     skos:altLabel "IC-FLD"@en ;
     skos:broader cenvo:IC ;
-    skos:definition "Ion Chromatography – Fluorescence Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICFLD" ;
     skos:prefLabel "ICFLD"@en .
@@ -565,7 +499,6 @@ cenvo:ICFLD a skos:Concept ;
 cenvo:ICHRMS a skos:Concept ;
     skos:altLabel "IC-HRMS"@en ;
     skos:broader cenvo:ICMS ;
-    skos:definition "Ion Chromatography – High Resolution Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICHRMS" ;
     skos:prefLabel "ICHRMS"@en .
@@ -573,7 +506,6 @@ cenvo:ICHRMS a skos:Concept ;
 cenvo:ICHRMSMSt a skos:Concept ;
     skos:altLabel "IC-HRMS/MS"@en ;
     skos:broader cenvo:ICMS ;
-    skos:definition "Ion Chromatography – High Resolution Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICHRMSMSt" ;
     skos:prefLabel "ICHRMSMSt"@en .
@@ -581,7 +513,6 @@ cenvo:ICHRMSMSt a skos:Concept ;
 cenvo:ICICPMS a skos:Concept ;
     skos:altLabel "IC-ICP-MS"@en ;
     skos:broader cenvo:MixICP ;
-    skos:definition "Ion Chromatography – ICP Mass Spectrometry — for ionic element species."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICICPMS" ;
     skos:prefLabel "ICICPMS"@en .
@@ -589,7 +520,6 @@ cenvo:ICICPMS a skos:Concept ;
 cenvo:ICMSMSt a skos:Concept ;
     skos:altLabel "IC-MS/MS"@en ;
     skos:broader cenvo:ICMS ;
-    skos:definition "Ion Chromatography – Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICMSMSt" ;
     skos:prefLabel "ICMSMSt"@en .
@@ -598,7 +528,6 @@ cenvo:ICPAES a skos:Concept ;
     skos:altLabel "ICP Atomic Emission Spectroscopy"@en,
         "ICP-AES"@en ;
     skos:broader cenvo:ICP ;
-    skos:definition "ICP Atomic Emission Spectroscopy — measures atomic emission from an ICP source. NOTE: widely considered a synonym of ICP-OES — to be verified against PARC D9.4-1. ICP-AES acronym may conflict with Auger Electron Spectroscopy."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICPAES" ;
     skos:prefLabel "ICPAES"@en ;
@@ -608,7 +537,6 @@ cenvo:ICPDRCMS a skos:Concept ;
     skos:altLabel "ICP Dynamic Reaction Cell MS"@en,
         "ICP-DRC-MS"@en ;
     skos:broader cenvo:ICPMS ;
-    skos:definition "ICP Dynamic Reaction Cell Mass Spectrometry — uses a reaction cell filled with a reactive gas to eliminate spectral interferences."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICPDRCMS" ;
     skos:prefLabel "ICPDRCMS"@en .
@@ -617,7 +545,6 @@ cenvo:ICPKEDMS a skos:Concept ;
     skos:altLabel "ICP Kinetic Energy Discrimination MS"@en,
         "ICP-KED-MS"@en ;
     skos:broader cenvo:ICPMS ;
-    skos:definition "ICP Kinetic Energy Discrimination Mass Spectrometry — uses a collision cell with kinetic energy discrimination to reduce polyatomic interferences."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICPKEDMS" ;
     skos:prefLabel "ICPKEDMS"@en .
@@ -626,7 +553,6 @@ cenvo:ICPMSMS a skos:Concept ;
     skos:altLabel "ICP Tandem Mass Spectrometry"@en,
         "ICP-MS/MS"@en ;
     skos:broader cenvo:ICPMS ;
-    skos:definition "ICP Tandem Mass Spectrometry — uses two mass analysers in series to reduce spectral interferences."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICPMSMS" ;
     skos:prefLabel "ICPMSMS"@en .
@@ -635,7 +561,6 @@ cenvo:ICPOES a skos:Concept ;
     skos:altLabel "ICP Optical Emission Spectroscopy"@en,
         "ICP-OES"@en ;
     skos:broader cenvo:ICP ;
-    skos:definition "ICP Optical Emission Spectroscopy — measures optical emission from an ICP source. NOTE: widely considered a synonym of ICP-AES — to be verified against PARC D9.4-1. ICP-OES is the preferred unambiguous acronym."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICPOES" ;
     skos:prefLabel "ICPOES"@en ;
@@ -644,7 +569,6 @@ cenvo:ICPOES a skos:Concept ;
 cenvo:ICUV a skos:Concept ;
     skos:altLabel "IC-UV"@en ;
     skos:broader cenvo:IC ;
-    skos:definition "Ion Chromatography – Ultraviolet Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICUV" ;
     skos:prefLabel "ICUV"@en .
@@ -652,7 +576,6 @@ cenvo:ICUV a skos:Concept ;
 cenvo:LCDAD a skos:Concept ;
     skos:altLabel "LC-DAD"@en ;
     skos:broader cenvo:LC ;
-    skos:definition "Liquid Chromatography – Diode Array Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "LCDAD" ;
     skos:prefLabel "LCDAD"@en .
@@ -660,7 +583,6 @@ cenvo:LCDAD a skos:Concept ;
 cenvo:LCFLD a skos:Concept ;
     skos:altLabel "LC-FLD"@en ;
     skos:broader cenvo:LC ;
-    skos:definition "Liquid Chromatography – Fluorescence Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "LCFLD" ;
     skos:prefLabel "LCFLD"@en .
@@ -668,7 +590,6 @@ cenvo:LCFLD a skos:Concept ;
 cenvo:LCHRMS a skos:Concept ;
     skos:altLabel "LC-HRMS"@en ;
     skos:broader cenvo:LCMS ;
-    skos:definition "Liquid Chromatography – High Resolution Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "LCHRMS" ;
     skos:prefLabel "LCHRMS"@en .
@@ -676,7 +597,6 @@ cenvo:LCHRMS a skos:Concept ;
 cenvo:LCHRMSMSt a skos:Concept ;
     skos:altLabel "LC-HRMS/MS"@en ;
     skos:broader cenvo:LCMS ;
-    skos:definition "Liquid Chromatography – High Resolution Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "LCHRMSMSt" ;
     skos:prefLabel "LCHRMSMSt"@en .
@@ -684,7 +604,6 @@ cenvo:LCHRMSMSt a skos:Concept ;
 cenvo:LCICPMS a skos:Concept ;
     skos:altLabel "LC-ICP-MS"@en ;
     skos:broader cenvo:MixICP ;
-    skos:definition "Liquid Chromatography – ICP Mass Spectrometry — for element speciation in liquid samples."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "LCICPMS" ;
     skos:prefLabel "LCICPMS"@en .
@@ -692,7 +611,6 @@ cenvo:LCICPMS a skos:Concept ;
 cenvo:LCICPMSMSt a skos:Concept ;
     skos:altLabel "LC-ICP-MS/MS"@en ;
     skos:broader cenvo:MixICP ;
-    skos:definition "Liquid Chromatography – ICP Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "LCICPMSMSt" ;
     skos:prefLabel "LCICPMSMSt"@en .
@@ -700,7 +618,6 @@ cenvo:LCICPMSMSt a skos:Concept ;
 cenvo:LCIR a skos:Concept ;
     skos:altLabel "LC-IR"@en ;
     skos:broader cenvo:MixOthers ;
-    skos:definition "Liquid Chromatography – Infrared Spectroscopy."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "LCIR" ;
     skos:prefLabel "LCIR"@en .
@@ -708,7 +625,6 @@ cenvo:LCIR a skos:Concept ;
 cenvo:LCMSMSt a skos:Concept ;
     skos:altLabel "LC-MS/MS"@en ;
     skos:broader cenvo:LCMS ;
-    skos:definition "Liquid Chromatography – Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "LCMSMSt" ;
     skos:prefLabel "LCMSMSt"@en .
@@ -716,7 +632,6 @@ cenvo:LCMSMSt a skos:Concept ;
 cenvo:LCNMR a skos:Concept ;
     skos:altLabel "LC-NMR"@en ;
     skos:broader cenvo:MixOthers ;
-    skos:definition "Liquid Chromatography – Nuclear Magnetic Resonance Spectroscopy."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "LCNMR" ;
     skos:prefLabel "LCNMR"@en .
@@ -724,7 +639,6 @@ cenvo:LCNMR a skos:Concept ;
 cenvo:LCUV a skos:Concept ;
     skos:altLabel "LC-UV"@en ;
     skos:broader cenvo:LC ;
-    skos:definition "Liquid Chromatography – Ultraviolet Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "LCUV" ;
     skos:prefLabel "LCUV"@en .
@@ -732,7 +646,6 @@ cenvo:LCUV a skos:Concept ;
 cenvo:LCVIS a skos:Concept ;
     skos:altLabel "LC-VIS"@en ;
     skos:broader cenvo:LC ;
-    skos:definition "Liquid Chromatography – Visible Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "LCVIS" ;
     skos:prefLabel "LCVIS"@en ;
@@ -741,7 +654,6 @@ cenvo:LCVIS a skos:Concept ;
 cenvo:PlasmaAES a skos:Concept ;
     skos:altLabel "Plasma AES"@en ;
     skos:broader cenvo:AES ;
-    skos:definition "Plasma Atomic Emission Spectroscopy — uses a plasma source to excite atoms for emission measurement."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "PlasmaAES" ;
     skos:prefLabel "PlasmaAES"@en .
@@ -749,7 +661,6 @@ cenvo:PlasmaAES a skos:Concept ;
 cenvo:SFCHRMS a skos:Concept ;
     skos:altLabel "SFC-HRMS"@en ;
     skos:broader cenvo:SFCMS ;
-    skos:definition "Supercritical Fluid Chromatography – High Resolution Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "SFCHRMS" ;
     skos:prefLabel "SFCHRMS"@en .
@@ -757,7 +668,6 @@ cenvo:SFCHRMS a skos:Concept ;
 cenvo:SFCHRMSMSt a skos:Concept ;
     skos:altLabel "SFC-HRMS/MS"@en ;
     skos:broader cenvo:SFCMS ;
-    skos:definition "Supercritical Fluid Chromatography – High Resolution Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "SFCHRMSMSt" ;
     skos:prefLabel "SFCHRMSMSt"@en .
@@ -765,7 +675,6 @@ cenvo:SFCHRMSMSt a skos:Concept ;
 cenvo:SFCMSMSt a skos:Concept ;
     skos:altLabel "SFC-MS/MS"@en ;
     skos:broader cenvo:SFCMS ;
-    skos:definition "Supercritical Fluid Chromatography – Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "SFCMSMSt" ;
     skos:prefLabel "SFCMSMSt"@en .
@@ -773,7 +682,6 @@ cenvo:SFCMSMSt a skos:Concept ;
 cenvo:SingleWavelengthUVVis a skos:Concept ;
     skos:altLabel "Single Wavelength UV-Vis"@en ;
     skos:broader cenvo:UVVis ;
-    skos:definition "Single Wavelength UV-Visible Spectroscopy — measurement at a single fixed wavelength."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "SingleWavelengthUVVis" ;
     skos:prefLabel "SingleWavelengthUVVis"@en .
@@ -782,7 +690,6 @@ cenvo:TDAAS a skos:Concept ;
     skos:altLabel "TD-AAS"@en,
         "Thermal Decomposition AAS"@en ;
     skos:broader cenvo:AAS ;
-    skos:definition "Thermal Decomposition Atomic Absorption Spectroscopy — the sample is thermally decomposed before atomic absorption measurement."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "TDAAS" ;
     skos:prefLabel "TDAAS"@en .
@@ -791,7 +698,6 @@ cenvo:TXRF a skos:Concept ;
     skos:altLabel "TXRF"@en,
         "Total Reflection XRF"@en ;
     skos:broader cenvo:XRF ;
-    skos:definition "Total Reflection X-ray Fluorescence Spectroscopy — uses total external reflection geometry to reduce background and improve detection limits."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "TXRF" ;
     skos:prefLabel "TXRF"@en .
@@ -799,7 +705,6 @@ cenvo:TXRF a skos:Concept ;
 cenvo:UPLCDAD a skos:Concept ;
     skos:altLabel "UPLC-DAD"@en ;
     skos:broader cenvo:UPLC ;
-    skos:definition "Ultra Performance Liquid Chromatography – Diode Array Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "UPLCDAD" ;
     skos:prefLabel "UPLCDAD"@en .
@@ -807,7 +712,6 @@ cenvo:UPLCDAD a skos:Concept ;
 cenvo:UPLCFLD a skos:Concept ;
     skos:altLabel "UPLC-FLD"@en ;
     skos:broader cenvo:UPLC ;
-    skos:definition "Ultra Performance Liquid Chromatography – Fluorescence Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "UPLCFLD" ;
     skos:prefLabel "UPLCFLD"@en .
@@ -815,7 +719,6 @@ cenvo:UPLCFLD a skos:Concept ;
 cenvo:UPLCHRMS a skos:Concept ;
     skos:altLabel "UPLC-HRMS"@en ;
     skos:broader cenvo:LCMS ;
-    skos:definition "Ultra Performance Liquid Chromatography – High Resolution Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "UPLCHRMS" ;
     skos:prefLabel "UPLCHRMS"@en .
@@ -823,7 +726,6 @@ cenvo:UPLCHRMS a skos:Concept ;
 cenvo:UPLCHRMSMSt a skos:Concept ;
     skos:altLabel "UPLC-HRMS/MS"@en ;
     skos:broader cenvo:LCMS ;
-    skos:definition "Ultra Performance Liquid Chromatography – High Resolution Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "UPLCHRMSMSt" ;
     skos:prefLabel "UPLCHRMSMSt"@en .
@@ -831,7 +733,6 @@ cenvo:UPLCHRMSMSt a skos:Concept ;
 cenvo:UPLCMS a skos:Concept ;
     skos:altLabel "UPLC-MS"@en ;
     skos:broader cenvo:LCMS ;
-    skos:definition "Ultra Performance Liquid Chromatography – Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "UPLCMS" ;
     skos:prefLabel "UPLCMS"@en .
@@ -839,7 +740,6 @@ cenvo:UPLCMS a skos:Concept ;
 cenvo:UPLCMSMSt a skos:Concept ;
     skos:altLabel "UPLC-MS/MS"@en ;
     skos:broader cenvo:LCMS ;
-    skos:definition "Ultra Performance Liquid Chromatography – Tandem Mass Spectrometry."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "UPLCMSMSt" ;
     skos:prefLabel "UPLCMSMSt"@en .
@@ -847,7 +747,6 @@ cenvo:UPLCMSMSt a skos:Concept ;
 cenvo:UPLCUV a skos:Concept ;
     skos:altLabel "UPLC-UV"@en ;
     skos:broader cenvo:UPLC ;
-    skos:definition "Ultra Performance Liquid Chromatography – Ultraviolet Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "UPLCUV" ;
     skos:prefLabel "UPLCUV"@en .
@@ -855,7 +754,6 @@ cenvo:UPLCUV a skos:Concept ;
 cenvo:UPLCVIS a skos:Concept ;
     skos:altLabel "UPLC-VIS"@en ;
     skos:broader cenvo:UPLC ;
-    skos:definition "Ultra Performance Liquid Chromatography – Visible Detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "UPLCVIS" ;
     skos:prefLabel "UPLCVIS"@en ;
@@ -865,7 +763,6 @@ cenvo:WDXRF a skos:Concept ;
     skos:altLabel "WD-XRF"@en,
         "Wavelength-Dispersive XRF"@en ;
     skos:broader cenvo:XRF ;
-    skos:definition "Wavelength-Dispersive X-ray Fluorescence Spectroscopy — separates fluorescent X-rays by wavelength using a crystal diffractometer."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "WDXRF" ;
     skos:prefLabel "WDXRF"@en .
@@ -882,7 +779,6 @@ cenvo:WDXRF a skos:Concept ;
 cenvo:Electrophoresis a skos:Concept ;
     skos:altLabel "Electrophoretic methods"@en ;
     skos:broader cenvo:Other ;
-    skos:definition "Electrophoresis — separation of charged particles in a fluid under the influence of an electric field."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "Electrophoresis" ;
     skos:prefLabel "Electrophoresis"@en .
@@ -890,7 +786,6 @@ cenvo:Electrophoresis a skos:Concept ;
 cenvo:Spectrophotometry a skos:Concept ;
     skos:altLabel "Spectrophotometric methods"@en ;
     skos:broader cenvo:Other ;
-    skos:definition "Spectrophotometry — measurement of light absorption or transmission by a solution at specific wavelengths."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "Spectrophotometry" ;
     skos:prefLabel "Spectrophotometry"@en .
@@ -898,7 +793,6 @@ cenvo:Spectrophotometry a skos:Concept ;
 cenvo:ICP a skos:Concept ;
     skos:altLabel "Inductively Coupled Plasma Spectroscopy"@en ;
     skos:broader cenvo:Spectroscopy ;
-    skos:definition "Inductively Coupled Plasma Spectroscopy — uses an inductively coupled plasma to atomise and excite or ionise the sample for elemental analysis."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICP" ;
     skos:prefLabel "ICP"@en .
@@ -906,7 +800,6 @@ cenvo:ICP a skos:Concept ;
 cenvo:MixOthers a skos:Concept ;
     skos:altLabel "Mix-Others"@en ;
     skos:broader cenvo:MixedMethods ;
-    skos:definition "Other hyphenated analytical methods not covered by the Mix-ICP category."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "MixOthers" ;
     skos:prefLabel "MixOthers"@en .
@@ -915,7 +808,6 @@ cenvo:MixedMethods a skos:Concept ;
     skos:altLabel "Coupled methods"@en,
         "Hyphenated methods"@en ;
     skos:broader cenvo:AnalyticalMethod ;
-    skos:definition "Analytical methods combining chromatographic separation with spectroscopic or mass spectrometric detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "MixedMethods" ;
     skos:prefLabel "MixedMethods"@en .
@@ -923,14 +815,12 @@ cenvo:MixedMethods a skos:Concept ;
 cenvo:NMR a skos:Concept ;
     skos:altLabel "Nuclear Magnetic Resonance Spectroscopy"@en ;
     skos:broader cenvo:Spectroscopy ;
-    skos:definition "Nuclear Magnetic Resonance Spectroscopy — uses the magnetic properties of atomic nuclei to determine molecular structure and composition."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "NMR" ;
     skos:prefLabel "NMR"@en .
 
 cenvo:Other a skos:Concept ;
     skos:broader cenvo:AnalyticalMethod ;
-    skos:definition "Analytical methods that do not fit within Spectroscopy, Mass Spectrometry, Chromatography, or Mixed Methods categories."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "Other" ;
     skos:prefLabel "Other"@en .
@@ -939,7 +829,6 @@ cenvo:UVVis a skos:Concept ;
     skos:altLabel "UV-Vis"@en,
         "UV-Visible Spectroscopy"@en ;
     skos:broader cenvo:Spectroscopy ;
-    skos:definition "UV-Visible Spectroscopy — measures absorption of ultraviolet and visible light by molecules in solution."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "UVVis" ;
     skos:prefLabel "UVVis"@en .
@@ -947,7 +836,6 @@ cenvo:UVVis a skos:Concept ;
 cenvo:Chromatography a skos:Concept ;
     skos:altLabel "Chromatographic methods"@en ;
     skos:broader cenvo:AnalyticalMethod ;
-    skos:definition "Analytical methods based on the separation of chemical mixtures by differential migration through a stationary phase."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "Chromatography" ;
     skos:prefLabel "Chromatography"@en .
@@ -955,7 +843,6 @@ cenvo:Chromatography a skos:Concept ;
 cenvo:IC a skos:Concept ;
     skos:altLabel "Ion Chromatography"@en ;
     skos:broader cenvo:Chromatography ;
-    skos:definition "Ion Chromatography — separation technique for ions and polar molecules using ion exchange as the separation mechanism."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "IC" ;
     skos:prefLabel "IC"@en .
@@ -964,7 +851,6 @@ cenvo:ICPMS a skos:Concept ;
     skos:altLabel "ICP-MS"@en,
         "Inductively Coupled Plasma Mass Spectrometry"@en ;
     skos:broader cenvo:MassSpectrometry ;
-    skos:definition "ICP Mass Spectrometry — uses an inductively coupled plasma to ionise the sample, with mass spectrometric detection for elemental and isotopic analysis."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICPMS" ;
     skos:prefLabel "ICPMS"@en .
@@ -973,7 +859,6 @@ cenvo:SFCMS a skos:Concept ;
     skos:altLabel "SFC-MS"@en,
         "Supercritical Fluid Chromatography Mass Spectrometry"@en ;
     skos:broader cenvo:MassSpectrometry ;
-    skos:definition "Supercritical Fluid Chromatography – Mass Spectrometry — uses supercritical fluid as the mobile phase with mass spectrometric detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "SFCMS" ;
     skos:prefLabel "SFCMS"@en .
@@ -981,7 +866,6 @@ cenvo:SFCMS a skos:Concept ;
 cenvo:XRF a skos:Concept ;
     skos:altLabel "X-ray Fluorescence Spectroscopy"@en ;
     skos:broader cenvo:Spectroscopy ;
-    skos:definition "X-ray Fluorescence Spectroscopy — uses X-ray excitation to produce characteristic fluorescent X-rays from elements in the sample."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "XRF" ;
     skos:prefLabel "XRF"@en .
@@ -989,7 +873,6 @@ cenvo:XRF a skos:Concept ;
 cenvo:AES a skos:Concept ;
     skos:altLabel "Atomic Emission Spectroscopy"@en ;
     skos:broader cenvo:Spectroscopy ;
-    skos:definition "Atomic Emission Spectroscopy — a technique that uses the emission of light by excited atoms to identify and quantify elements."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "AES" ;
     skos:prefLabel "AES"@en .
@@ -997,7 +880,6 @@ cenvo:AES a skos:Concept ;
 cenvo:AFS a skos:Concept ;
     skos:altLabel "Atomic Fluorescence Spectroscopy"@en ;
     skos:broader cenvo:Spectroscopy ;
-    skos:definition "Atomic Fluorescence Spectroscopy — measures the fluorescence emitted by atoms excited by a light source; highly sensitive for trace element determination."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "AFS" ;
     skos:prefLabel "AFS"@en .
@@ -1006,7 +888,6 @@ cenvo:HPLC a skos:Concept ;
     skos:altLabel "High Performance Liquid Chromatography"@en,
         "High Pressure Liquid Chromatography"@en ;
     skos:broader cenvo:LC ;
-    skos:definition "High Performance Liquid Chromatography — liquid chromatography using high pressure to force the mobile phase through a tightly packed stationary phase column."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "HPLC" ;
     skos:prefLabel "HPLC"@en .
@@ -1015,7 +896,6 @@ cenvo:MixICP a skos:Concept ;
     skos:altLabel "Chromatography-ICP-MS"@en,
         "Mix-ICP"@en ;
     skos:broader cenvo:MixedMethods ;
-    skos:definition "Chromatography Coupled to ICP-MS — hyphenated methods combining chromatographic separation with ICP-MS detection for speciation analysis."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "MixICP" ;
     skos:prefLabel "MixICP"@en .
@@ -1024,7 +904,6 @@ cenvo:UPLC a skos:Concept ;
     skos:altLabel "UHPLC"@en,
         "Ultra Performance Liquid Chromatography"@en ;
     skos:broader cenvo:LC ;
-    skos:definition "Ultra Performance Liquid Chromatography — liquid chromatography using sub-2-micron particle columns and very high pressures for improved resolution and speed."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "UPLC" ;
     skos:prefLabel "UPLC"@en .
@@ -1032,7 +911,6 @@ cenvo:UPLC a skos:Concept ;
 cenvo:GC a skos:Concept ;
     skos:altLabel "Gas Chromatography"@en ;
     skos:broader cenvo:Chromatography ;
-    skos:definition "Gas Chromatography — separation technique using a gaseous mobile phase; analytes must be volatile or derivatised to be volatile."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GC" ;
     skos:prefLabel "GC"@en .
@@ -1040,13 +918,11 @@ cenvo:GC a skos:Concept ;
 cenvo:MassSpectrometry a skos:Concept ;
     skos:altLabel "MS methods"@en ;
     skos:broader cenvo:AnalyticalMethod ;
-    skos:definition "Analytical methods based on the measurement of mass-to-charge ratios of ions to identify and quantify chemical substances."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "MassSpectrometry" ;
     skos:prefLabel "MassSpectrometry"@en .
 
 cenvo:AnalyticalMethod a skos:Concept ;
-    skos:definition "Any method used for the chemical analysis of environmental samples. Top-level concept encompassing all analytical techniques."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "AnalyticalMethod" ;
     skos:prefLabel "AnalyticalMethod"@en ;
@@ -1055,7 +931,6 @@ cenvo:AnalyticalMethod a skos:Concept ;
 cenvo:LC a skos:Concept ;
     skos:altLabel "Liquid Chromatography"@en ;
     skos:broader cenvo:Chromatography ;
-    skos:definition "Liquid Chromatography — separation technique using a liquid mobile phase passing through a stationary phase."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "LC" ;
     skos:prefLabel "LC"@en .
@@ -1063,7 +938,6 @@ cenvo:LC a skos:Concept ;
 cenvo:AAS a skos:Concept ;
     skos:altLabel "Atomic Absorption Spectroscopy"@en ;
     skos:broader cenvo:Spectroscopy ;
-    skos:definition "Atomic Absorption Spectroscopy — a technique for measuring concentrations of elements by measuring the absorption of light by free atoms in the gaseous state."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "AAS" ;
     skos:prefLabel "AAS"@en .
@@ -1072,7 +946,6 @@ cenvo:ICMS a skos:Concept ;
     skos:altLabel "IC-MS"@en,
         "Ion Chromatography Mass Spectrometry"@en ;
     skos:broader cenvo:MassSpectrometry ;
-    skos:definition "Ion Chromatography – Mass Spectrometry — combines ion chromatographic separation with mass spectrometric detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "ICMS" ;
     skos:prefLabel "ICMS"@en .
@@ -1080,7 +953,6 @@ cenvo:ICMS a skos:Concept ;
 cenvo:Spectroscopy a skos:Concept ;
     skos:altLabel "Spectroscopic methods"@en ;
     skos:broader cenvo:AnalyticalMethod ;
-    skos:definition "Analytical methods based on the interaction of matter with electromagnetic radiation to identify and quantify chemical substances."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "Spectroscopy" ;
     skos:prefLabel "Spectroscopy"@en .
@@ -1089,7 +961,6 @@ cenvo:LCMS a skos:Concept ;
     skos:altLabel "LC-MS"@en,
         "Liquid Chromatography Mass Spectrometry"@en ;
     skos:broader cenvo:MassSpectrometry ;
-    skos:definition "Liquid Chromatography – Mass Spectrometry — combines liquid chromatographic separation with mass spectrometric detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "LCMS" ;
     skos:prefLabel "LCMS"@en .
@@ -1098,7 +969,6 @@ cenvo:GCMS a skos:Concept ;
     skos:altLabel "GC-MS"@en,
         "Gas Chromatography Mass Spectrometry"@en ;
     skos:broader cenvo:MassSpectrometry ;
-    skos:definition "Gas Chromatography – Mass Spectrometry — combines gas chromatographic separation with mass spectrometric detection."@en ;
     skos:inScheme vocab:AnalyticalMethod ;
     skos:notation "GCMS" ;
     skos:prefLabel "GCMS"@en .
